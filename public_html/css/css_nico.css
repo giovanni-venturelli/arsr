@@ -31,5 +31,30 @@
 	text-align: left;
 }
 
+.inp_utente{
+	margin-left: 4 em;
+}
 
+.inp_pass{
+	margin-left: 4 em;
+}
+.content_form{
+	float: center;
+	text-align: center;
+}
+
+input#submit{
+	
+	border-radius: 0.5em;
+	color: #191a1c;
+	background-color: #EFEFEF ;
+}
+#errore_login{
+	color: red;
+}
+input#reset{
+	
+	border-radius: 0.5em;
+	color: #191a1c;
+	background-color: #EFEFEF ;
 

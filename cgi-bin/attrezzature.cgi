@@ -86,7 +86,7 @@ require("menu.cgi");
 									<div class=\"attr_img\">
 										<img src=\"$source\" alt=\"$alt\" class=\"img_attr\" />
 									</div>
-										<div calss=\"div_cont\">";
+										<div>";
 										if($disp eq 'disponibile'){
 											$htmlprint="$htmlprint<div class=\"attr_disp_si\">$disp</div>";
 										}

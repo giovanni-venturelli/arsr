@@ -8,8 +8,8 @@ use utf8;
 	$session = CGI::Session->load() or die $!;
 	my $user = $session->param('utente');
 
-	$titolo="staff";
-	$where="Il nostro staff";
+	$title="Staff";
+	$where="Staff";
 
 	$parser = XML::LibXML->new();
 	
@@ -38,8 +38,8 @@ print "content-type: text/html\n\n";
 			my $alt=$item->find('img/alt');
 			
 			$htmlprint="$htmlprint  
-				<div class=\"content_staff\">
-					<div class=\"img_staff\">
+				<div class=\"attr_content\">
+					<div class=\"attr_img\">
 						<img src=\"$source\" alt=\"$alt\" />
 					</div>				
 						<div class=\"nome_staff\">$nome  $cognome</div> 

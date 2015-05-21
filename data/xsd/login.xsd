@@ -4,7 +4,7 @@
 			<xs:element name="login">
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="Utente" type="utn" maxOccurs="unbounded"/>
+						<xs:element name="utente" type="utn" maxOccurs="unbounded"/>
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
@@ -14,7 +14,7 @@
 						<xs:element name="mail">
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
-									<xs:pattern value="([a-zA-Z0-9]+)(@[a-z]+).(it|com)"/>
+									<xs:pattern value="([a-zA-Z0-9]+)(@[a-z]+).(it|com|net|org)"/>
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:element>
@@ -29,24 +29,8 @@
 						<xs:element name="nome" type="xs:string" />
 						<xs:element name="cognome" type="xs:string" minOccurs="0" />
 						<xs:element name="indirizzo" type="ind" />
-						<xs:choice>
-								<xs:element name="CF">
-									<xs:simpleType>
-										<xs:restriction base="xs:string">
-											<xs:pattern value="[A-Z0-9]*"/>
-											<xs:length value="16"/>
-										</xs:restriction>
-									</xs:simpleType>
-								</xs:element>
-								<xs:element name="PI">
-									<xs:simpleType>
-										<xs:restriction base="xs:string">
-											<xs:pattern value="[0-9]*" />
-											<xs:length value="11"/>
-										</xs:restriction>
-									</xs:simpleType>
-								</xs:element>
-						</xs:choice>
+						<xs:element name="fatturazione" type="xs:string" />
+						<xs:element name="tipo_fatt" type="xs:string" />
 					</xs:sequence>
 				</xs:complexType>
 				<xs:complexType name="ind">
@@ -55,8 +39,8 @@
 						<xs:element name="numero">
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
-									<xs:pattern value="([0-9])+[a|b]*" />
-									<xs:maxLength value="3" />
+									<xs:pattern value="([0-9])+[a|b|c|d|e|f|g|h|i|l|m]*" />
+									<xs:maxLength value="4" />
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:element>

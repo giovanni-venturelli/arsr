@@ -58,11 +58,13 @@ my $htmlprimt;
 		require("header.cgi");
         require("menu.cgi");
 		require ("footer.cgi");
-	 $htmlprint= "$header$menu<div id=\"content\">";
+
+		$htmlprint= "$header$menu<div id=\"content\">";
 	 
 	 
-	if($erroreb){#Segnalo errore se presente nei dati di accesso
-		print "<h3>ERRORE LOGIN: <span xml:lang='en'> Username/Password</span> errate</h3>";
+	if($erroreb){    #Segnalo errore se presente nei dati di accesso
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE LOGIN: <span xml:lang='en'> Username/Password</span> errate</div>";
+		
 	}
 
 	$htmlprint="$htmlprint 
@@ -70,21 +72,25 @@ my $htmlprimt;
 			<div class=\"content_form\">
 				<fieldset>
 					<legend>Inserire i dati di <span xml:lang=\"eng\">login</span></legend>
-						<label title=\"utente\">Utente:
-							<input title=\"utente\" type=\"text\" name=\"User\" tabindex=\"1\"/>
+						<label title=\"utente\">Utente
+							<div class=\"inp_utente\">
+								<input title=\"utente\" type=\"text\" name=\"User\" tabindex=\"1\"/>
+							<\div>
 						</label>
 							<br>
-						<label title=\"password\"><span xml:lang=\"en\">Password</span>:
+						<label title=\"password\"><span xml:lang=\"en\">Password</span>
+							<div class=\"inp_pass\">	
 								<input title=\"password\" type=\"password\" name=\"Pass\" tabindex=\"2\"/>
+							<\div>
 						</label>
 					
 				<br>
-				<input id=\"reset\" name=\"annulla\"  value=\"reset\" type=\"reset\" tabindex=\"3\"/>
+				<input id=\"reset\" name=\"annulla\"  value=\"Reset\" type=\"reset\" tabindex=\"3\"/>
 				<input id=\"submit\" name=\"login\"  value=\"Entra\" type=\"submit\" tabindex=\"4\"/>
 				</fieldset>  
 			</form>
 				<div class=\"registrati_ora\">
-					Non sei ancora registrato? fallo ora <a ref=\"registration.cgi\"> Cliccando QUI</a>
+					Non sei ancora registrato? fallo ora <a href=\"registration.cgi\"> Cliccando QUI</a>
 				</div>
 			</div>
 		";

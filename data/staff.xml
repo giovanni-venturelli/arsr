@@ -31,7 +31,7 @@
 	<cognome> Agostini</cognome>
 	<ruolo>Presidente</ruolo>
 	<img>
-		<source>../public_html/img/cesco.jpg</source>
+		<source>cesco.jpg</source>
 		<alt>Foto di Francesco  Agostini</alt>
 	</img>
 </persona>
