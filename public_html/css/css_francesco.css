@@ -1,0 +1,124 @@
+/*css_francesco.css*/
+/*CSS Riguardante Admin Staff*/
+#inserisci{
+	float:left;
+}
+#modifica{
+	float:left;
+}
+#elimina{
+	float:left;
+}
+#break{
+	clear: both;
+	margin-bottom:15px;
+}
+
+.container{
+	height:400px;
+	border:solid 3px #28324E;
+}
+
+/*CSS riguardante la parte dei contatti*/
+
+.TContact{
+	background: linear-gradient(to bottom right, #191a1c , black);
+	border: solid 2px;
+	border-color:#
+	width:100%;
+}
+
+.TFirst{
+	border-radius: 15px;
+    border: 2px solid #3333ff;
+	width:150px;
+	background: linear-gradient(to right, #191a1c , #28324E);
+}
+
+.TSecond{
+	width:350px;
+}
+
+.image{
+	width:130px;
+	height:130px;
+}
+
+.mailto{
+	text-decoration: none;
+	
+}
+
+.mailto:hover + .invisible{
+	text-decoration: none;
+	display:inline;
+}
+
+/*CSS Servizio */
+
+.par1{
+	margin:0px;
+	padding:5px;
+	border-radius: 15px;
+    border: 2px solid #3333ff;
+	background-image: url('../img/bgc-2.jpg');
+	background-color:black;
+	background-repeat: no-repeat;
+	background-size: 300px 200px;
+	background-position:right;
+}
+
+.par2{
+	margin:0px;
+	padding:5px;
+	border-radius: 15px;
+    border: 2px solid #3333ff;
+	background-image: url('../img/bgdj.jpg');
+	background-color:black;
+	background-repeat: no-repeat;
+	background-size: 300px 200px;
+	background-position:left;
+
+}
+
+.par3{
+	margin:0px;
+	padding:5px;
+	border-radius: 15px;
+    border: 2px solid #3333ff;
+	background-image: url('../img/bgrecord.jpg');
+	background-color:black;
+	background-repeat: no-repeat;
+	background-size: 300px 200px;
+	background-position:right;
+	margin-bottom:15px;
+}
+
+/*comon CSS*/
+
+.SubTitle{
+	font-family:myfont;
+	font-size:45px;
+	margin-bottom:10px;
+}
+
+.HParag{
+	margin:0px;
+	border-radius: 15px;
+	padding:10px;
+    border: 1px solid #FFFFFF;
+	background:linear-gradient(to right,black 30%,blue,indigo);
+	font-family:myfont;
+	font-size:32px;
+}
+
+.invisible{
+	height:18px;
+	width:18px;
+	display:none;
+}
+
+@font-face {
+    font-family: "myfont";
+    src: url("web fonts/main_font/SFSportsNight.woff") format('woff');
+}

@@ -1,0 +1,67 @@
+	<?xml version="1.0"?>
+	<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+			<xs:element name="login">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Utente" type="utn" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+				<xs:complexType name="utn">
+					<xs:sequence>
+						<xs:element name="username" type="xs:string" />
+						<xs:element name="mail">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:pattern value="([a-zA-Z0-9]+)(@[a-z]+).(it|com)"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="password">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="4"/>
+									<xs:maxLength value="8"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="nome" type="xs:string" />
+						<xs:element name="cognome" type="xs:string" minOccurs="0" />
+						<xs:element name="indirizzo" type="ind" />
+						<xs:choice>
+								<xs:element name="CF">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:pattern value="[A-Z0-9]*"/>
+											<xs:length value="16"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+								<xs:element name="PI">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:pattern value="[0-9]*" />
+											<xs:length value="11"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+						</xs:choice>
+					</xs:sequence>
+				</xs:complexType>
+				<xs:complexType name="ind">
+					<xs:sequence>
+						<xs:element name="via" type="xs:string" />
+						<xs:element name="numero">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:pattern value="([0-9])+[a|b]*" />
+									<xs:maxLength value="3" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="paese" type="xs:string" />
+						<xs:element name="provincia" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:schema>

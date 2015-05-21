@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS */
+
+.content_staff{
+	padding:0;
+	margin-top: 0.5em;
+	border: solid;
+	border-color: #28324E;
+	height: 5em;
+	border-radius: 0.5em;
+}
+
+.img_staff{
+	height: 100%;
+	float: left;
+	margin-top: 0.25em;
+	margin-left: 0.25em;
+	margin-right:0.25em;
+	margin-bottom: 0.25em;
+	height: 4.5em;
+}
+
+.ruolo_staff{
+	margin-left: 4em;
+	float:left;
+}
+
+.nome_staff{
+	margin-left: 8em;
+	font-size: large;
+	text-align: left;
+}
+
+
+

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="attrezzature.xsl"  xmlns="http://www.ASRS.com" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="attrezzature.xsd"?>
+<database>
+	<attrezzatura>
+		<nome>Patata</nome>
+		<codice_prodotto>1</codice_prodotto>
+		<descrizione>patata</descrizione>
+		<prezzo>750€</prezzo>
+		<img>
+			<source>../public_html/img/source.png</source>
+			<alt>patata gialla</alt>
+		</img>
+		<disponibile>disponibile tra 4 giorni</disponibile>
+	</attrezzatura>
+		<attrezzatura>
+		<nome>Cane</nome>
+		<codice_prodotto>2</codice_prodotto>
+		<descrizione>animale che puzza e abbaia</descrizione>
+		<prezzo>50€</prezzo>
+		<img>
+			<source>../public_html/img/source.png</source>
+			<alt>cane che puzza</alt>
+		</img>
+		<disponibile>disponibile</disponibile>
+	</attrezzatura>
+	<attrezzatura>
+				<nome>Patata</nome>
+				<codice_prodotto>3</codice_prodotto>
+				<descrizione>patata</descrizione>
+				<prezzo>750                        €</prezzo>
+				<img>
+					<source>feedback.cgi</source>
+					<alt>patata gialla</alt>
+				</img>
+				<disponibile>non disponibile</disponibile>
+			</attrezzatura>
+	<attrezzatura>
+				<nome>Gatto</nome>
+				<codice_prodotto>4</codice_prodotto>
+				<descrizione>animale che perde pelo ovunque animale che perde pelo ovunque animale che perde pelo ovunque </descrizione>
+				<prezzo>2  €</prezzo>
+				<img>
+					<source>check_modifica_attrezzature.cgi</source>
+					<alt>gatto che perde pelo</alt>
+				</img>
+				<disponibile>non disponibile</disponibile>
+			</attrezzatura>
+
+	<attrezzatura>
+				<nome>Cane</nome>
+				<codice_prodotto>5</codice_prodotto>
+				<descrizione>animale che puzza e abbaia</descrizione>
+				<prezzo>50  €</prezzo>
+				<img>
+					<source>attrezzature.cgi</source>
+					<alt>cane che puzza</alt>
+				</img>
+				<disponibile>disponibile</disponibile>
+	</attrezzatura>
+
+</database>

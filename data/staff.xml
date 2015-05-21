@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="staff.xsl"  xmlns="http://www.ASRS.com" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="xsd/staff.xsd"?>
+<Database>
+	
+
+<persona>
+	<id>5</id>
+	<nome>Paolo</nome>
+	<cognome>Tizianel</cognome>
+	<ruolo>fonico</ruolo>
+	<img>
+		<source>arsr.jpg</source>
+		<alt>Foto di Paolo Tizianel</alt>
+	</img>
+</persona>
+
+<persona>
+	<id>6</id>
+	<nome>Leonardo</nome>
+	<cognome>Benetollo</cognome>
+	<ruolo>capo</ruolo>
+	<img>
+		<source>arsr.jpg</source>
+		<alt>Foto di Leonardo Benetollo</alt>
+	</img>
+</persona>
+
+<persona>
+	<id>1</id>
+	<nome>Francesco</nome>
+	<cognome> Agostini</cognome>
+	<ruolo>Presidente</ruolo>
+	<img>
+		<source>../public_html/img/cesco.jpg</source>
+		<alt>Foto di Francesco  Agostini</alt>
+	</img>
+</persona>
+<persona>
+	<id>4</id>
+	<nome>stolfo</nome>
+	<cognome>fent</cognome>
+	<ruolo>fonico</ruolo>
+	<img>
+		<source>impossible-triangle-md.png</source>
+		<alt>Foto di stolfo fent</alt>
+	</img>
+</persona></Database>

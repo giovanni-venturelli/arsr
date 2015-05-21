@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xmlns = "http://www.ASRS.com" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="login.xsd"?>
+<login>
+	<Utente>
+		<username>user1</username>
+		<mail>user1@gmail.com</mail>
+		<password>user</password>
+		<nome>nome</nome>
+		<cognome>cognome</cognome>
+		<indirizzo>
+			<via>via</via>
+			<numero>1</numero>
+			<paese>paese</paese>
+			<provincia>provincia</provincia>
+		</indirizzo>
+		<CF>GMTLKS45862DF89S</CF>
+	</Utente>
+	<Utente>
+		<username>user2</username>
+		<mail>user2@gmail.com</mail>
+		<password>user</password>
+		<nome>nome</nome>
+		<indirizzo>
+			<via>via</via>
+			<numero>1</numero>
+			<paese>paese</paese>
+			<provincia>provincia</provincia>
+		</indirizzo>
+		<PI>12345678901</PI>
+	</Utente>
+</login>

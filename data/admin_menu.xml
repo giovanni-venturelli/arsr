@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../data/administrator.xsl"  xmlns="http://www.ASRS.com" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="administrator.xsd"?>
+<menu>
+	<page id="home">
+		<name><span lang="en">Home</span></name>
+		<indirizzo>administrator.xml</indirizzo>
+	</page>
+	<page id="insert_attrezzatura">
+		<name> inserisci attrezzatura </name>
+		<indirizzo>inserisci_attrezzatura.xsl</indirizzo>
+	</page>
+	<page id="remove_attrezzatura">
+		<name>rimuovi attrezzatura</name>
+		<indirizzo>remove_attrezzatura.xsl</indirizzo>
+	</page>
+	<page id="modifica_staff">
+		<name>modifica staff</name>
+		<indirizzo>modifica_staff.xsl</indirizzo>
+	</page>
+	<page id="frasi">
+		<name>frasi home page</name>
+		<indirizzo>modifica_homepage.xml</indirizzo>
+	</page>
+</menu>
