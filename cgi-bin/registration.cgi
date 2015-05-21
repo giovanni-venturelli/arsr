@@ -69,7 +69,7 @@ $htmlprint="$htmlprint
 					$htmlprint="$htmlprint> Codice Fiscale
 				
 				<input id=\"reset\" type=\"reset\" value=\"Reset\"/>
-				<input id=\"inserisci_utente\" type=\"submit\" value=\"registrati\"/>
+				<input id=\"Registrati\" type=\"submit\" value=\"Registrati\"/>
 			</fieldset>
 		</div> 
 	</form>
@@ -117,8 +117,6 @@ if($erroreDati){
 		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: fatturazione </div>";
 		
 	}
-	
-
 }
 
 $htmlprint="$htmlprint</div>\n$footer";
