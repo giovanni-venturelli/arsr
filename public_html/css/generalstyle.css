@@ -419,6 +419,7 @@ margin-bottom:200px;
 	float:right;
 	margin-left:0.5em;
 	margin-top:0.2em;
+	text-align: left;
 }
 
 #back_to_top_link{
@@ -427,6 +428,7 @@ margin-bottom:200px;
 }
 #back_to_top:hover{
 	background-color: #F30808;
+
 	}
 
 #link_to_comment{
@@ -453,6 +455,9 @@ margin-bottom:200px;
 	width:7em;
 	display:inline-block;
 }
-.label-block{
+#label_block{
 	display:block;
+	}
+	.form-group{
+		border:none;
 	}

@@ -86,7 +86,7 @@ require("menu.cgi");
 									<div class=\"attr_img\">
 										<img src=\"$source\" alt=\"$alt\" class=\"img_attr\" />
 									</div>
-										<div>";
+										<div calss=\"div_cont\">";
 										if($disp eq 'disponibile'){
 											$htmlprint="$htmlprint<div class=\"attr_disp_si\">$disp</div>";
 										}
@@ -106,7 +106,7 @@ require("menu.cgi");
 		$contatore=$contatore+1;
 	}
 		$htmlprint="$htmlprint<div id=\"pr\">*il prezzo si riferisce al noleggio giornaliero</div>";
-		$htmlprint="$htmlprint<div id=\"back_to_top\"><a href=\# id=\"back_to_top_link\">torna in alto</a></div>$htmlpag";
+		$htmlprint="$htmlprint<div><div id=\"back_to_top\"><a href=\# id=\"back_to_top_link\">torna in alto</a></div>$htmlpag</div>";
 		$htmlprint="$htmlprint</div>";
 	require("footer.cgi");
 	$htmlprint="$htmlprint$footer";
