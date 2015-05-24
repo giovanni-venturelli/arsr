@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xmlns = "http://www.ASRS.com" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="log_admin.xsd"?>
+<login_admin>
+	<admin>
+		<username>user1</username>
+		<password>user</password>
+	</admin>		
+</login_admin>

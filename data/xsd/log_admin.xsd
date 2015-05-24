@@ -1,0 +1,25 @@
+	<?xml version="1.0"?>
+	<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+			<xs:element name="login_admin">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="admin" type="adm" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+				<xs:complexType name="adm">
+					<xs:sequence>
+						<xs:element name="username" type="xs:string" />
+						
+						<xs:element name="password">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="4"/>
+									<xs:maxLength value="8"/>
+								</xs:restriction>
+							</xs:simpleType>
+						
+					</xs:sequence>
+				</xs:complexType>
+			</xs:schema>

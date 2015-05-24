@@ -29,19 +29,19 @@ if($page->param('login') eq "Entra"){
 	if(!$erroreb){
 		
 		my $parser = XML::LibXML->new();
-		my $doc = $parser->parse_file('../data/login.xml');
+		my $doc = $parser->parse_file('../data/log_admin.xml');
 		my $root = $doc->getDocumentElement;
-		my @users = $root->getElementsByTagName('Utente');
+		my @users = $root->getElementsByTagName('admin');
 		
 		foreach $nod (@users) {
-			$user=$nod->getElementsByTagName('username');
-			if("$user" eq "$username"){
-				$pass=$nod->getElementsByTagName('password');
-				if("$pass" eq "$password"){
+			$dbuser=$nod->getElementsByTagName('username');
+			if("$dbuser" eq "$username"){
+				$dbpass=$nod->getElementsByTagName('password');
+				if("$dbpass" eq "$password"){
                     $cookie = $page->cookie(
                     -name=>'utente',
                     -value=>'utente');
-                 	print redirect(-cookie=>$cookie, -url=>"attrezzature.cgi");	###########
+                 	print redirect(-cookie=>$cookie, -url=>"admin_menu.cgi");	###########
 				}
 			}
 		}
@@ -89,10 +89,7 @@ my $htmlprimt;
 				<input id=\"submit\" name=\"login\"  value=\"Entra\" type=\"submit\" tabindex=\"4\"/>
 				</fieldset>  
 			</form>
-				<div class=\"registrati_ora\">
-					Non sei ancora registrato? fallo ora <a href=\"registration.cgi\"> Cliccando QUI</a>
-				</div>
-			</div>
+		</div>
 		";
 	
 	
