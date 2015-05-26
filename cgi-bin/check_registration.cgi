@@ -28,7 +28,6 @@ use utf8;
 			#creo tutte le variabili che poi vado a mettere nell'xml
 			$erroreDati=0;
 			$erroreUser=0;
-			$erroreEmail=0;
 			$errorePwd=0;
 			$erroreNome=0;
 			$erroreCognome=0;
@@ -37,29 +36,27 @@ use utf8;
 			$errorePaese=0;
 			$erroreProvincia=0;
 			$ErroreFatt=0;
+			
 			$username=$page->param('username'); 
 				$username =~ s/([<>])/$map{$1}/g;
 				if($username !~ /[a-zA-Z0-9]+/ ){
 					$erroreDati=1;
 					$erroreUser=1;
 				}
-			 $email=$page->param('email'); 
+				$email=$page->param('email'); 
 				$email =~ s/([<>])/$map{$1}/g;
-				if($email !~ /[a-zA-Z0-9]+.@.[a-z]..{1}.[a-z]/){
-					$erroreDati=1;
-					$erroreEmail=1;
-				}
+				
 			 $password=$page->param('password'); 
 				$password =~ s/([<>])/$map{$1}/g;
 				if( $password !~/[ \w ]+/ ){
 					$erroreDati=1;
 					$errorePwd=1;
 				}
-			 $name=$page->param('name'); 
+			 $firstname=$page->param('firstname'); 
 				$name =~ s/([<>])/$map{$1}/g;
-				if($name !~/[a-zA-Z]+/ ){
+				if($firstname !~/[a-zA-Z]+/ ){
 					$erroreDati=1;
-					$erroreNome=1;
+					$firstname=1;
 				}
 			 $cognome=$page->param('cognome');
 				$cognome =~ s/([<>])/$map{$1}/g;
@@ -103,52 +100,49 @@ use utf8;
 			
 			if($erroreDati){
 				require('registration.cgi');
-				
-				
 			}
 			else{
 			
-			my $file='../data/log_utenti.xml'; 
-		    my $doc = $parser->parse_file($file); #apre il file per lettura nel parser
-		    
-			#controllo se il file è aperto
-		    if(!$doc){
-					$ERRORE=1;
+				my $file='../data/log_utenti.xml'; 
+				my $doc = $parser->parse_file($file); #apre il file per lettura nel parser
+				
+				#controllo se il file è aperto
+				if(!$doc){
+						$ERRORE=1;
+					}
+					#trovo il nodo radice
+				my $root = $doc->getDocumentElement; #trova la radice
+				@feed = $root->getElementsByTagName('utente');
+			
+				if(!$erroreDati){ # se non ci sono errori nei dati inserisco l'utente
+					my $frammento = "
+						<utente>
+							<username>$username</username>
+							<email>$email</email>
+							<password>$password</password>
+							<nome>$firstname</nome>
+							<cognome>$cognome</cognome>
+							<indirizzo>
+								<via>$via</via>
+								<civico>$civico</civico>
+								<provincia>$provincia</provincia>
+								<paese>$paese</paese>
+							</indirizzo>
+							<fatturazione>$fatturazione</fatturazione>
+							<tipo_fatt>$tipo_fatt</tipo_fatt>
+						</utente>
+						\n";
+							
+					my $nodo = $parser->parse_balanced_chunk($frammento);				
+						
+					$root->appendChild($nodo);
+						
+					open(OUT, ">$file");#apre il file per la scrittura
+					print OUT $doc->toString;#scrive nel file
+					close(OUT);# chiude il file
+					print redirect(-uri=>'login.cgi');
 				}
-		      	#trovo il nodo radice
-		    my $root = $doc->getDocumentElement; #trova la radice
-		    @feed = $root->getElementsByTagName('utente');
-		
-		if(!$erroreDati){ # se non ci sono errori nei dati inserisco l'utente
-			my $frammento = "<utente>
-					<username>$username</username>
-					<email>$email</email>
-					<password>$password</password>
-					<nome>$nome</nome>
-					<cognome>$cognome</cognome>
-					<indirizzo>
-						<via>$via</via>
-						<civico>$civico</civico>
-						<provincia>$provincia</provincia>
-						<paese>$paese</paese>
-					</indirizzo>
-					<fatturazione>$fatturazione</fatturazione>
-					<tipo_fatt>$tipo_fatt</tipo_fatt>
-				</utente>
-				
-				\n";
-					
-			my $nodo = $parser->parse_balanced_chunk($frammento);				
-				
-			$root->appendChild($nodo);
-				
-			open(OUT, ">$file");#apre il file per la scrittura
-			print OUT $doc->toString;#scrive nel file
-			close(OUT);# chiude il file
-			print redirect(-uri=>'login.cgi');
-
-	}
-}
+			}
 exit
 ;
 	

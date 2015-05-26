@@ -11,7 +11,7 @@
 				<xs:complexType name="utn">
 					<xs:sequence>
 						<xs:element name="username" type="xs:string" />
-						<xs:element name="mail">
+						<xs:element name="email">
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
 									<xs:pattern value="([a-zA-Z0-9]+)(@[a-z]+).(it|com|net|org)"/>

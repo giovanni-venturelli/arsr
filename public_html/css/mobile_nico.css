@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS mobile di registrazione, login  */
+
+.content_staff{
+	padding: 0;
+	margin-top: 0.5em;
+	border: solid;
+	height: 5em;
+	border-radius: 0.5em;
+	border-color:#28324E;
+}
+.attr_img{ /*uguale a quello di puc, ne basta uno*/
+	float: left;
+	margin-top: 0.25em;
+	margin-left: 0.25em;
+	margin-right:0.25em;
+	height: em;
+	margin:solid;
+}
+.ruolo_staff{
+	
+	text-align: right;
+}
+
+.nome_staff{
+	margin-left: 8em;
+	font-size: large;
+	text-align: left;
+}
