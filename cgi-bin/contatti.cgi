@@ -5,6 +5,9 @@ $where = "Contatti";
 $header;
 $menu;
 $footer;
+$title = 'Contatti';
+$where = "Contatti";
+
 my $htmlprint;
 
 use CGI::Carp qw(fatalsToBrowser);
