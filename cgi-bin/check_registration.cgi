@@ -28,7 +28,7 @@ use utf8;
 			#creo tutte le variabili che poi vado a mettere nell'xml
 			$erroreDati=0;
 			$erroreUser=0;
-			$errore_mail=0;
+			$erroreEmail=0;
 			$errorePwd=0;
 			$erroreNome=0;
 			$erroreCognome=0;
@@ -47,7 +47,7 @@ use utf8;
 				$email =~ s/([<>])/$map{$1}/g;
 				if($email !~ /[a-zA-Z0-9]+.@.[a-z]..{1}.[a-z]/){
 					$erroreDati=1;
-					$errore_mail=1;
+					$erroreEmail=1;
 				}
 			 $password=$page->param('password'); 
 				$password =~ s/([<>])/$map{$1}/g;

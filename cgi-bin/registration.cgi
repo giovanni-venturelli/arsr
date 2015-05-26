@@ -39,7 +39,7 @@ $htmlprint="$htmlprint
 				<label class=\"label-block\" for=\"username\" >Username*:</label>
 					<input type=\"text\" value=\"$username\" name=\"username\" id=\"username\" maxlength=\"10\" required/>
 				<label class=\"label-block\" for=\"email\" >Indirizzo Email*:</label>
-					<input type=\"text\" value=\"$email\" name=\"email\" id=\"email\" maxlength=\"40\" /> <br>
+					<input type=\"text\" value=\"$email\" name=\"email\" id=\"email\" maxlength=\"80\" />
 				<label class=\"label-block\" for=\"password\" >Password*:</label>
 					<input type=\"password\" value=\"$password\" name=\"password\" id\"password\" maxlength\"8\" required/>
 				<label class=\"label-block\" for=\"name\">Nome*: </label>
@@ -81,7 +81,7 @@ if($erroreDati){
 		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: <span xml:lang='en'> Username</span> </div>";
 		
 	}
-	if($errore_mail ){
+	if($erroreEmail ){
 		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: <span xml:lang='en'> email</span> </div>";
 		
 	}

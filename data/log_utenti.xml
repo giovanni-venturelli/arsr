@@ -3,7 +3,7 @@
 <login>
 	<utente>
 		<username>user1</username>
-		<mail>user1@gmail.com</mail>
+		<email>user1@gmail.com</email>
 		<password>user</password>
 		<nome>nome</nome>
 		<cognome>cognome</cognome>
@@ -16,4 +16,5 @@
 		<fatturazione>GMTLKS45862DF89S</fatturazione>
         <tipo_fatt>p.iva</tipo_fatt>
 	</utente>		
+				
 </login>
