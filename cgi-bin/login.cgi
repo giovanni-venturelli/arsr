@@ -31,17 +31,22 @@ if($page->param('login') eq "Entra"){
 		my $parser = XML::LibXML->new();
 		my $doc = $parser->parse_file('../data/log_utenti.xml');
 		my $root = $doc->getDocumentElement;
-		my @users = $root->getElementsByTagName('Utente');
+		my @users = $root->getElementsByTagName('utente');
 		
 		foreach $nod (@users) {
 			$user=$nod->getElementsByTagName('username');
 			if("$user" eq "$username"){
 				$pass=$nod->getElementsByTagName('password');
 				if("$pass" eq "$password"){
-                    $cookie = $page->cookie(
-                    -name=>'utente',
-                    -value=>'utente');
-                 	print redirect(-cookie=>$cookie, -url=>"attrezzature.cgi");	###########
+                    sub createSession(){
+						$session= new CGI::Session();
+						$session->param('utente',$user);
+						print $session->header(-url =>"attrezzature.cgi");
+					}
+					#$cookie = $page->cookie(
+                    #-name=>'utente',
+                    #-value=>'utente');
+                 	#print redirect(-cookie=>$cookie, -url=>"attrezzature.cgi");	###########
 				}
 			}
 		}
@@ -77,18 +82,18 @@ my $htmlprimt;
 								<input title=\"utente\" type=\"text\" name=\"User\" tabindex=\"1\"/>
 							<\div>
 						</label>
-							<br>
+							
 						<label title=\"password\"><span xml:lang=\"en\">Password</span>
 							<div class=\"inp_pass\">	
 								<input title=\"password\" type=\"password\" name=\"Pass\" tabindex=\"2\"/>
 							<\div>
 						</label>
 					
-				<br>
+				
 				<input id=\"reset\" name=\"annulla\"  value=\"Reset\" type=\"reset\" tabindex=\"3\"/>
 				<input id=\"submit\" name=\"login\"  value=\"Entra\" type=\"submit\" tabindex=\"4\"/>
 				</fieldset>  
-			</form>
+		</form>
 				<div class=\"registrati_ora\">
 					Non sei ancora registrato? fallo ora <a href=\"registration.cgi\"> Cliccando QUI</a>
 				</div>

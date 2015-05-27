@@ -38,10 +38,15 @@ if($page->param('login') eq "Entra"){
 			if("$dbuser" eq "$username"){
 				$dbpass=$nod->getElementsByTagName('password');
 				if("$dbpass" eq "$password"){
-                    $cookie = $page->cookie(
-                    -name=>'utente',
-                    -value=>'utente');
-                 	print redirect(-cookie=>$cookie, -url=>"admin_menu.cgi");	###########
+                    sub createSession(){
+						$session= new CGI::Session();
+						$session->param('utente',$user);
+						print $session->header(-url =>"attrezzature.cgi");
+					}
+					#$cookie = $page->cookie(
+                    #-name=>'utente',
+                    #-value=>'utente');
+                 	#print redirect(-cookie=>$cookie, -url=>"admin_menu.cgi");	###########
 				}
 			}
 		}

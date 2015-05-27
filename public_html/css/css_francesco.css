@@ -23,14 +23,13 @@
 
 .TContact{
 	background: linear-gradient(to bottom right, #191a1c , black);
-	border: solid 2px;
-	border-color:#
+	border: solid 2px #28324E;
 	width:100%;
 }
 
 .TFirst{
 	border-radius: 15px;
-    border: 2px solid #3333ff;
+    border: 2px solid #191a1c;
 	width:150px;
 	background: linear-gradient(to right, #191a1c , #28324E);
 }
@@ -46,6 +45,7 @@
 
 .mailto{
 	text-decoration: none;
+	color:#FFFFFF;
 	
 }
 
@@ -60,24 +60,27 @@
 	margin:0px;
 	padding:5px;
 	border-radius: 15px;
-    border: 2px solid #3333ff;
-	background-image: url('../img/bgc-2.jpg');
+    border: 2px solid #28324E;
+	/*background-image: url('../img/bgc-2.jpg');
 	background-color:black;
 	background-repeat: no-repeat;
 	background-size: 300px 200px;
 	background-position:right;
+	*/
 }
 
 .par2{
 	margin:0px;
 	padding:5px;
 	border-radius: 15px;
-    border: 2px solid #3333ff;
+    border: 2px solid #28324E;
+	/*
 	background-image: url('../img/bgdj.jpg');
 	background-color:black;
 	background-repeat: no-repeat;
 	background-size: 300px 200px;
 	background-position:left;
+	*/
 
 }
 
@@ -85,19 +88,21 @@
 	margin:0px;
 	padding:5px;
 	border-radius: 15px;
-    border: 2px solid #3333ff;
+    border: 2px solid #28324E;
+	/*
 	background-image: url('../img/bgrecord.jpg');
 	background-color:black;
 	background-repeat: no-repeat;
 	background-size: 300px 200px;
 	background-position:right;
 	margin-bottom:15px;
+	*/
 }
 
 /*comon CSS*/
 
 .SubTitle{
-	font-family:myfont;
+	/*font-family:myfont;*/
 	font-size:45px;
 	margin-bottom:10px;
 }
@@ -107,8 +112,8 @@
 	border-radius: 15px;
 	padding:10px;
     border: 1px solid #FFFFFF;
-	background:linear-gradient(to right,black 30%,blue,indigo);
-	font-family:myfont;
+	/*background:linear-gradient(to right,black 30%,blue,indigo);*/
+	/*font-family:myfont;*/
 	font-size:32px;
 }
 

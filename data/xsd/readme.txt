@@ -1,7 +1,9 @@
 XSD validati:
 -feedback.xsd
 -attrezzature.xsd
--login.xsd
+-log_utenti.xsd
+-log_admin.xsd
+
 
 COSA MANCA:
 -index.xsd

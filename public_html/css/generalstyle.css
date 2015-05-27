@@ -455,7 +455,7 @@ margin-bottom:200px;
 	width:7em;
 	display:inline-block;
 }
-#label_block{
+.label_block{
 	display:block;
 	}
 	.form-group{
