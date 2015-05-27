@@ -34,13 +34,13 @@ if($page->param('login') eq "Entra"){
 		my @users = $root->getElementsByTagName('admin');
 		
 		foreach $nod (@users) {
-			$dbuser=$nod->getElementsByTagName('username');
+			$user=$nod->getElementsByTagName('username');
 			if("$dbuser" eq "$username"){
-				$dbpass=$nod->getElementsByTagName('password');
+				$pass=$nod->getElementsByTagName('password');
 				if("$dbpass" eq "$password"){
                     sub createSession(){
 						$session= new CGI::Session();
-						$session->param('utente',$user);
+						$session->param('admin',$user);
 						print $session->header(-url =>"attrezzature.cgi");
 					}
 					#$cookie = $page->cookie(
