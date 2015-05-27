@@ -14,18 +14,8 @@ use CGI;
 
 use utf8;
 
-sub getSession() {
-	$session = CGI::Session->load() or die $!;
-	if ($session->is_expired || $session->is_empty ) 
-		{
-			return undef;
-		}#end if
-	else 
-		{
-			my $utente = $session->param('utente');
-			$session;
-		}#end else
-}#end sub getSession()
+$session = CGI::Session->load() or die $!;
+my $admin = $session->param('admin');
 
 my $session=getSession;
 $page=new CGI;
@@ -37,7 +27,6 @@ require ("menu.cgi");
 require ("footer.cgi");
 $htmlprint= "$header$menu<div id=\"content\">";
 $htmlprint="$htmlprint
-	<h3 class='SubTitle'>Servizi</h3>
 		<h4 class='HParag'>Musica <span lang='en'>Live</span></h4>
 		<p class='par1'>Microfoni, Casse, <span lang='en'>Mixer</span> e tutto quello che serve per un ottimo <span lang='en'>show</span> &egrave; a vostra disposizione. Al giorno d'oggi molte <span lang='en'>band</span> e molti organizzatori di eventi hanno difficolt&agrave; nel trovare un buon servizio al giusto prezzo. Professionale... ma costoso, Economico... ma non professionale. Cosa scegliere? Professionale o economico? sei stufo di trovarti di fronte a questa scelta? E allora fai la scelta giusta! Noi offriamo la giusta via di mezzo, prezzi contenuti e professionalit&agrave!</p>
 
@@ -46,7 +35,7 @@ $htmlprint="$htmlprint
 
 		<h4 class='HParag'><span lang='en'>Studio Recording</span></h4>
 		<p class='par3'>Hai una band e vorresti registrare una demo? Hai il pezzo del secolo in mente e vorresti registrarlo? Spesso e volentieri gli studi per registrare una semplice <span lang='en'>demo</span>, offrendo servizi di altissimo livello e strutture hanno prezzi inaccessibili ai privati e alle band emergenti. Noi abbiamo la possibilit&agrave; di registrazione in multitraccia fino a 24 canali con possibilità di <span lang='en'>editing</span> e <span lang='en'>mastering</span> mediante software professionali! Disponiamo di una piccola struttura per la registrazione di singoli strumenti oppure la possibilit&agrave; di servizio di registrazione a domicilio direttamente nella vostra sala prove!</p>
-		<p></p>
+		</div>
 	$footer";
 print($htmlprint);
 

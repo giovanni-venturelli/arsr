@@ -12,6 +12,9 @@ use DBI;
 use File::Basename;
 use utf8;
 
+$title = 'Modifica staff';
+$where = "Modifica staff";
+
 #verifica della sessione
 sub getSession(){
 	$session = CGI::Session->load() or die $!;
@@ -107,7 +110,7 @@ require ("footer.cgi");
 $htmlprint= "$header$menu<div id=\"content\">";
 $htmlprint="$htmlprint
 	<fieldset class='container'>
-		<legend><h4>Modifica in Corso...</h4></legend>
+		<legend><h4 class='legend'>Modifica in Corso...</h4></legend>
 		<p>Modifica avvenuta con successo</p>
 		<p>Redirect Alla pagina di amministrazione</p>
 		<META http-equiv='refresh' content='2;URL=admin_staff.cgi'>

@@ -11,6 +11,9 @@ use CGI qw(:standard);
 use DBI;
 use utf8;
 
+$title = 'Elimina staff';
+$where = "Elimina staff";
+
 #verifica della sessione
 sub getSession(){
 	$session = CGI::Session->load() or die $!;
@@ -51,11 +54,12 @@ require ("footer.cgi");
 $htmlprint= "$header$menu<div id=\"content\">";
 $htmlprint="$htmlprint
 	<fieldset class='container'>
-		<legend><h4>Eliminazione in Corso...</h4></legend>
+		<legend><h4 class='legend'>Eliminazione in Corso...</h4></legend>
 		<p>Eliminazione avvenuta con successo</p>
 		<p>Redirect Alla pagina di amministrazione</p>
 		<META http-equiv='refresh' content='2;URL=admin_staff.cgi'>
 	</fieldset>
+	</div>
 	$footer
 ";
 print $htmlprint;
