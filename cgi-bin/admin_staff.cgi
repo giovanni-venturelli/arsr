@@ -11,18 +11,11 @@ use CGI qw(:standard);
 use DBI;
 use utf8;
 
-sub getSession(){
-	$session = CGI::Session->load() or die $!;
-	if($session->is_expired || $session->is_empty){
-		return undef;
-	}
-	else{
-		my $admin = $session->param('admin');
-		$session;
-	}
-}
+$title = 'Admin Staff';
+$where = "Admin Staff";
 
-my $session=getSession;
+$session = CGI::Session->load() or die $!;
+my $admin = $session->param('utente');
 $page=new CGI;
 
 $parser = XML::LibXML->new();
@@ -47,11 +40,10 @@ require ("header.cgi");
 require ("menu.cgi");
 require ("footer.cgi");
 $htmlprint= "$header$menu<div id=\"content\">";
-$htmlprint="$htmlprint
-	<h3 class='SubTitle'>Amministrazione-Staff</h3>
+if ($admin eq 'admin'){$htmlprint="$htmlprint
 	<div id='inserisci'>
 	<fieldset class='container form-group'>
-		<legend><h4>Inserisci</h4></legend>
+		<legend><h4 class='legend'>Inserisci</h4></legend>
 		<form action='inserisci_staff.cgi' method='POST' enctype='multipart/form-data'>
 			<p><label class='label'>Nome:</label><input type='text' name='nome'/></p>
 			<p><label class='label'>Cognome:</label><input type='text' name='cognome'/></p>
@@ -64,7 +56,7 @@ $htmlprint="$htmlprint
 	</div>
 	<div id='modifica'>
 	<fieldset class='container  form-group'>
-		<legend><h4>Modifica</h4></legend>
+		<legend><h4 class='legend'>Modifica</h4></legend>
 		<form action='modifica_staff.cgi' method='POST'>
 			<p><select name='staff'>
 				$h_opt
@@ -75,7 +67,7 @@ $htmlprint="$htmlprint
 	</div>
 	<div id='elimina'>
 	<fieldset class='container  form-group'>
-		<legend><h4>Elimina</h4></legend>
+		<legend><h4 class='legend'>Elimina</h4></legend>
 		<form action='elimina_staff.cgi' method='POST'>
 			<p><select name='staff'>
 				$h_opt
@@ -85,5 +77,9 @@ $htmlprint="$htmlprint
 	</fieldset>
 	</div>
 	<div id='break'></div>
-	$footer";
+	</div>
+	";
+}
+else {$htmlprint="$htmlprint<p class='error'>PRIVILEGI INSUFFICIENTI PER ACCEDERE A QUESTA PAGINA</p>";}
+$htmlprint="$htmlprint $footer";
 print($htmlprint);

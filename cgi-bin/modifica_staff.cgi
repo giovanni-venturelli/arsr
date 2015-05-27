@@ -11,6 +11,9 @@ use CGI qw(:standard);
 use DBI;
 use utf8;
 
+$title = 'Modifica Staff';
+$where = "Modifica Staff";
+
 sub getSession(){
 	$session = CGI::Session->load() or die $!;
 	if($session->is_expired || $session->is_empty){
@@ -61,7 +64,7 @@ $htmlprint= "$header$menu<div id=\"content\">";
 $htmlprint="$htmlprint
 	<h3 class='SubTitle'>Modifica-Staff</h3>
 	<fieldset class='form-group'>
-		<legend><h4>Modifica dati:</h4></legend>
+		<legend><h4 class='legend'>Modifica dati:</h4></legend>
 		<form action='modifica_staff_xml.cgi' method='POST' enctype='multipart/form-data'>		
 			<p class='invisible'><label class='label invisible'>Nome:</label><input value='$id_form' type='text' name='id'/></p>
 			<p><label class='label'>Nome:</label><input value='$nome' type='text' name='nome'/></p>
@@ -72,5 +75,6 @@ $htmlprint="$htmlprint
 			<input type='submit' value='Modifica'/>
 		</form>
 	</fieldset>
+	</div>
 	$footer";
 print($htmlprint);
