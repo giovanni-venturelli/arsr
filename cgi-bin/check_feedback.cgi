@@ -12,21 +12,19 @@ use XML::LibXML::NodeList;
 use XML::LibXML::XPathContext;
 use utf8;
 #apri sessione
-sub getSession() 
-{
-	$session = CGI::Session->load() or die $!;
-	if ($session->is_expired || $session->is_empty ) 
-		{
-			return undef;
-		}#end if
-	else 
-		{
-			my $utente = $session->param('utente');
-			$session;
-		}#end else
-}#end sub getSession()
 
-my $session=getSession; #richiama sessione
+	sub getSession(){
+		$session = CGI::Session->load() or die $!;
+			if($session->is_expired || $session->is_empty){
+				return undef;
+			}
+			else{
+				my $utente = $session->param('utente');
+				return $utente;
+			}
+	}
+
+my $utente = getSession(); #richiama sessione
 $page=new CGI; #crea oggetto CGI per recuperare i parametri passati con POST
 if(!$session->is_empty ) #se c'è sessione
 	{
@@ -34,13 +32,12 @@ if(!$session->is_empty ) #se c'è sessione
 			{
 
 				my $parser = XML::LibXML->new(); #crea un nuovo parser
-				my $user = $session->param('utente'); #recupera il nome utente della sessione
 				my $dt = localtime->strftime('%Y-%m-%d'); #recupera la data corrente
 				my $text=$page->param('feed_body'); #inserisce POST['feed_body'] nella variabile $text
 				utf8::upgrade($text); #esegue l'escate con utf8
 				my %map = (
-				'>' => '&gt;',
-				'<' => '&lt;'
+					'>' => '&gt;',
+					'<' => '&lt;'
 				);#crea mappa per l'escape dei tag html
 				$text =~ s/([<>])/$map{$1}/g; #fa l'escape html
 				my $file='../data/feedback.xml'; 
@@ -59,7 +56,7 @@ if(!$session->is_empty ) #se c'è sessione
     			}#trova il valore da assegnare come id al nuovo nodo
 				my $frammento = "<feedback>
 				<id>$newid</id>
-				<autore>$user</autore>
+				<autore>$utente</autore>
 				<immagine>avatar.jpg</immagine>
 				<data>$dt</data>
 				<corpo>$text</corpo>

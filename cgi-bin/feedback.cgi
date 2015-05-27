@@ -7,9 +7,22 @@ use CGI::Session;
 use CGI;
 use DBI;
 use utf8;
+
+	sub getSession(){
+		$session = CGI::Session->load() or die $!;
+			if($session->is_expired || $session->is_empty){
+				return undef;
+			}
+			else{
+				my $utente = $session->param('utente');
+				return $utente;
+			}
+	}
+
+
 $page = new CGI;
-$session = new CGI::Session();
-$session->param('utente', "giovanni");
+$utente = getSession();
+
 print $session->header();
 #crea un oggetto CGI
 
@@ -72,39 +85,40 @@ $htmlprint="$htmlprint<span id=\"link_to_comment\"><a href=\"\#bottom\">Lascia u
 <input class=\"pulsante pagine_submit\" id=\"pagine_submit_top\" type=\"submit\" value=\"VAI\"/>
 </form></div>";
 }# end if ($numid>10)
-foreach $nod (@reversefeed){
-if (((!$numpair||$num == 1)&&($contatore < 10))||($contatore < $lim1 && $contatore >= $lim2))
-{
-my $nodid=$nod->findvalue('id');
-my $author=$nod->find('autore');
-my $date=$nod->find('data');
-my $body=$nod->find('corpo');
-my %map = (
-        '>' => '&gt;',
-        '<' => '&lt;'
-        );#crea mappa per l'escape dei tag html in lettura da xml
-        $body =~ s/([<>])/$map{$1}/g; #escape dei tag html in xml
-my $image=$nod->find('immagine');
-$htmlprint="$htmlprint<div class=\"commento\">
-<img class=\"commento_immagine\" src=\"..\/public_html\/img\/avatars\/$image\" alt=\"Immagine di profilo di $author\"/>
-<form action=\"delete_feedback.cgi\" method=\"post\">
-<input type=\"hidden\" name=\"id\" value=\"$nodid\" />
-<input type=\"submit\" class=\"pulsante erase\" value=\"elimina\"/>
-</form>
-<div class=\"commento_content\">$prova
-<p class=\"commento_autore\"><strong>$author</strong></p>
-<p class=\"commento_corpo\">$body</p>
-<div class=\"commento_intestazione\">
-<p class=\"commento_numdat\">commento \#$nodid</p>
-<p class=\"commento_numdat\">$date</p>
+		foreach $nod (@reversefeed){
+			if (((!$numpair||$num == 1)&&($contatore < 10))||($contatore < $lim1 && $contatore >= $lim2)){
+				my $nodid=$nod->findvalue('id');
+				my $author=$nod->find('autore');
+				my $date=$nod->find('data');
+				my $body=$nod->find('corpo');
+				my %map = (
+						'>' => '&gt;',
+						'<' => '&lt;'
+						);#crea mappa per l'escape dei tag html in lettura da xml
+						$body =~ s/([<>])/$map{$1}/g; #escape dei tag html in xml
+				my $image=$nod->find('immagine');
+				$htmlprint="$htmlprint<div class=\"commento\">
+				<img class=\"commento_immagine\" src=\"..\/public_html\/img\/avatars\/$image\" alt=\"Immagine di profilo di $author\"/>
+				<form action=\"delete_feedback.cgi\" method=\"post\">
+				<input type=\"hidden\" name=\"id\" value=\"$nodid\" />";
+					if($author eq $utente){
+						$htmlprint="$htmlprint<input type=\"submit\" class=\"pulsante erase\" value=\"elimina\"/>";
+					}
+				$htmlprint="$htmlprint</form>
+				<div class=\"commento_content\">$prova
+				<p class=\"commento_autore\"><strong>$author</strong></p>
+				<p class=\"commento_corpo\">$body</p>
+				<div class=\"commento_intestazione\">
+				<p class=\"commento_numdat\">commento \#$nodid</p>
+				<p class=\"commento_numdat\">$date</p>
 
-</div>
-</div>\n
-</div>\n";
-}
-$contatore++;
+				</div>
+				</div>\n
+				</div>\n";
+			}
+			$contatore++;
 
-}
+		}
 
 $htmlprint="$htmlprint
 <div class=\"pagine\">
@@ -116,14 +130,16 @@ if($numid>10){
 <input class=\"pulsante pagine_submit\" type=\"submit\" value=\"VAI\"/>
 </form>";
 }
-$htmlprint="$htmlprint</div>
-<form method=\"post\" action=\"check_feedback.cgi\">
-<div class=\"form-group\">
-<a name=\"bottom\"><label id=\"commento_label\" for=\"inserisci\">Inserisci un commento</label></a>
-<textarea name=\"feed_body\" id=\"commento_textarea\"></textarea>
-</div> 
-<input id=\"commento_submit\" type=\"submit\" value=\"INSERISCI\"/>
-</form>
-";
+	if($utente){
+		$htmlprint="$htmlprint</div>
+		<form method=\"post\" action=\"check_feedback.cgi\">
+		<div class=\"form-group\">
+		<a name=\"bottom\"><label id=\"commento_label\" for=\"inserisci\">Inserisci un commento</label></a>
+		<textarea name=\"feed_body\" id=\"commento_textarea\"></textarea>
+		</div> 
+		<input id=\"commento_submit\" type=\"submit\" value=\"INSERISCI\"/>
+		</form>
+		";
+	}
 $htmlprint="$htmlprint</div>\n$footer";
 print $htmlprint;
