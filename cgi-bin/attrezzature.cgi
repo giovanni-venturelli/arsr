@@ -5,8 +5,19 @@ use CGI::Session;
 use CGI::Carp qw(fatalsToBrowser);
 use utf8;
 
-$session = CGI::Session->load() or die $!;
-my $user = $session->param('utente');
+	sub getSession(){
+		$session = CGI::Session->load() or die $!;
+			if($session->is_expired || $session->is_empty){
+				return undef;
+			}
+			else{
+				my $utente = $session->param('utente');
+				return $utente;
+			}
+	}
+
+$page = new CGI;
+$utente= getSession();
 
 $titolo="Attrezzature";
 $where="Noleggio Attrezzature";

@@ -44,4 +44,24 @@
 		<source>impossible-triangle-md.png</source>
 		<alt>Foto di stolfo fent</alt>
 	</img>
+</persona>
+<persona>
+	<id>5</id>
+	<nome/>
+	<cognome/>
+	<ruolo/>
+	<img>
+		<source/>
+		<alt>Foto di  </alt>
+	</img>
+</persona>
+<persona>
+	<id>6</id>
+	<nome>a</nome>
+	<cognome>a</cognome>
+	<ruolo>a</ruolo>
+	<img>
+		<source>10968366_10205002789022780_7819915266057635743_n.jpg</source>
+		<alt>Foto di a a</alt>
+	</img>
 </persona></Database>

@@ -29,7 +29,7 @@ if($page->param('login') eq "Entra"){
 	if(!$erroreb){
 		
 		my $parser = XML::LibXML->new();
-		my $doc = $parser->parse_file('../data/login.xml');
+		my $doc = $parser->parse_file('../data/log_utenti.xml');
 		my $root = $doc->getDocumentElement;
 		my @users = $root->getElementsByTagName('Utente');
 		
