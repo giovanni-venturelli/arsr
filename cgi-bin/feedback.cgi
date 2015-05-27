@@ -8,18 +8,7 @@ use CGI;
 use DBI;
 use utf8;
 
-	sub getSession(){
-		$session = CGI::Session->load() or die $!;
-			if($session->is_expired || $session->is_empty){
-				return undef;
-			}
-			else{
-				my $utente = $session->param('utente');
-				return $utente;
-			}
-	}
-
-
+require ("header.cgi");
 $page = new CGI;
 $utente = getSession();
 
@@ -35,7 +24,7 @@ $footer;
 
 my $htmlprint;
 
-require ("header.cgi");
+
 require ("menu.cgi");
 require ("footer.cgi");
 $htmlprint= "$header$menu<div id=\"content\">";
@@ -128,10 +117,10 @@ if($numid>10){
   $htmlprint="$htmlprint
 <form method=\"get\" class=\"form_pagine\" id=\"form_pagine_bottom\" action=\"#\">$pagelist
 <input class=\"pulsante pagine_submit\" type=\"submit\" value=\"VAI\"/>
-</form>";
+</form></div>";
 }
 	if($utente){
-		$htmlprint="$htmlprint</div>
+		$htmlprint="$htmlprint
 		<form method=\"post\" action=\"check_feedback.cgi\">
 		<div class=\"form-group\">
 		<a name=\"bottom\"><label id=\"commento_label\" for=\"inserisci\">Inserisci un commento</label></a>

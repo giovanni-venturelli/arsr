@@ -2,10 +2,13 @@
 use XML::LibXML;
 
 use CGI;
+use CGI::Session();
 use CGI::Cookie qw();
 use CGI qw(:standard);
 use CGI::Carp qw(warningsToBrowser fatalsToBrowser);
 use utf8;
+
+require("header.cgi");
 
 $page = CGI->new;
 $titolo="Login";
@@ -55,7 +58,6 @@ if($page->param('login') eq "Entra"){
 my $htmlprimt;
 
 	print "Content-type: text/html\n\n";
-		require("header.cgi");
         require("menu.cgi");
 		require ("footer.cgi");
 

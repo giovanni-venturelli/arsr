@@ -1,9 +1,31 @@
 	#!"C:\xampp\perl\bin\perl.exe"
 
 	use utf8;
+	
+	sub getSession(){
+		$session = CGI::Session->load() or die $!;
+			if($session->is_expired || $session->is_empty){
+				return undef;
+			}
+			else{
+				my $utente = $session->param('utente');
+				return $utente;
+			}
+	}
+
+$page = new CGI;
+$utente = getSession();
+	
+	if($utente){
+		$log="<div id=\"stato_utente\">sei collegato come $utente, <a href=\"logout.cgi\">[esci]</a></div>";
+	}
+	else{
+		$log="<div id=\"stato_utente\">non sei collegato, <a href=\"login.cgi\">[login]</a> , <a href=\"registration.cgi\">[registrati]</a></div>";
+	}
+	
 	$ref;
 	if ($where eq "<span lang=\"en\">Home</span>"){
-		$ref="
+		$ref="$log
 	<h1>
 	<abbr>ARSR</abbr>
 	<span lang=\"en\">Service</span>
@@ -11,7 +33,8 @@
 	<h2>Audio e luci di qualità per il tuo Spettacolo</h2>";
 	}
 else{
-	$ref="<a href=\"index.cgi\">
+	$ref="$log
+	<a href=\"index.cgi\">
 	<h1>
 	<abbr>ARSR</abbr>
 	<span lang=\"en\">Service</span>

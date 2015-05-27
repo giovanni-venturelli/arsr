@@ -5,17 +5,9 @@ use CGI::Session;
 use CGI::Carp qw(fatalsToBrowser);
 use utf8;
 
-	sub getSession(){
-		$session = CGI::Session->load() or die $!;
-			if($session->is_expired || $session->is_empty){
-				return undef;
-			}
-			else{
-				my $utente = $session->param('utente');
-				return $utente;
-			}
-	}
-
+print "content-type: text/html\n\n";
+require("header.cgi");
+require("menu.cgi");
 $page = new CGI;
 $utente= getSession();
 
@@ -43,9 +35,8 @@ $pagina;
 		}
 	}
 
-print "content-type: text/html\n\n";
-require("header.cgi");
-require("menu.cgi");
+
+
 
 
 	$htmlprint="$header$menu<div id=\"content\">";
