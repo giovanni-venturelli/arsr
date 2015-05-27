@@ -2,7 +2,7 @@
 use XML::LibXML;
 
 use CGI;
-use CGI::Session();
+use CGI::Session;
 use CGI::Cookie qw();
 use CGI qw(:standard);
 use CGI::Carp qw(warningsToBrowser fatalsToBrowser);
@@ -15,44 +15,6 @@ $titolo="Login";
 $where="Pannello di login";
 $header;
 $footer;
-
-
-if($page->param('login') eq "Entra"){
-	$username = $page->param('User');
-	$password = $page->param('Pass');
-
-	#Controllo cosa contiene login
-	if($username!~/^([a-zA-Z0-9])/){
-		$erroreb=1;
-	}
-	if($password!~/^([a-zA-Z0-9])/){
-		$erroreb=1;
-	}
-
-	if(!$erroreb){
-		
-		my $parser = XML::LibXML->new();
-		my $doc = $parser->parse_file('../data/log_utenti.xml');
-		my $root = $doc->getDocumentElement;
-		my @users = $root->getElementsByTagName('utente');
-		
-		foreach $nod (@users) {
-			$user=$nod->getElementsByTagName('username');
-			if("$user" eq "$username"){
-				$pass=$nod->getElementsByTagName('password');
-				if("$pass" eq "$password"){
-					$cookie = $page->cookie(
-                    -name=>'utente',
-                    -value=>'utente');
-                 	print redirect(-cookie=>$cookie, -url=>"attrezzature.cgi");	###########
-				}
-			}
-		}
-	}
-	$erroreb=1;
-}
-
-
 
 #html e form
 my $htmlprimt;
@@ -70,19 +32,19 @@ my $htmlprimt;
 	}
 
 	$htmlprint="$htmlprint 
-		<form method=\"post\" action=\"login.cgi\">
+		<form method=\"post\" action=\"check_login.cgi\">
 			<div class=\"content_form\">
 				<fieldset>
 					<legend>Inserire i dati di <span xml:lang=\"eng\">login</span></legend>
 						<label title=\"utente\">Utente
 							<div class=\"inp_utente\">
-								<input title=\"utente\" type=\"text\" name=\"User\" tabindex=\"1\"/>
+								<input title=\"utente\" type=\"text\" name=\"user\" tabindex=\"1\"/>
 							<\div>
 						</label>
 							
 						<label title=\"password\"><span xml:lang=\"en\">Password</span>
 							<div class=\"inp_pass\">	
-								<input title=\"password\" type=\"password\" name=\"Pass\" tabindex=\"2\"/>
+								<input title=\"password\" type=\"password\" name=\"pass\" tabindex=\"2\"/>
 							<\div>
 						</label>
 					

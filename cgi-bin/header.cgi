@@ -8,13 +8,15 @@
 				return undef;
 			}
 			else{
+
 				my $utente = $session->param('utente');
 				return $utente;
 			}
 	}
-
-$page = new CGI;
+	
 $utente = getSession();
+$page = new CGI;
+
 	
 	if($utente){
 		$log="<div id=\"stato_utente\">sei collegato come $utente, <a href=\"logout.cgi\">[esci]</a></div>";
