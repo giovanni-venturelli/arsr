@@ -44,7 +44,7 @@ $menu="$menu$temp";
 $menu="$menu
 </li>
 <li  class=\"menulist\"";
-$temp=ActiveLink($where, "Contatti", "../public_html/contatti.html\"");
+$temp=ActiveLink($where, "Contatti", "contatti.cgi\"");
 $menu="$menu$temp";
 $menu="$menu</li>
 </ul>
