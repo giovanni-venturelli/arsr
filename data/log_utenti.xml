@@ -16,5 +16,19 @@
 		<fatturazione>GMTLKS45862DF89S</fatturazione>
         <tipo_fatt>p.iva</tipo_fatt>
 	</utente>		
-		
+	<utente>
+		<username>puc</username>
+		<email>matteo@gmail.com</email>
+		<password>ciao</password>
+		<nome>matteo</nome>
+		<cognome>gnoato</cognome>
+		<indirizzo>
+			<via>Via Marin</via>
+			<civico>5</civico>
+			<provincia>paodva</provincia>
+			<paese>italia</paese>
+		</indirizzo>
+		<fatturazione>GNTMTT91M705S</fatturazione>
+		<tipo_fatt>cod.fiscale</tipo_fatt>
+	</utente>	
 </login>

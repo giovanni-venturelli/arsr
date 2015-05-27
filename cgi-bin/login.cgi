@@ -2,7 +2,7 @@
 use XML::LibXML;
 
 use CGI;
-use CGI::Cookie qw();
+use CGI::Session();
 use CGI qw(:standard);
 use CGI::Carp qw(warningsToBrowser fatalsToBrowser);
 use utf8;
@@ -13,6 +13,7 @@ $where="Pannello di login";
 $header;
 $footer;
 
+		print "Content-type: text/html\n\n";
 
 if($page->param('login') eq "Entra"){
 	$username = $page->param('User');
@@ -20,38 +21,39 @@ if($page->param('login') eq "Entra"){
 
 	#Controllo cosa contiene login
 	if($username!~/^([a-zA-Z0-9])/){
+		print "errore re user";
 		$erroreb=1;
 	}
 	if($password!~/^([a-zA-Z0-9])/){
+		print "errore re pass";
 		$erroreb=1;
 	}
 
 	if(!$erroreb){
-		
+		print "no errore <br />";
 		my $parser = XML::LibXML->new();
 		my $doc = $parser->parse_file('../data/log_utenti.xml');
 		my $root = $doc->getDocumentElement;
 		my @users = $root->getElementsByTagName('utente');
 		
 		foreach $nod (@users) {
+			print "ciao </br>";
 			$user=$nod->getElementsByTagName('username');
-			if("$user" eq "$username"){
+			if($user eq $username){
 				$pass=$nod->getElementsByTagName('password');
-				if("$pass" eq "$password"){
-                    sub createSession(){
+							print "ciao2 </br>";
+				if($pass eq $password){
+					sub createSession(){
 						$session= new CGI::Session();
 						$session->param('utente',$user);
 						print $session->header(-url =>"attrezzature.cgi");
 					}
-					#$cookie = $page->cookie(
-                    #-name=>'utente',
-                    #-value=>'utente');
-                 	#print redirect(-cookie=>$cookie, -url=>"attrezzature.cgi");	###########
+					$session = createSession();
 				}
 			}
 		}
+		$erroreb=1;
 	}
-	$erroreb=1;
 }
 
 
@@ -59,7 +61,6 @@ if($page->param('login') eq "Entra"){
 #html e form
 my $htmlprimt;
 
-	print "Content-type: text/html\n\n";
 		require("header.cgi");
         require("menu.cgi");
 		require ("footer.cgi");
@@ -68,6 +69,7 @@ my $htmlprimt;
 	 
 	 
 	if($erroreb){    #Segnalo errore se presente nei dati di accesso
+		print "Content-type: text/html\n\n";
 		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE LOGIN: <span xml:lang='en'> Username/Password</span> errate</div>";
 		
 	}
