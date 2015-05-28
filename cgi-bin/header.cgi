@@ -59,9 +59,10 @@ else{
 			<link rel=\"stylesheet\" type=\"text/css\" media =\"(min-width: 767px) and (min-device-width: 1024px)\"  href=\"../public_html/css/css_matteo.css\" />
 			
 			<link rel=\"stylesheet\" type=\"text/css\" media =\"(min-width: 767px) and (min-device-width: 1024px)\"  href=\"../public_html/css/css_nico.css\" />
-			<link rel=\"stylesheet\" type=\"text/css\" media=\"only screen and (max-device-width: 640px)\" href=\"../public_html/css/mobile_nico.css\" />
-			
 			<link rel=\"stylesheet\" type=\"text/css\" media =\"(min-width: 767px) and (min-device-width: 1024px)\"  href=\"../public_html/css/css_francesco.css\" />
+			<link rel=\"stylesheet\" type=\"text/css\" media=\"(max-width: 766px)\" href=\"../public_html/css/css_francesco_mobile.css\" />
+			<link rel=\"stylesheet\" type=\"text/css\" media=\"(max-width: 766px)\" href=\"../public_html/css/mobile_nico.css\" />
+			
 		</head>
 		<body>
 				<div id=\"main\">

@@ -1,5 +1,4 @@
-/*css_francesco.css*/
-/*CSS Riguardante Admin Staff*/
+@media (max-width: 766px){
 #inserisci{
 	float:left;
 }
@@ -24,7 +23,6 @@
 .TContact{
 	margin:2px;
 	padding:2px;
-	background: linear-gradient(to bottom right, #191a1c , black);
 	border: solid 2px #28324E;
 	width:100%;
 }
@@ -36,7 +34,6 @@
 	border-radius: 15px;
     border: 2px solid #191a1c;
 	width:150px;
-	background: linear-gradient(to right, #191a1c , #28324E);
 }
 
 .TSecond{
@@ -47,6 +44,7 @@
 }
 
 .image{
+	display:none;
 	margin:2px;
 	padding:2px;
 	float:right;
@@ -56,7 +54,6 @@
 
 .mailto{
 	text-decoration: none;
-	color:#FFFFFF;
 	
 }
 
@@ -110,21 +107,18 @@
 .sub1{
 	margin:0px;
 	padding:6px;
-	background-color:#B8312E;
 	font-size:28px;
 }
 
 .sub2{
 	margin:0px;
 	padding:6px;
-	background-color:#602a7a;
 	font-size:28px;
 }
 
 .sub3{
 	margin:0px;
 	padding:6px;
-	background-color:#10a88a;
 	font-size:28px;
 }
 
@@ -171,4 +165,6 @@
 @font-face {
     font-family: "myfont";
     src: url("web fonts/main_font/SFSportsNight.woff") format('woff');
+}
+
 }

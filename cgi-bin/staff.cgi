@@ -38,12 +38,15 @@ print "content-type: text/html\n\n";
 			my $alt=$item->find('img/alt');
 			
 			$htmlprint="$htmlprint  
-				<div class=\"attr_content\">
-					<div class=\"attr_img\">
-						<img src=\"$source\" alt=\"$alt\" />
-					</div>				
+				<div class=\"content_staff\">
+					<div class='imgpos'>
+						<img class='img_staff' src=\"../public_html/img/avatars/$source\" alt=\"$alt\" />
+					</div>	
+					<div class='text'>
 						<div class=\"nome_staff\">$nome  $cognome</div> 
 						<div class=\"ruolo_staff\">$ruolo</div>
+					</div>
+					<div class='break'></div>
 				</div>";
 		}
 
