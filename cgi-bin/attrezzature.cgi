@@ -6,13 +6,14 @@ use CGI::Carp qw(fatalsToBrowser);
 use utf8;
 
 print "content-type: text/html\n\n";
+$title="Noleggio Attrezzature";
+$where="Noleggio Attrezzature";
 require("header.cgi");
 require("menu.cgi");
 $page = new CGI;
 $utente= getSession();
 
-$titolo="Attrezzature";
-$where="Noleggio Attrezzature";
+
 
 $parser = XML::LibXML->new();
 my $file = "../data/attrezzature.xml";
