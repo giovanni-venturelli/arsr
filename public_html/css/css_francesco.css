@@ -70,7 +70,6 @@
 .par1{
 	margin:0px;
 	padding:5px;
-	border-radius: 15px;
     border: 2px solid #28324E;
 	/*background-image: url('../img/bgc-2.jpg');
 	background-color:black;
@@ -83,7 +82,6 @@
 .par2{
 	margin:0px;
 	padding:5px;
-	border-radius: 15px;
     border: 2px solid #28324E;
 	/*
 	background-image: url('../img/bgdj.jpg');
@@ -98,7 +96,6 @@
 .par3{
 	margin:0px;
 	padding:5px;
-	border-radius: 15px;
     border: 2px solid #28324E;
 	/*
 	background-image: url('../img/bgrecord.jpg');
@@ -108,6 +105,27 @@
 	background-position:right;
 	margin-bottom:15px;
 	*/
+}
+
+.sub1{
+	margin:0px;
+	padding:6px;
+	background-color:#B8312E;
+	font-size:28px;
+}
+
+.sub2{
+	margin:0px;
+	padding:6px;
+	background-color:#602a7a;
+	font-size:28px;
+}
+
+.sub3{
+	margin:0px;
+	padding:6px;
+	background-color:#10a88a;
+	font-size:28px;
 }
 
 /*comon CSS*/
