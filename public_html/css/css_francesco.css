@@ -22,12 +22,17 @@
 /*CSS riguardante la parte dei contatti*/
 
 .TContact{
+	margin:2px;
+	padding:2px;
 	background: linear-gradient(to bottom right, #191a1c , black);
 	border: solid 2px #28324E;
 	width:100%;
 }
 
 .TFirst{
+	margin:2px;
+	padding:2px;
+	float:left;
 	border-radius: 15px;
     border: 2px solid #191a1c;
 	width:150px;
@@ -35,10 +40,16 @@
 }
 
 .TSecond{
+	margin:2px;
+	padding:2px;
+	float:left;
 	width:350px;
 }
 
 .image{
+	margin:2px;
+	padding:2px;
+	float:right;
 	width:130px;
 	height:130px;
 }
@@ -100,6 +111,22 @@
 }
 
 /*comon CSS*/
+
+.break{
+	clear: both;
+}
+
+.left{
+	float:left;
+}
+
+.right{
+	float:right;
+}
+
+.center{
+	left: 50%;
+}
 
 .SubTitle{
 	/*font-family:myfont;*/
