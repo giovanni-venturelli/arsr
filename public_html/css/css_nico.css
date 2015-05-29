@@ -9,27 +9,25 @@
 	height: 5em;
 	border-radius: 0.5em;
 }
-
-.attr_img{ /*uguale a quello di puc, ne basta uno*/
-	float: left;
+.img_staff{
 	margin-top: 0.25em;
 	margin-left: 0.25em;
 	margin-right:0.25em;
 	height: 4.5em;
+	width: 4.5em;
 	margin:solid;
 }
-
+/*
 .ruolo_staff{
-	/*margin-left: 4em;*/
-	float:right;
+	margin-left: 4em;
 }
 
 .nome_staff{
 	margin-left: 8em;
 	font-size: large;
-	text-align: left;
-}
 
+}
+*/
 .inp_utente, .inp_pass{ /*box inserimento utente e pwd in login*/
 	margin-left: 4 em;
 }
@@ -49,3 +47,34 @@ input#submit,input#reset ,input#Registrati{ /*submit,reset,registrati di pagine 
 	text-align:center;
 }
 
+#colonna_live{
+	float: left;
+	background-image: url(../img/colonnasinistra.png);
+	background-color:#b8312e;
+}
+
+#colonna_djset{
+	float: left;
+	margin-left:2%;
+	background-color: #602a7a;
+	background-image: url(../img/colonnacentrale.png);
+}
+
+#colonna_studio{
+	margin-left:68%;
+	background-color: #10a88a;
+	background-image: url(../img/colonnadestra.png);
+}
+
+
+.break{
+	clear: both;
+}
+
+.imgpos{
+	float:left;
+}
+
+.text{
+	float:left;
+}

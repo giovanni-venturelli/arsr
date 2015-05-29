@@ -12,8 +12,9 @@ sub destroySession(){
 	$session->close();
 	$session->delete();
 	$session->flush();
-	
-	print redirect(-uri=>'attrezzature.cgi');
 
 }
 
+my $page=CGI->new;
+destroySession();
+print $page->redirect(-uri=>'attrezzature.cgi');
