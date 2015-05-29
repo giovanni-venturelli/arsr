@@ -7,7 +7,7 @@ use utf8;
 
 print "content-type: text/html\n\n";
 $title="Home";
-$where="home";
+$where="<span lang=\"en\">Home</span>";
 require("header.cgi");
 require("menu.cgi");
 $page = new CGI;
@@ -45,7 +45,7 @@ foreach $item(@items){
 		";
 }
 require("footer.cgi");
-$htmlprint="$htmlprint$footer";
+$htmlprint="$htmlprint</div>$footer";
 print $htmlprint;
 
 

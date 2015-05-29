@@ -8,7 +8,7 @@
 		<prezzo>750€</prezzo>
 		<img>
 			<source>../public_html/img/source.png</source>
-			<alt>patata gialla</alt>
+			<alt/>
 		</img>
 		<disponibile>disponibile tra 4 giorni</disponibile>
 	</attrezzatura>
@@ -19,7 +19,7 @@
 		<prezzo>50€</prezzo>
 		<img>
 			<source>../public_html/img/source.png</source>
-			<alt>cane che puzza</alt>
+			<alt/>
 		</img>
 		<disponibile>disponibile</disponibile>
 	</attrezzatura>
@@ -27,25 +27,24 @@
 				<nome>Patata</nome>
 				<codice_prodotto>3</codice_prodotto>
 				<descrizione>patata</descrizione>
-				<prezzo>750                        €</prezzo>
+				<prezzo>750€</prezzo>
 				<img>
 					<source>feedback.cgi</source>
-					<alt>patata gialla</alt>
+					<alt/>
 				</img>
 				<disponibile>non disponibile</disponibile>
-			</attrezzatura>
+	</attrezzatura>
 	<attrezzatura>
 				<nome>Gatto</nome>
 				<codice_prodotto>4</codice_prodotto>
 				<descrizione>animale che perde pelo ovunque animale che perde pelo ovunque animale che perde pelo ovunque </descrizione>
-				<prezzo>2  €</prezzo>
+				<prezzo>2€</prezzo>
 				<img>
 					<source>check_modifica_attrezzature.cgi</source>
-					<alt>gatto che perde pelo</alt>
+					<alt/>
 				</img>
 				<disponibile>non disponibile</disponibile>
-			</attrezzatura>
-
+	</attrezzatura>
 	<attrezzatura>
 				<nome>Cane</nome>
 				<codice_prodotto>5</codice_prodotto>
@@ -53,8 +52,177 @@
 				<prezzo>50  €</prezzo>
 				<img>
 					<source>attrezzature.cgi</source>
-					<alt>cane che puzza</alt>
+					<alt/>
 				</img>
 				<disponibile>disponibile</disponibile>
 	</attrezzatura>
+	<attrezzatura>
+				<nome>Cane</nome>
+				<codice_prodotto>6</codice_prodotto>
+				<descrizione>animale che puzza e abbaia</descrizione>
+				<prezzo>50  €</prezzo>
+				<img>
+					<source>attrezzature.cgi</source>
+					<alt/>
+				</img>
+				<disponibile>disponibile</disponibile>
+	</attrezzatura>
+	<attrezzatura>
+				<nome>Cane</nome>
+				<codice_prodotto>7</codice_prodotto>
+				<descrizione>animale che puzza e abbaia</descrizione>
+				<prezzo>50  €</prezzo>
+				<img>
+					<source>attrezzature.cgi</source>
+					<alt/>
+				</img>
+				<disponibile>disponibile</disponibile>
+	</attrezzatura>
+	<attrezzatura>
+				<nome>Cane</nome>
+				<codice_prodotto>8</codice_prodotto>
+				<descrizione>animale che puzza e abbaia</descrizione>
+				<prezzo>50  €</prezzo>
+				<img>
+					<source>attrezzature.cgi</source>
+					<alt/>
+				</img>
+				<disponibile>disponibile</disponibile>
+	</attrezzatura>
+	<attrezzatura>
+				<nome>Cane</nome>
+				<codice_prodotto>9</codice_prodotto>
+				<descrizione>animale che puzza e abbaia</descrizione>
+				<prezzo>50  €</prezzo>
+				<img>
+					<source>attrezzature.cgi</source>
+					<alt/>
+				</img>
+				<disponibile>disponibile</disponibile>
+	</attrezzatura>
+	<attrezzatura>
+				<nome>Cane</nome>
+				<codice_prodotto>10</codice_prodotto>
+				<descrizione>animale che puzza e abbaia</descrizione>
+				<prezzo>50  €</prezzo>
+				<img>
+					<source>attrezzature.cgi</source>
+					<alt/>
+				</img>
+				<disponibile>disponibile</disponibile>
+	</attrezzatura>
+	<attrezzatura>
+				<nome>Cane</nome>
+				<codice_prodotto>11</codice_prodotto>
+				<descrizione>animale che puzza e abbaia</descrizione>
+				<prezzo>50  €</prezzo>
+				<img>
+					<source>attrezzature.cgi</source>
+					<alt/>
+				</img>
+				<disponibile>disponibile</disponibile>
+	</attrezzatura>
+	<attrezzatura>
+				<nome>Cane</nome>
+				<codice_prodotto>12</codice_prodotto>
+				<descrizione>animale che puzza e abbaia</descrizione>
+				<prezzo>50  €</prezzo>
+				<img>
+					<source>attrezzature.cgi</source>
+					<alt/>
+				</img>
+				<disponibile>disponibile</disponibile>
+	</attrezzatura>
+	<attrezzatura>
+				<nome>Cane</nome>
+				<codice_prodotto>13</codice_prodotto>
+				<descrizione>animale che puzza e abbaia</descrizione>
+				<prezzo>50  €</prezzo>
+				<img>
+					<source>attrezzature.cgi</source>
+					<alt/>
+				</img>
+				<disponibile>disponibile</disponibile>
+	</attrezzatura>
+	<attrezzatura>
+				<nome>Cane</nome>
+				<codice_prodotto>14</codice_prodotto>
+				<descrizione>animale che puzza e abbaia</descrizione>
+				<prezzo>50  €</prezzo>
+				<img>
+					<source>attrezzature.cgi</source>
+					<alt/>
+				</img>
+				<disponibile>disponibile</disponibile>
+	</attrezzatura>
+	<attrezzatura>
+				<nome>Cane</nome>
+				<codice_prodotto>15</codice_prodotto>
+				<descrizione>animale che puzza e abbaia</descrizione>
+				<prezzo>50  €</prezzo>
+				<img>
+					<source>attrezzature.cgi</source>
+					<alt/>
+				</img>
+				<disponibile>disponibile</disponibile>
+	</attrezzatura>
+	<attrezzatura>
+				<nome>Cane</nome>
+				<codice_prodotto>16</codice_prodotto>
+				<descrizione>animale che puzza e abbaia</descrizione>
+				<prezzo>50  €</prezzo>
+				<img>
+					<source>attrezzature.cgi</source>
+					<alt/>
+				</img>
+				<disponibile>disponibile</disponibile>
+	</attrezzatura>
+	<attrezzatura>
+				<nome>Cane</nome>
+				<codice_prodotto>17</codice_prodotto>
+				<descrizione>animale che puzza e abbaia</descrizione>
+				<prezzo>50  €</prezzo>
+				<img>
+					<source>attrezzature.cgi</source>
+					<alt/>
+				</img>
+				<disponibile>disponibile</disponibile>
+	</attrezzatura>
+	<attrezzatura>
+				<nome>Cane</nome>
+				<codice_prodotto>18</codice_prodotto>
+				<descrizione>animale che puzza e abbaia</descrizione>
+				<prezzo>50  €</prezzo>
+				<img>
+					<source>attrezzature.cgi</source>
+					<alt/>
+				</img>
+				<disponibile>disponibile</disponibile>
+	</attrezzatura>
+	<attrezzatura>
+				<nome>Cane</nome>
+				<codice_prodotto>19</codice_prodotto>
+				<descrizione>animale che puzza e abbaia</descrizione>
+				<prezzo>50  €</prezzo>
+				<img>
+					<source>attrezzature.cgi</source>
+					<alt/>
+				</img>
+				<disponibile>disponibile</disponibile>
+	</attrezzatura>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </database>
