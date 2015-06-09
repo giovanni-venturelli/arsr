@@ -10,12 +10,12 @@
 	</frame>
 	<frame>
 		<id>djset</id>
-		<titolo>DJ set live</titolo>
+		<titolo><span lang="en"><abbr>DJ</abbr> set live</span></titolo>
 		<corpo>Festa di compleanno? Voglia di ballare? Vuoi rendere indimenticabile il tuo 18° compleanno? Perchè spendere milioni per far la festa in discoteca quando la discoteca puoi farla a casa tua? Abbiamo impianti su misura per feste domestiche fino alle sale più grandi.</corpo>
 	</frame>
 	<frame >
 		<id>studio</id>
-		<titolo>Studio Recording</titolo>
-		<corpo>Hai una band e vorresti registrare una demo? Hai il pezzo del secolo in mente e vorresti registrarlo? Spesso e volentieri gli studi per registrare una semplice demo, offrendo servizi di altissimo livello e strutture hanno prezzi inaccessibili ai privati e alle band emergenti.</corpo>
+		<titolo><span lang="en">Studio Recording<</span>/titolo>
+		<corpo>Hai una <span lang="en">band</span> e vorresti registrare una <span lang="en">demo</span>? Hai il pezzo del secolo in mente e vorresti registrarlo? Spesso e volentieri gli studi per registrare una semplice <span lang="en">demo</span>, offrendo servizi di altissimo livello e strutture hanno prezzi inaccessibili ai privati e alle <span lang="en">band</span> emergenti.</corpo>
 	</frame>
 </main>
