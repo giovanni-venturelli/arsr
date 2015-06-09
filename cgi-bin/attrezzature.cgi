@@ -11,7 +11,7 @@ $where="Noleggio Attrezzature";
 require("header.cgi");
 require("menu.cgi");
 $page = new CGI;
-$utente= getSession();
+#$utente= getSession();
 
 
 
@@ -42,6 +42,9 @@ $pagina;
 
 	$htmlprint="$header$menu<div id=\"content\">";
 	if(($num_attr/10) > 1){
+			if($admin){
+				$htmlprint="$htmlprint<form action=\"insert_attrezzature.cgi\"><input type=\"submit\" class=\"pulsante submit\" id=\"inserisci_pulsante\" value=\"NEW\"></form>";
+			}
 			$htmlpag="$htmlpag<form id=\"num_pagine\" name=\"num\" method=\"get\" action=\"attrezzature.cgi\">sei a pagina";
 			if($pagina){
 					$htmlpag="$htmlpag	$pagina, vai a pagina  ";
@@ -102,8 +105,21 @@ $pagina;
 											$htmlprint="$htmlprint<div class=\"attr_nome\">$nome</div>
 											<div class=\"attr_cod\">$cod</div>
 											<div class=\"attr_prezzo\">$prezzo</div>
-											<div class=\"attr_descr\">$desc</div>
-										</div>
+											<div class=\"attr_descr\">$desc</div>";
+											if($admin){
+												$htmlprint="$htmlprint<div class=\"attr_form\">
+																		<form class=\"attr_button\" action=\"modifica_attrezzature.cgi\" method=\"post\">
+																			<input type=\"hidden\" name=\"cod_\" value=\"$cod\" />
+																			<input type=\"submit\" name=\"modifica\" id=\"img_mod\" />
+																		</form>
+																		<form class=\"attr_button2\" action=\"check_remove_attrezzature.cgi\" method=\"post\">
+																			<input type=\"hidden\" name=\"codice\" value=\"$cod\" />
+																			<input type=\"submit\" name=\"rimuovi\" id=\"img_rem\" />
+																		</form>
+																	</div>";
+											}
+											
+										$htmlprint="$htmlprint</div>
 								</div>";
 		}
 		$contatore=$contatore+1;

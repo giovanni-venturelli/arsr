@@ -10,7 +10,7 @@ use utf8;
 
 require ("header.cgi");
 $page = new CGI;
-$utente = getSession();
+#$utente = getSession();
 
 print $session->header();
 #crea un oggetto CGI
@@ -90,7 +90,7 @@ $htmlprint="$htmlprint<span id=\"link_to_comment\"><a href=\"\#bottom\">Lascia u
 				<img class=\"commento_immagine\" src=\"..\/public_html\/img\/avatars\/$image\" alt=\"Immagine di profilo di $author\"/>
 				<form action=\"delete_feedback.cgi\" method=\"post\">
 				<input type=\"hidden\" name=\"id\" value=\"$nodid\" />";
-					if($author eq $utente){
+					if($author eq $utente || $admin){
 						$htmlprint="$htmlprint<input type=\"submit\" class=\"pulsante erase\" value=\"elimina\"/>";
 					}
 				$htmlprint="$htmlprint</form>

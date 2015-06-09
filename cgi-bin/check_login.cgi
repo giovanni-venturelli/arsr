@@ -20,6 +20,7 @@ sub getSession(){
 	}
 else{
 	my $utente = $session->param('utente');
+	my $admin = $session->param('admin');
 	return $utente;
 }
 }
@@ -35,7 +36,7 @@ if(!length $utente) #se non c'è sessione
 		my $nome=$page->param('user'); # recupera POST['user'];
 		my $pass=$page->param('pass'); # recupera POST['password'];
 		my $parser = XML::LibXML->new();
-		my $doc = $parser->parse_file('../data/log_utenti.xml');
+		my $doc = $parser->parse_file('../data/login.xml');
 		my $root = $doc->getDocumentElement;
 		my @users = $root->getElementsByTagName('utente');
 
@@ -45,8 +46,14 @@ if(!length $utente) #se non c'è sessione
 				$password=$nod->getElementsByTagName('password');
 				if("$pass" eq "$password"){
 					$session = new CGI::Session();
-					$session->param('utente', $nome);
-					print $session->header(-location => "feedback.cgi");
+					$admin=$nod->getElementsByTagName('admin');
+					if($admin eq "si"){
+						$session->param('admin', $nome);
+					}
+					else{
+						$session->param('utente', $nome);
+					}
+					print $session->header(-location => "index.cgi");
 					#print redirect(-uri=>'feedback.cgi');#redirect alla pagina feedback.cgi
 					exit;
 				}

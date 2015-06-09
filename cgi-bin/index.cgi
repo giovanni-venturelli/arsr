@@ -11,7 +11,7 @@ $where="<span lang=\"en\">Home</span>";
 require("header.cgi");
 require("menu.cgi");
 $page = new CGI;
-$utente= getSession();
+#$utente= getSession();
 
 
 

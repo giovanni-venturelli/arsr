@@ -124,9 +124,9 @@ use utf8;
 							<cognome>$cognome</cognome>
 							<indirizzo>
 								<via>$via</via>
-								<civico>$civico</civico>
-								<provincia>$provincia</provincia>
+								<numero>$civico</numero>
 								<paese>$paese</paese>
+								<provincia>$provincia</provincia>
 							</indirizzo>
 							<fatturazione>$fatturazione</fatturazione>
 							<tipo_fatt>$tipo_fatt</tipo_fatt>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xmlns = "http://www.ASRS.com" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="log_utenti.xsd"?>
+<?xmlns = "http://www.ASRS.com" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="login.xsd"?>
 <login>
 	<utente>
 		<username>user1</username>
@@ -15,6 +15,7 @@
 		</indirizzo>
 		<fatturazione>GMTLKS45862DF89S</fatturazione>
         <tipo_fatt>p.iva</tipo_fatt>
+        <admin>no</admin>
 	</utente>		
 	<utente>
 		<username>puc</username>
@@ -24,11 +25,26 @@
 		<cognome>gnoato</cognome>
 		<indirizzo>
 			<via>Via Marin</via>
-			<civico>5</civico>
-			<provincia>paodva</provincia>
+			<numero>5</numero>
 			<paese>italia</paese>
+			<provincia>paodva</provincia>
 		</indirizzo>
 		<fatturazione>GNTMTT91M705S</fatturazione>
 		<tipo_fatt>cod.fiscale</tipo_fatt>
-	</utente>	
+		<admin>no</admin>
+	</utente>
+	<utente>
+		<username>admin</username>
+		<email>amministrazione@arsr.com</email>
+		<password>arsr</password>
+		<nome>Francesco</nome>
+		<cognome>Agostini</cognome>
+		<indirizzo>
+			<via>via</via>
+			<numero>5</numero>
+			<paese>cc</paese>
+			<provincia>cc</provincia>
+		</indirizzo>
+		<admin>si</admin>
+	</utente>
 </login>

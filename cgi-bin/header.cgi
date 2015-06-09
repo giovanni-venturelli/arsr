@@ -2,24 +2,17 @@
 
 	use utf8;
 	
-	sub getSession(){
+		$page = new CGI;
 		$session = CGI::Session->load() or die $!;
-			if($session->is_expired || $session->is_empty){
-				return undef;
-			}
-			else{
-
-				my $utente = $session->param('utente');
-				return $utente;
-			}
-	}
-	
-$utente = getSession();
-$page = new CGI;
+		$utente = $session->param('utente');
+		$admin = $session->param('admin');
 
 	
 	if($utente){
 		$log="<div id=\"stato_utente\">sei collegato come $utente, <a href=\"logout.cgi\">[esci]</a></div>";
+	}
+	elsif($admin){
+		$log="<div id=\"stato_utente\">sei collegato come $admin, <a href=\"logout.cgi\">[esci]</a></div>";
 	}
 	else{
 		$log="<div id=\"stato_utente\">non sei collegato, <a href=\"login.cgi\">[login]</a> , <a href=\"registration.cgi\">[registrati]</a></div>";
