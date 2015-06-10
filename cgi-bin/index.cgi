@@ -5,12 +5,13 @@ use CGI::Session;
 use CGI::Carp qw(fatalsToBrowser);
 use utf8;
 
-print "content-type: text/html\n\n";
+
 $title="Home";
 $where="<span lang=\"en\">Home</span>";
 require("header.cgi");
 require("menu.cgi");
 $page = new CGI;
+print $page->header;
 #$utente= getSession();
 
 
