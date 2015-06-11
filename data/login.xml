@@ -47,4 +47,32 @@
 		</indirizzo>
 		<admin>si</admin>
 	</utente>
+		<utente>
+		<username>scapincuea</username>
+		<email>amministrazione@arsr.com</email>
+		<password>arsr</password>
+		<nome>Nicoletta</nome>
+		<cognome>Scapin</cognome>
+		<indirizzo>
+			<via>via in cueo</via>
+			<numero>0</numero>
+			<paese>Cina</paese>
+			<provincia>cc</provincia>
+		</indirizzo>
+		<admin>no</admin>
+	</utente>
+		<utente>
+		<username>scapincuea</username>
+		<email>amministrazione@arsr.com</email>
+		<password>arsr</password>
+		<nome>Nicoletta</nome>
+		<cognome>Scapin</cognome>
+		<indirizzo>
+			<via>via in cueo</via>
+			<numero>0</numero>
+			<paese>Cina</paese>
+			<provincia>cc</provincia>
+		</indirizzo>
+		<admin>no</admin>
+	</utente>			
 </login>

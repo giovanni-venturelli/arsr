@@ -103,7 +103,7 @@ use utf8;
 			}
 			else{
 			
-				my $file='../data/log_utenti.xml'; 
+				my $file='../data/login.xml'; 
 				my $doc = $parser->parse_file($file); #apre il file per lettura nel parser
 				
 				#controllo se il file è aperto
