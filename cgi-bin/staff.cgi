@@ -22,8 +22,8 @@ use utf8;
 	my $root = $doc->getDocumentElement;
 	@items = $root->getElementsByTagName('persona');
 	$num_attr=@items;
-
-print "content-type: text/html\n\n";
+$page = new CGI;
+print $page->header;
 	require("header.cgi");
 	require("menu.cgi");
 	require("footer.cgi");
