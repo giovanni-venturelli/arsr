@@ -36,8 +36,6 @@ $htmlprint="$htmlprint
 		<h4 class='sub sub3'><span lang='en'>Studio Recording</span></h4>
 		<p class='par par3'>Hai una band e vorresti registrare una demo? Hai il pezzo del secolo in mente e vorresti registrarlo? Spesso e volentieri gli studi per registrare una semplice <span lang='en'>demo</span>, offrendo servizi di altissimo livello e strutture hanno prezzi inaccessibili ai privati e alle band emergenti. Noi abbiamo la possibilit&agrave; di registrazione in multitraccia fino a 24 canali con possibilità di <span lang='en'>editing</span> e <span lang='en'>mastering</span> mediante software professionali! Disponiamo di una piccola struttura per la registrazione di singoli strumenti oppure la possibilit&agrave; di servizio di registrazione a domicilio direttamente nella vostra sala prove!</p>
 		
-		<div class='validation center'><img class='image2' src='../public_html/img/vcss.gif' alt='logo validazione css'/><img class='image2' src='../public_html/img/vxhtml.png' alt='validazione html'/></div>
-		</div>
 	$footer";
 print($htmlprint);
 
