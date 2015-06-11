@@ -85,8 +85,7 @@ $htmlprint="$htmlprint
 		
 		</div>
 		</div>
-		<div class='validation center'><img class='image2' src='../public_html/img/vcss.gif' alt='logo validazione css'/><img class='image2' src='../public_html/img/vxhtml.png' alt='validazione html'/><div class='break'></div></div>
-
+		
 	$footer";
 print($htmlprint);
 

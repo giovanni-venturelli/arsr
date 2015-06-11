@@ -17,29 +17,13 @@
 	width: 4.5em;
 	margin:solid;
 }
-/*
-.ruolo_staff{
-	margin-left: 4em;
-}
 
-.nome_staff{
-	margin-left: 8em;
-	font-size: large;
-
-}
-*/
 .inp_utente, .inp_pass{ /*box inserimento utente e pwd in login*/
 	margin-left: 4 em;
 }
 
 .content_form{
 	text-align: center;
-}
-
-input#submit,input#reset ,input#Registrati{ /*submit,reset,registrati di pagine login e reg. */
-	border-radius: 0.5em;
-	color: #191a1c;
-	background-color: #EFEFEF ;
 }
 
 #errore_login{ /*colore e posizione del testo in caso di err. login e registr. */
@@ -66,7 +50,6 @@ input#submit,input#reset ,input#Registrati{ /*submit,reset,registrati di pagine 
 	background-image: url(../img/colonnadestra.png);
 }
 
-
 .break{
 	clear: both;
 }
@@ -77,4 +60,11 @@ input#submit,input#reset ,input#Registrati{ /*submit,reset,registrati di pagine 
 
 .text{
 	float:left;
+}
+
+/*immagini del footer*/
+.image_footer{
+float:right;
+width: 5em;
+
 }
