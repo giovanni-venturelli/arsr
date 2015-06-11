@@ -8,18 +8,18 @@ use CGI qw(:standard);
 use CGI::Carp qw(warningsToBrowser fatalsToBrowser);
 use utf8;
 
+$page = CGI->new;
+print $page->header;
+
+$title="Login";
+$where="Pannello di login";
 require("header.cgi");
 
-$page = CGI->new;
-$titolo="Login";
-$where="Pannello di login";
-$header;
-$footer;
+
 
 #html e form
 my $htmlprimt;
 
-	print "Content-type: text/html\n\n";
         require("menu.cgi");
 		require ("footer.cgi");
 
@@ -49,14 +49,14 @@ my $htmlprimt;
 						</label>
 					
 				
-				<input id=\"reset\" name=\"annulla\"  value=\"Reset\" type=\"reset\" tabindex=\"3\"/>
-				<input id=\"submit\" name=\"login\"  value=\"Entra\" type=\"submit\" tabindex=\"4\"/>
+				<input class=\"pulsante\" name=\"annulla\"  value=\"Reset\" type=\"reset\" tabindex=\"3\"/>
+				<input class=\"pulsante\" name=\"login\"  value=\"Entra\" type=\"submit\" tabindex=\"4\"/>
 				</fieldset>  
+			</div>
 		</form>
 				<div class=\"registrati_ora\">
 					Non sei ancora registrato? fallo ora <a href=\"registration.cgi\"> Cliccando QUI</a>
 				</div>
-			</div>
 		";
 	
 	

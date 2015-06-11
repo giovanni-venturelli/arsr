@@ -8,6 +8,8 @@ use CGI;
 use DBI;
 use utf8;
 
+$title = 'Guestbook';
+$where = "Dicono di Noi";
 require ("header.cgi");
 $page = new CGI;
 #$utente = getSession();
@@ -16,8 +18,7 @@ print $session->header();
 #crea un oggetto CGI
 
 my $parser = XML::LibXML->new();
-$title = 'Guestbook';
-$where = "Dicono di Noi";
+
 $header;
 $menu;
 $footer;

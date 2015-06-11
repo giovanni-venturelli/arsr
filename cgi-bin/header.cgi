@@ -14,8 +14,14 @@
 	elsif($admin){
 		$log="<div id=\"stato_utente\">sei collegato come $admin, <a href=\"logout.cgi\">[esci]</a></div>";
 	}
-	else{
+	elsif($title ne "Login" && $title ne "Registrazione"){
 		$log="<div id=\"stato_utente\">non sei collegato, <a href=\"login.cgi\">[login]</a> , <a href=\"registration.cgi\">[registrati]</a></div>";
+	}
+	elsif($title eq "Registrazione"){
+		$log="<div id=\"stato_utente\">non sei collegato, <a href=\"login.cgi\">[login]</a> </div>";
+	}
+	else{
+		$log="<div id=\"stato_utente\">non sei collegato, <a href=\"registration.cgi\">[registrati]</a></div>";
 	}
 	
 	$ref;

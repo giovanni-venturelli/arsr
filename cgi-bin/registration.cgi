@@ -12,7 +12,7 @@ $session = new CGI::Session();
 print $session->header();
 
 my $parser = XML::LibXML->new();
-$title = 'ARSR-Registrazione';
+$title = 'Registrazione';
 $where = "Pennello di registrazione";
 $header;
 $menu;
@@ -107,14 +107,17 @@ $htmlprint="$htmlprint
 							$htmlprint="$htmlprint checked";
 						}
 						$htmlprint="$htmlprint> Codice Fiscale
-	</form>
+				<div><input class=\"pulsante\" type=\"reset\" value=\"Reset\"/>
+				<input class=\"pulsante\" type=\"submit\" value=\"Registrati\"/>
+				</div>
 			</fieldset>
-				<input id=\"reset\" type=\"reset\" value=\"Reset\"/>
-				<input id=\"Registrati\" type=\"submit\" value=\"Registrati\"/>
+			</div>
+	</form>
+
 			
-		</div> 
+
 	
-</div>
+
 ";
 
 
