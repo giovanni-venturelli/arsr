@@ -15,10 +15,10 @@ use utf8;
 
 
 
-
-$utente = getSession(); #richiama sessione
 $page=new CGI; #crea oggetto CGI per recuperare i parametri passati con POST
-if(!$utente->is_empty ) #se c'è sessione
+
+require("session.cgi");
+if($utente) #se c'è sessione
 	{
 if(length $page->param('feed_body')) # recupera POST['feed_body']
 	{

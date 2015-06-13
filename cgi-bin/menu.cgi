@@ -17,8 +17,8 @@ return $ret;
 }
 
 
-$menu="<div id=\"menu\"><p id=\"menutitle\">
-MENU</p>
+$menu="<div id=\"menu\">
+
 <ul>
 <li class=\"menulist\"";
 $temp=ActiveLink($where, "<span lang=\"en\">Home</span>", "index.cgi");

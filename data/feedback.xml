@@ -61,4 +61,34 @@
 
 
 
+<feedback>
+<id>11</id>
+<autore>puc</autore>
+<immagine>avatar.jpg</immagine>
+<data>2015-06-13</data>
+<corpo>1</corpo>
+</feedback>
+
+<feedback>
+<id>13</id>
+<autore>puc</autore>
+<immagine>avatar.jpg</immagine>
+<data>2015-06-13</data>
+<corpo>3</corpo>
+</feedback>
+<feedback>
+<id>14</id>
+<autore>puc</autore>
+<immagine>avatar.jpg</immagine>
+<data>2015-06-13</data>
+<corpo>4</corpo>
+</feedback>
+<feedback>
+<id>15</id>
+<autore>puc</autore>
+<immagine>avatar.jpg</immagine>
+<data>2015-06-13</data>
+<corpo>5</corpo>
+</feedback>
+
 </commenti>

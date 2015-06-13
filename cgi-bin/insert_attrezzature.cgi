@@ -27,7 +27,7 @@ use XML::LibXML::XPathContext;
 	if($session){ #ATTENZIONE! ENTRO NELL'IF SENZA SESSIONE SOLO PER PROVARE LA PAGINA, DA MODIFICARE DOPO LA CREAZIONE DELLA PAGINA DI LOGIN
 		require ("session.cgi");
 		require("header.cgi");
-		require("admin_menu.cgi");
+		require("menu.cgi");
 		print "content-type: text/html\n\n";
 		$htmlprint="$header$menu<div id=\"content\">";
 		$htmlprint="$htmlprint<form id=\"insert_attrezzatura\" action=\"check_insert_attrezzature.cgi\" method=\"post\">

@@ -59,8 +59,17 @@ else {
 $lim1=$num*10;
 $lim2=$lim1-10;
 $pagelist;
+$pagelist="$pagelist</select>";
+if($num eq 1){ #se siamo a pagina 1 visualizza il riquadro di descrizione
+$htmlprint="$htmlprint <div id=\"feedback_main\"><h3>GUESTBOOK</h3>Questo è il libro degli ospiti, puoi leggere cosa pensano di noi i nostri collaboratori e puoi tu stesso lasciare un commento.</div>";
+}
+if($numid<=10 && $utente){
+$htmlprint="$htmlprint<div><a href=\"\#bottom\">Lascia un commento</a></div>";
+} 
 if($numid>10){
-
+if($utente){
+$htmlprint="$htmlprint<span id=\"link_to_comment\"><a href=\"\#bottom\">Lascia un commento</a></span>";
+} 
 $pagelist="<span>Sei a pagina $num vai a pagina </span><select name=\"pagina\">";
 $top;
 $top=$numid/10;
@@ -74,12 +83,11 @@ $pagelist="$pagelist selected";
 $pagelist="$pagelist>$p</option>";
 }
 }
-$pagelist="$pagelist</select>";
-if($utente){
-$htmlprint="$htmlprint<span id=\"link_to_comment\"><a href=\"\#bottom\">Lascia un commento</a></span>";} 
+
+
 $htmlprint="$htmlprint<div class=\"pagine\"><form method=\"get\" class=\"form_pagine\" id=\"form_pagine_top\" action=\"#\">$pagelist
 <input class=\"pulsante pagine_submit\" id=\"pagine_submit_top\" type=\"submit\" value=\"VAI\"/>
-</form><</div>";
+</form></div>";
 }# end if ($numid>10)
 		foreach $nod (@reversefeed){
 			if (((!$numpair||$num == 1)&&($contatore < 10))||($contatore < $lim1 && $contatore >= $lim2)){
@@ -132,10 +140,10 @@ $htmlprint="$htmlprint</div>";
 		<form method=\"post\" action=\"check_feedback.cgi\">
 		<fieldset id=\"feedbackfieldset\">
 		<div class=\"form-group\">
-		<a name=\"bottom\"><label id=\"commento_label\" for=\"commento_textarea\">Inserisci un commento</label></a>
+		<label id=\"commento_label\" for=\"commento_textarea\">Inserisci un commento</label>
 		<textarea name=\"feed_body\" id=\"commento_textarea\"></textarea>
 		</div> 
-		<input id=\"commento_submit\" type=\"submit\" value=\"INSERISCI\"/>
+		<input id=\"commento_submit\" class=\"pulsante\" type=\"submit\" value=\"INSERISCI\"/>
 		</fieldset>
 		</form>
 		";
