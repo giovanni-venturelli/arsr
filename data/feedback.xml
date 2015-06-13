@@ -33,13 +33,7 @@
 				<data>2015-05-13</data>
 				<corpo>5</corpo>
 				</feedback>
-<feedback>
-				<id>9</id>
-				<autore>giovanni</autore>
-				<immagine>avatar.jpg</immagine>
-				<data>2015-05-13</data>
-				<corpo>6</corpo>
-				</feedback>
+
 <feedback>
 				<id>10</id>
 				<autore>giovanni</autore>
@@ -66,11 +60,5 @@
 
 
 
-<feedback>
-				<id>27</id>
-				<autore>giovanni</autore>
-				<immagine>avatar.jpg</immagine>
-				<data>2015-05-27</data>
-				<corpo>ddd</corpo>
-				</feedback>
+
 </commenti>

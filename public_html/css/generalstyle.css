@@ -482,3 +482,7 @@ margin-bottom:200px;
 .modifica:hover{
 	background-color: #009900;
 }
+
+#feedbackfieldset{
+	border:none;
+}
