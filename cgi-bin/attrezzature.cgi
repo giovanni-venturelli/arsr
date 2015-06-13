@@ -110,11 +110,11 @@ $pagina;
 												$htmlprint="$htmlprint<div class=\"attr_form\">
 																		<form class=\"attr_button\" action=\"modifica_attrezzature.cgi\" method=\"post\">
 																			<input type=\"hidden\" name=\"cod_\" value=\"$cod\" />
-																			<input type=\"submit\" name=\"modifica\" id=\"img_mod\" />
+																			<input type=\"submit\" name=\"modifica\" value=\"MODIFICA\" class=\"pulsante\" />
 																		</form>
 																		<form class=\"attr_button2\" action=\"check_remove_attrezzature.cgi\" method=\"post\">
 																			<input type=\"hidden\" name=\"codice\" value=\"$cod\" />
-																			<input type=\"submit\" name=\"rimuovi\" id=\"img_rem\" />
+																			<input type=\"submit\" name=\"rimuovi\" value=\"RIMUOVI\" class=\"pulsante\" />
 																		</form>
 																	</div>";
 											}

@@ -71,7 +71,9 @@ $pagelist="$pagelist>$p</option>";
 }
 }
 $pagelist="$pagelist</select>";
-$htmlprint="$htmlprint<span id=\"link_to_comment\"><a href=\"\#bottom\">Lascia un commento</a></span> <div class=\"pagine\"><form method=\"get\" class=\"form_pagine\" id=\"form_pagine_top\" action=\"#\">$pagelist
+if($utente){
+$htmlprint="$htmlprint<span id=\"link_to_comment\"><a href=\"\#bottom\">Lascia un commento</a></span>";} 
+$htmlprint="$htmlprint<div class=\"pagine\"><form method=\"get\" class=\"form_pagine\" id=\"form_pagine_top\" action=\"#\">$pagelist
 <input class=\"pulsante pagine_submit\" id=\"pagine_submit_top\" type=\"submit\" value=\"VAI\"/>
 </form></div>";
 }# end if ($numid>10)

@@ -68,7 +68,7 @@ if($session || !$session){ # finchè non abbiamo le sessioni metto che è come s
 			<nome>$nome</nome>
 			<codice_prodotto>$code</codice_prodotto>
 			<descrizione>$descr</descrizione>
-			<prezzo>$prezzo €</prezzo>
+			<prezzo>$prezzo€</prezzo>
 			<img>
 				<source>$img</source>
 				<alt>$alt</alt>
@@ -80,7 +80,7 @@ if($session || !$session){ # finchè non abbiamo le sessioni metto che è come s
 		open(OUT, ">$file");
 		print OUT $doc->toString;
 		close(OUT);
-		print redirect(-uri=>'admin_attrezzature.cgi');
+		print redirect(-uri=>'attrezzature.cgi');
 		exit;
 }
 

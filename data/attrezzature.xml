@@ -199,17 +199,7 @@
 				</img>
 				<disponibile>disponibile</disponibile>
 	</attrezzatura>
-	<attrezzatura>
-				<nome>Cane</nome>
-				<codice_prodotto>19</codice_prodotto>
-				<descrizione>animale che puzza e abbaia</descrizione>
-				<prezzo>50  €</prezzo>
-				<img>
-					<source>attrezzature.cgi</source>
-					<alt/>
-				</img>
-				<disponibile>disponibile</disponibile>
-	</attrezzatura>
+	
 
 
 
@@ -260,6 +250,32 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<attrezzatura>
+			<nome>Cane2</nome>
+			<codice_prodotto>19</codice_prodotto>
+			<descrizione>animale che puzza e abbaia</descrizione>
+			<prezzo>50   €</prezzo>
+			<img>
+				<source>Relazione_1051873.pdf</source>
+				<alt/>
+			</img>
+			<disponibile>disponibile</disponibile>
+		</attrezzatura>
 
 
 

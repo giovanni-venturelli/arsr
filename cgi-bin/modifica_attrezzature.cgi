@@ -11,18 +11,6 @@ use utf8;
 use XML::LibXML::NodeList;
 use XML::LibXML::XPathContext;
 
-	sub getSession(){
-		$session = CGI::Session->load() or die $!;
-		if($session->is_expired || $session->is_empty){
-			return undef;
-		}
-		else{
-			my $admin = $session->param('admin');
-			$session;
-		}
-	}
-	
-	my $session=getSession;
 	$page=new CGI;
 	
 	$parser = XML::LibXML->new();
@@ -47,9 +35,12 @@ use XML::LibXML::XPathContext;
 			# qua ci va un'istruzione per interrompere il ciclo!
 		}
 	}
-	if($session || !$session){ #ATTENZIONE! ENTRO NELL'IF SENZA SESSIONE SOLO PER PROVARE LA PAGINA, DA MODIFICARE DOPO LA CREAZIONE DELLA PAGINA DI LOGIN
-		require("header.cgi");
-		require("admin_menu.cgi");
+	
+	$title = "Modifica Attrezzature";
+	$where = "Modifica Attrezzature";
+	require("header.cgi");
+	if($admin){
+		require("menu.cgi");
 		print "content-type: text/html\n\n";
 		$htmlprint="$header$menu<div id=\"content\">";
 		$htmlprint="$htmlprint<form id=\"insert_attrezzatura\" action=\"check_modifica_attrezzature.cgi\" method=\"post\">
