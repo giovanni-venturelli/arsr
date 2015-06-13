@@ -29,8 +29,8 @@ if($session || !$session){ # finchè non abbiamo le sessioni metto che è come s
 	
 	my $parser = XML::LibXML->new();	#creo un parser per il file xml
 	my %map = (							#creo una mappa per eseguire l'escape
-		'>' => '<![CDATA[>]]>',
-		'<' => '<![CDATA[<]]>'
+	'>' => '&gt;',
+	'<' => '&lt;'
 	);
 	
 	my $nome = $page->param('nome');

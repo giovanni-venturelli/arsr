@@ -10,9 +10,13 @@ use utf8;
 
 $title = 'Guestbook';
 $where = "Dicono di Noi";
+
+require("session.cgi");
+
 require ("header.cgi");
 $page = new CGI;
-#$utente = getSession();
+
+
 
 print $session->header();
 #crea un oggetto CGI

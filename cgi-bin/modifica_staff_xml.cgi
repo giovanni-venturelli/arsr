@@ -103,7 +103,7 @@ print($page->header());
 
 #stampa del codice HTML
 my $htmlprint;
-
+require ("session.cgi");
 require ("header.cgi");
 require ("menu.cgi");
 require ("footer.cgi");

@@ -8,8 +8,11 @@ use utf8;
 
 $title="Home";
 $where="<span lang=\"en\">Home</span>";
-require("header.cgi");
-require("menu.cgi");
+#!"C:\xampp\perl\bin\perl.exe"
+require ("session.cgi");
+require ("header.cgi");
+require ("menu.cgi");
+require ("footer.cgi");
 $page = new CGI;
 print $page->header;
 #$utente= getSession();
@@ -28,12 +31,11 @@ my $root = $doc->getDocumentElement;
 $item=@items;
 	
 my $htmlprint;
-require ("header.cgi");
-require ("menu.cgi");
-require ("footer.cgi");
 $htmlprint= "$header$menu<div id=\"content\">";
 
-
+if (length $admin){
+	$htmlprint=$htmlprint.'<div id="editindex"><a href="editindex.cgi"><button class="pulsante">Modifica informazioni</button></a></div>'
+}
 foreach $item(@items){
 		my $titolo=$item->find('titolo');
 		my $corpo=$item->find('corpo');

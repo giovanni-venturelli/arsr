@@ -22,6 +22,7 @@ $page=new CGI;
 print($page->header());
 
 my $htmlprint;
+require ("session.cgi");
 require ("header.cgi");
 require ("menu.cgi");
 require ("footer.cgi");

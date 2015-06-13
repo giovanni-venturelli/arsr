@@ -38,6 +38,7 @@ use XML::LibXML::XPathContext;
 	
 	$title = "Modifica Attrezzature";
 	$where = "Modifica Attrezzature";
+	require ("session.cgi");
 	require("header.cgi");
 	if($admin){
 		require("menu.cgi");

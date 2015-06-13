@@ -21,7 +21,7 @@ $footer;
 my $htmlprint;
 
 #print "content-type: text/html\n\n";
-
+require ("session.cgi");
 require ("header.cgi");
 require ("menu.cgi");
 require ("footer.cgi");

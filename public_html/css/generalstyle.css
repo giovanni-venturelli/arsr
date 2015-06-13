@@ -461,3 +461,24 @@ margin-bottom:200px;
 	.form-group{
 		border:none;
 	}
+#editindex{
+	margin-bottom:0.5em;
+}
+
+.inputcorpo{
+	min-height: 25em;
+	max-height: 25em;
+	min-width:97%;
+	max-width:97%;
+	margin-top:0.5em;
+}
+.annulla{
+	margin-left:0.2em;
+}
+.modifica{
+	background-color: #10a88a;
+}
+
+.modifica:hover{
+	background-color: #009900;
+}

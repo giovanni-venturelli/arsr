@@ -8,6 +8,7 @@ use utf8;
 print "content-type: text/html\n\n";
 $title="Noleggio Attrezzature";
 $where="Noleggio Attrezzature";
+require("session.cgi");
 require("header.cgi");
 require("menu.cgi");
 $page = new CGI;

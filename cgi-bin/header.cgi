@@ -2,10 +2,6 @@
 
 	use utf8;
 	
-		$page = new CGI;
-		$session = CGI::Session->load() or die $!;
-		$utente = $session->param('utente');
-		$admin = $session->param('admin');
 
 	
 	if($utente){

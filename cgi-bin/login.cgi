@@ -13,6 +13,7 @@ print $page->header;
 
 $title="Login";
 $where="Pannello di login";
+require ("session.cgi");
 require("header.cgi");
 
 

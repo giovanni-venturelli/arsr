@@ -40,6 +40,7 @@ $pagina;
 			}
 
 print "content-type: text/html\n\n";
+require("session.cgi");
 require("header.cgi");
 require("admin_menu.cgi");
 
