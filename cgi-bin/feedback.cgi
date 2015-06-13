@@ -79,7 +79,7 @@ if($utente){
 $htmlprint="$htmlprint<span id=\"link_to_comment\"><a href=\"\#bottom\">Lascia un commento</a></span>";} 
 $htmlprint="$htmlprint<div class=\"pagine\"><form method=\"get\" class=\"form_pagine\" id=\"form_pagine_top\" action=\"#\">$pagelist
 <input class=\"pulsante pagine_submit\" id=\"pagine_submit_top\" type=\"submit\" value=\"VAI\"/>
-</form></div>";
+</form><</div>";
 }# end if ($numid>10)
 		foreach $nod (@reversefeed){
 			if (((!$numpair||$num == 1)&&($contatore < 10))||($contatore < $lim1 && $contatore >= $lim2)){
@@ -124,16 +124,19 @@ if($numid>10){
   $htmlprint="$htmlprint
 <form method=\"get\" class=\"form_pagine\" id=\"form_pagine_bottom\" action=\"#\">$pagelist
 <input class=\"pulsante pagine_submit\" type=\"submit\" value=\"VAI\"/>
-</form></div>";
+</form>";
 }
+$htmlprint="$htmlprint</div>";
 	if($utente){
 		$htmlprint="$htmlprint
 		<form method=\"post\" action=\"check_feedback.cgi\">
+		<fieldset id=\"feedbackfieldset\">
 		<div class=\"form-group\">
-		<a name=\"bottom\"><label id=\"commento_label\" for=\"inserisci\">Inserisci un commento</label></a>
+		<a name=\"bottom\"><label id=\"commento_label\" for=\"commento_textarea\">Inserisci un commento</label></a>
 		<textarea name=\"feed_body\" id=\"commento_textarea\"></textarea>
 		</div> 
 		<input id=\"commento_submit\" type=\"submit\" value=\"INSERISCI\"/>
+		</fieldset>
 		</form>
 		";
 	}
