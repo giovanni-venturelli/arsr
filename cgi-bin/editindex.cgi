@@ -39,9 +39,9 @@ foreach $item(@items){
 		$htmlprint="$htmlprint
 			
 			<div id='colonna_$id' class='colonna'>
-			<label for='titolo_$id'>
+			<label class=\"label_block\" for='titolo_$id'>Titolo</label>
 			<input type='text' id='titolo_$id' name='titolo_$id' value='$titolo'/>
-			<label for='corpo_$id'>
+			<label class=\"label_block\" for='corpo_$id'>Contenuto</label>
 			<textarea class='inputcorpo' id='corpo_$id' name='corpo_$id' >$corpo</textarea>
 			</div>
 		";
