@@ -33,32 +33,28 @@ my $htmlprimt;
 	}
 
 	$htmlprint="$htmlprint 
-		
 		<form method=\"post\" action=\"check_login.cgi\">
-			<fieldset>
-				<div class=\"content_form\">
-					<fieldset>
-						<legend>Inserire i dati di <span xml:lang=\"eng\">login</span></legend>
-							<label title=\"utente\">Utente
-								<div class=\"inp_utente\">
-									<input title=\"utente\" type=\"text\" name=\"user\" tabindex=\"1\"/>
-								<\div>
-							</label>
-								
-							<label title=\"password\"><span xml:lang=\"en\">Password</span>
-								<div class=\"inp_pass\">	
-									<input title=\"password\" type=\"password\" name=\"pass\" tabindex=\"2\"/>
-								<\div>
-							</label>
-						
+			<div class=\"content_form\">
+				<fieldset>
+					<legend>Inserire i dati di <span xml:lang=\"eng\">login</span></legend>
+						<label title=\"utente\">Utente
+							<div class=\"inp_utente\">
+								<input title=\"utente\" type=\"text\" name=\"user\" tabindex=\"1\"/>
+							<\div>
+						</label>
+							
+						<label title=\"password\"><span xml:lang=\"en\">Password</span>
+							<div class=\"inp_pass\">	
+								<input title=\"password\" type=\"password\" name=\"pass\" tabindex=\"2\"/>
+							<\div>
+						</label>
 					
-					<input class=\"pulsante\" name=\"annulla\"  value=\"Reset\" type=\"reset\" tabindex=\"3\"/>
-					<input class=\"pulsante\" name=\"login\"  value=\"Entra\" type=\"submit\" tabindex=\"4\"/>
-					</fieldset>  
-				</div>
-			</fieldset>
+				
+				<input class=\"pulsante\" name=\"annulla\"  value=\"Reset\" type=\"reset\" tabindex=\"3\"/>
+				<input class=\"pulsante\" name=\"login\"  value=\"Entra\" type=\"submit\" tabindex=\"4\"/>
+				</fieldset>  
+			</div>
 		</form>
-		
 				<div class=\"registrati_ora\">
 					Non sei ancora registrato? fallo ora <a href=\"registration.cgi\"> Cliccando QUI</a>
 				</div>
