@@ -74,7 +74,7 @@ $htmlprint="$htmlprint
 		<div class=\"pure-control-group\">
 			<fieldset>
 				<legend>Registrazione: completare i campi come richiesto</legend>
-				
+
 					<label class=\"label_block\" for=\"username\" >Username</label>
 						<input type=\"text\" value=\"$username\" placeholder=\"Username \" name=\"username\" id=\"username\" maxlength=\"10\" required/>
 					<label class=\"label_block\" for=\"email\" >Indirizzo email</label>
