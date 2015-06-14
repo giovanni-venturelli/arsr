@@ -188,6 +188,11 @@ ul {
 	font-weight: bolder;
 	border-radius: 0.2em;
 }
+.menulist a:visited{
+	color: #28324E;
+	display:block;
+	background-color: #75706B;
+}
 
 .menulist a:hover{
 	transform: scale(1.1); 
@@ -196,12 +201,10 @@ ul {
 	color: #EFEFEF;
 	display:block;
 }
-
-
-.menulist a:visited{
-	color: #28324E;
-	display:block;
+.menulist a:visited:hover{
+	background-color: #A38F84;
 }
+
 
 .menulist a:active{
 	transform: scale(1);

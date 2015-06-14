@@ -64,7 +64,6 @@
 
 /*immagini del footer*/
 .image_footer{
-float:right;
+margin-top:0;
 width: 5em;
-
 }
