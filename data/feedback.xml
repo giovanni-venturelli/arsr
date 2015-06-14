@@ -91,4 +91,18 @@
 <corpo>5</corpo>
 </feedback>
 
+<feedback>
+<id>16</id>
+<autore>puc</autore>
+<immagine>avatar.jpg</immagine>
+<data>2015-06-14</data>
+<corpo>prova</corpo>
+</feedback>
+<feedback>
+<id>17</id>
+<autore>puc</autore>
+<immagine>avatar.jpg</immagine>
+<data>2015-06-14</data>
+<corpo>prova2</corpo>
+</feedback>
 </commenti>

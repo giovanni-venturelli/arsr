@@ -1,32 +1,40 @@
 #!"C:\strawberry\perl\bin\perl.exe"
-
 use XML::LibXML;
 use CGI::Carp qw(fatalsToBrowser);
 use CGI qw(:standard);
 use CGI::Session;
 use CGI;
-use DBI;
+use Time::localtime;#data e ora
+use Time::Piece;
 use XML::LibXML::NodeList;
 use XML::LibXML::XPathContext;
-use utf8;
-sub getSession() 
-{
-	$session = CGI::Session->load() or die $!;
-	if ($session->is_expired || $session->is_empty ) 
-		{
-			return undef;
-		}#end if
-	else 
-		{
-			my $utente = $session->param('utente');
-			$session;
-		}#end else
-}#end sub getSession()
 
-my $session=getSession; #richiamo la sessione
+require 'session.cgi';
 $page=new CGI;	#creo un oggetto CGI per recuperare i parametri passati con POST
-if($session || !$session){ # finchè non abbiamo le sessioni metto che è come se ci fosse sempre
-	
+
+
+
+  my $random_number = rand();
+my $file = "temp$random_number.txt";
+
+# Use the open() function to create the file.
+unless(open FILE, '>'.$file) {
+  # Die with error message 
+  # if we can't open it.
+ die "nUnable to create $filen";
+}
+
+# Write some text to the file.
+
+print FILE "Hello theren";
+print FILE "How are you?n";
+
+# close the file.
+close FILE;
+
+
+
+if(length $admin){ 	
 	my $parser = XML::LibXML->new();	#creo un parser per il file xml
 	my %map = (							#creo una mappa per eseguire l'escape
 	'>' => '&gt;',
@@ -55,8 +63,8 @@ if($session || !$session){ # finchè non abbiamo le sessioni metto che è come s
 		@items = $root->getElementsByTagName('attrezzatura');
 		
 		my $code = $page->param('codice'); #salvo il codice prodotto dal file di modifica (passato come input type="hidden")
-			my $Xpath = "/database/attrezzatura[codice_prodotto=\"$code\"]"; # genialata di Giovanni di salvare la stringa xpath in variabile
-			for my $dead ($doc ->findnodes ($Xpath)){ # trovato su stackoverflow per eliminare il nodo
+			my $Xpath = "/database/attrezzatura[codice_prodotto=\"$code\"]"; # salva la stringa xpath in variabile
+			for my $dead ($doc ->findnodes ($Xpath)){ # elimina il nodo
 				$dead->unbindNode; # elimino il nodo 
 				open(OUT, ">$file"); # tre istruzioni per salvare lo stato del file xml
 				print OUT $doc->toString;

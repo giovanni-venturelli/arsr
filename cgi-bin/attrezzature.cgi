@@ -29,6 +29,7 @@ $num_attr=@items;
 $buffer = $ENV{'QUERY_STRING'};
 @pairs = split(/&/,$buffer);
 $num_pair = @pairs; #numero copie (se =0 sono in pagina 1)
+
 $pagina;
 	if($num_pair){
 		foreach $pair(@pairs){
@@ -42,6 +43,9 @@ $pagina;
 
 
 	$htmlprint="$header$menu<div id=\"content\">";
+	
+
+
 	if(($num_attr/10) > 1){
 			if($admin){
 				$htmlprint="$htmlprint<form action=\"insert_attrezzature.cgi\"><input type=\"submit\" class=\"pulsante submit\" id=\"inserisci_pulsante\" value=\"NEW\"></form>";
@@ -77,8 +81,10 @@ $pagina;
 			}
 			$htmlpag="$htmlpag</select></form>";
 		}
+
 	$htmlprint="$htmlprint$htmlpag";
 	$contatore = 0;
+
 	foreach $item(@items){
 		if(((!$num_pair || $pagina==1) && $contatore < 10) || ((($contatore < $pagina*10)) && ($contatore > ($pagina*10)-11))){
 		my $nome=$item->find('nome');
@@ -88,12 +94,14 @@ $pagina;
 		my $source=$item->find('img/source');
 		my $alt=$item->find('img/alt');
 		my $disp=$item->find('disponibile');
-		
+
 		$htmlprint="$htmlprint  <div class=\"attr_content\">
-									<div class=\"attr_img\">
-										<img src=\"$source\" alt=\"$alt\" class=\"img_attr\" />
-									</div>
+
+									<div class=\"attr_img\">".
+#										<img src=\"$source\" alt=\"$alt\" class=\"img_attr\" />
+									"</div>
 										<div calss=\"div_cont\">";
+
 										if($disp eq 'disponibile'){
 											$htmlprint="$htmlprint<div class=\"attr_disp_si\">$disp</div>";
 										}
@@ -101,12 +109,15 @@ $pagina;
 											$htmlprint="$htmlprint<div class=\"attr_disp_no\">$disp</div>";
 										}
 										else{
+
 											$htmlprint="$htmlprint<div class=\"attr_disp\">$disp</div>";
 										}
 											$htmlprint="$htmlprint<div class=\"attr_nome\">$nome</div>
 											<div class=\"attr_cod\">$cod</div>
 											<div class=\"attr_prezzo\">$prezzo</div>
 											<div class=\"attr_descr\">$desc</div>";
+
+
 											if($admin){
 												$htmlprint="$htmlprint<div class=\"attr_form\">
 																		<form class=\"attr_button\" action=\"modifica_attrezzature.cgi\" method=\"post\">
@@ -118,16 +129,24 @@ $pagina;
 																			<input type=\"submit\" name=\"rimuovi\" value=\"RIMUOVI\" class=\"pulsante\" />
 																		</form>
 																	</div>";
+	
 											}
-											
-										$htmlprint="$htmlprint</div>
+
+
+									$htmlprint="$htmlprint</div>
 								</div>";
+
 		}
+
 		$contatore=$contatore+1;
 	}
+
 		$htmlprint="$htmlprint<div id=\"pr\">*il prezzo si riferisce al noleggio giornaliero</div>";
 		$htmlprint="$htmlprint<div><div id=\"back_to_top\"><a href=\# id=\"back_to_top_link\">torna in alto</a></div>$htmlpag</div>";
 		$htmlprint="$htmlprint</div>";
+		
+
+
 	require("footer.cgi");
 	$htmlprint="$htmlprint$footer";
 	print $htmlprint;

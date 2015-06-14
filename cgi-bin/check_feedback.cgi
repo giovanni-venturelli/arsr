@@ -18,6 +18,8 @@ use utf8;
 $page=new CGI; #crea oggetto CGI per recuperare i parametri passati con POST
 
 require("session.cgi");
+
+
 if($utente) #se c'è sessione
 	{
 if(length $page->param('feed_body')) # recupera POST['feed_body']

@@ -142,3 +142,14 @@
 	float:rigth;
 	margin-left: 30em;
 }
+
+#form_attr_descr_input{
+	max-width:99%;
+	min-width:99%;
+	margin:0;
+}
+
+#form_attr_img_alt_input{
+	min-width: 98%;
+	max-width:98%;
+}

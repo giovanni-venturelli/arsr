@@ -59,61 +59,61 @@ use XML::LibXML::XPathContext;
 										<div id=\"form_attr_img_nome\">
 											immagine:
 										</div>
-										<div id=\"form_attr_img_input\">
-											<input name=\"img\" type=\"file\" name=\"img\" value=\"$source\" />
-										</div>
+											<input id=\"form_attr_img_input\" name=\"img\" type=\"file\"  name=\"img\" value=\"$source\" />					
 									</div>
 									<div id=\"form_attr_img_alt\">
 										<div id=\"form_attr_img_alt_nome\">
 											descrizione immagine:
 										</div>
-										<div id=\"form_attr_img_alt_input\">
-											<textarea name=\"alt\" rows=\"2\" cols=\"22\">$alt</textarea>
-										</div>
+										
+											<textarea id=\"form_attr_img_alt_input\" name=\"alt\" rows=\"2\" cols=\"22\">$alt</textarea>
+										
 									</div>
 								</div>
 								<div class=\"form_attr_nome\">
 									<div id=\"form_attr_descr_nome\">
 										descrizione:
 									</div>
-									<div id=\"form_attr_descr_input\">
-										<textarea name=\"descr\" rows=\"6\" cols=\"100\">$desc</textarea>
-									</div>
+										<textarea id=\"form_attr_descr_input\" name=\"descr\" rows=\"6\" cols=\"100\">$desc</textarea>
+									
 								</div>
 								<div class=\"form_attr_nome\">
 									<div id=\"form_attr_prezzo_nome\">
 										prezzo:
 									</div>
-									<div id=\"fomr_attr_prezzo_input\">
-										<input name=\"prezzo\" type=\"text\" value=\"$prezzo\" />€
-									</div>
+									
+										<input id=\"fomr_attr_prezzo_input\" name=\"prezzo\" type=\"text\" value=\"$prezzo\" />€
+								
 								</div>
 								<div class=\"form_attr_nome\">
 									<div id=\"form_attr_disp_name\">
 										disponibilità:
 									</div>
-									<div id=\"form_attr_disp_input\">";
-									if($disp eq "disponibile"){
-										$htmlprint="$htmlprint<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\" value=\"disponibile\" checked>disponibile</div>
-										<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\" value=\"non disponibile\">non disponibile</div>
-										<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\">disponibile tra <input name=\"day\" type=\"number\" min=\"1\" max=\"9\"> giorni </div>"
-									}
-									elsif($disp eq "non disponibile"){
-										$htmlprint="$htmlprint<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\" value=\"disponibile\">disponibile</div>
-										<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\" value=\"non disponibile\" checked>non disponibile</div>
-										<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\">disponibile tra <input name=\"day\" type=\"number\" min=\"1\" max=\"9\"> giorni </div>"
-									}
-									else{
-										$htmlprint="$htmlprint<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\" value=\"disponibile\">disponibile</div>
-										<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\" value=\"non disponibile\">non disponibile</div>
-										<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\" checked>disponibile tra <input name=\"day\" type=\"number\" min=\"1\" max=\"9\" value=\"$day\"> giorni </div>"
-									}
+									<div id=\"form_attr_disp_input\" class=\"form_attr_disp_input_\">
+									";
+									
+										$htmlprint="$htmlprint<input type=\"radio\" name=\"disp\" value=\"disponibile\"";
+										if($disp eq "disponibile"){
+										$htmlprint="$htmlprint checked";
+										}
+										$htmlprint="$htmlprint>disponibile</div>
+										<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\" value=\"non disponibile\"";
+										if($disp eq "non disponibile"){
+											$htmlprint="$htmlprint checked";
+										}
+										$htmlprint="$htmlprint>non disponibile</div>";
+										if($disp ne "non disponibile" && $disp ne "disponibile"){
+											$htmlprint="$htmlprint<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\" checked>disponibile tra <input name=\"day\" type=\"number\" min=\"1\" max=\"9\" value=\"$day\"> giorni </div>";
+										}
+										else{
+										$htmlprint="$htmlprint<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\">disponibile tra <input name=\"day\" type=\"number\" min=\"1\" max=\"9\"> giorni </div>"
+										}
 									$htmlprint="$htmlprint	
-									</div>
+									
 								</div>
-								<div class=\"form_attr_nome\">
-									<input class=\"pulsante submit\" id=\"pulsante_vai\" type=\"submit\" value=\"MODIFICA\" />
-								</div>
+								
+									<input class=\"pulsante\" id=\"pulsante_vai\" type=\"submit\" value=\"MODIFICA\" />
+								
 							</form>
 							</div>";
 		require("footer.cgi");
