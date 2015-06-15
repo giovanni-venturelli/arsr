@@ -12,7 +12,6 @@ require("session.cgi");
 require("header.cgi");
 require("menu.cgi");
 $page = new CGI;
-#$utente= getSession();
 
 
 
@@ -44,12 +43,12 @@ $pagina;
 
 	$htmlprint="$header$menu<div id=\"content\">";
 	
-
+	$htmlprint="$htmlprint <div id=\"feedback_main\"><h3>NOLEGGIO ATTREZZATURE</h3> Da qua puoi vedere quali attrezzature sono disponibili per il noleggio. Per informazioni puoi chiamare il numero 666</div>";
+	if($admin){
+		$htmlprint="$htmlprint<form action=\"insert_attrezzature.cgi\"><input type=\"submit\" class=\"pulsante submit\" id=\"inserisci_pulsante\" value=\"NEW\"></form>";
+	}
 
 	if(($num_attr/10) > 1){
-			if($admin){
-				$htmlprint="$htmlprint<form action=\"insert_attrezzature.cgi\"><input type=\"submit\" class=\"pulsante submit\" id=\"inserisci_pulsante\" value=\"NEW\"></form>";
-			}
 			$htmlpag="$htmlpag<form id=\"num_pagine\" name=\"num\" method=\"get\" action=\"attrezzature.cgi\">sei a pagina";
 			if($pagina){
 					$htmlpag="$htmlpag	$pagina, vai a pagina  ";
@@ -97,9 +96,9 @@ $pagina;
 
 		$htmlprint="$htmlprint  <div class=\"attr_content\">
 
-									<div class=\"attr_img\">".
-#										<img src=\"$source\" alt=\"$alt\" class=\"img_attr\" />
-									"</div>
+									<div class=\"attr_img\">
+										<img src=\"$source\" alt=\"$alt\" class=\"img_attr\" />
+									</div>
 										<div calss=\"div_cont\">";
 
 										if($disp eq 'disponibile'){

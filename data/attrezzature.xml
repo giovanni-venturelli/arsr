@@ -7,7 +7,7 @@
 				<descrizione>patata</descrizione>
 				<prezzo>750€</prezzo>
 				<img>
-					<source>feedback.cgi</source>
+					<source></source>
 					<alt/>
 				</img>
 				<disponibile>non disponibile</disponibile>
@@ -18,7 +18,7 @@
 				<descrizione>animale che perde pelo ovunque animale che perde pelo ovunque animale che perde pelo ovunque </descrizione>
 				<prezzo>2€</prezzo>
 				<img>
-					<source>check_modifica_attrezzature.cgi</source>
+					<source></source>
 					<alt/>
 				</img>
 				<disponibile>non disponibile</disponibile>
@@ -30,7 +30,7 @@
 				<descrizione>animale che puzza e abbaia</descrizione>
 				<prezzo>50  €</prezzo>
 				<img>
-					<source>attrezzature.cgi</source>
+					<source></source>
 					<alt/>
 				</img>
 				<disponibile>disponibile</disponibile>
@@ -42,7 +42,7 @@
 				<descrizione>animale che puzza e abbaia</descrizione>
 				<prezzo>50  €</prezzo>
 				<img>
-					<source>attrezzature.cgi</source>
+					<source></source>
 					<alt/>
 				</img>
 				<disponibile>disponibile</disponibile>
@@ -53,7 +53,7 @@
 				<descrizione>animale che puzza e abbaia</descrizione>
 				<prezzo>50  €</prezzo>
 				<img>
-					<source>attrezzature.cgi</source>
+					<source></source>
 					<alt/>
 				</img>
 				<disponibile>disponibile</disponibile>
@@ -70,19 +70,6 @@
 			</img>
 			<disponibile>disponibile</disponibile>
 		</attrezzatura>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <attrezzatura>
 			<nome>Cane</nome>
 			<codice_prodotto>10</codice_prodotto>
@@ -118,4 +105,5 @@
 			</img>
 			<disponibile>disponibile</disponibile>
 		</attrezzatura>
+
 </database>
