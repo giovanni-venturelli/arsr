@@ -18,7 +18,6 @@ body {
 #header {
 	background-image: url(../img/headmix.png);
 	background-repeat: no-repeat;
-	/*background-color: #75706B;*/
 	color: #EFEFEF;
 	text-align: center;
 	padding: 0.1em;
@@ -111,14 +110,10 @@ min-height: 2em;
 	color:#EFEFEF;
 }
 #content{
-	color:#191a1c;
+	color:#EFEFEF;
 	text-align:justify;
 	margin-top:0.5em;
-
 	margin-bottom: 0.5em;
-	/*background-color:rgba(239,239,239,0.8);
-	
-	border: thin solid #A38F84;*/
 }
 #slideshow {
 	width: 90%;
@@ -157,24 +152,26 @@ min-height: 2em;
 
 .pagine_submit:hover button, input[type=submit]{
   cursor: pointer !important;
-
 }
+
 .label_block{
 	display:block;
 }
+
 .inputcorpo{
 	min-width:99%;
 	max-width: 99%;
 	min-height: 7em;
 }
+
 .modifica{
 	margin-top:0.2em;
 }
+
 .annulla{
 	margin-top:0.2em;
 	margin-left:0.5em;
 }
-
 
 .colonna{
 	
@@ -202,29 +199,37 @@ min-height: 2em;
 }
 #range-logo{
 	float:right;
+	padding-top:1em;
 	margin-top:0.1em;
-	margin-bottom: 0.5em;
-	padding-left: 1.5%;
-	padding-top: 0.5%;
-	padding-bottom: 0.5%;
-	margin-right:-3.2em;
+	margin-right:-3.7em;
 	background-image:url(../img/flat_facebook_logo.png);
 	text-indent: -9999px;
 	display: block;
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: 1.8em;
 	opacity:0.8;
 }
+#range-logo:hover{
+	opacity: 1;
+}
+
 #subheader{
 	height:2em;
 	margin-top: 0.2em;
-	background-color: #28324E;
 	padding:0.5em;
 	padding-bottom: 0;
+	position:relative;
 }
 #position{
-	display:inline;
+	margin-top: 0.1em;
+	margin-bottom: 0.5em;
+	padding-left: 1.5%;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+	background-color: #28324E;
+	color:#EFEFEF;
 	float:left;
+	width:94.4%;
 }
 #feedback_main{
 
