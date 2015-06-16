@@ -59,6 +59,8 @@ if(!length $utente) #se non c'è sessione
 				}
 			}
 		}
+		$erroreb=1;
+			require ("login.cgi");
 	}
 }
 else{
