@@ -32,6 +32,30 @@ print FILE "How are you?n";
 # close the file.
 close FILE;
 
+#modifica di francesco per l'upload del file
+#upload del file immagine
+my $filename = $page->param("img");
+$CGI::POST_MAX = 1024 * 5000;
+my $safe_filename_characters = "a-zA-Z0-9_.-";
+my $upload_dir = "../public_html/img";
+if ( !$filename ){
+	print $page->header ( );
+	print "There was a problem uploading your photo (try a smaller file).";
+	exit;
+}
+my ( $name, $path, $extension ) = fileparse ( $filename, '..*' );
+$filename = $name . $extension;
+$filename =~ tr/ /_/;
+$filename =~ s/[^$safe_filename_characters]//g;
+if ( $filename =~ /^([$safe_filename_characters]+)$/ ){$filename = $1;}
+else{die "Filename contains invalid characters";}
+my $upload_filehandle = $page->upload("foto");
+open ( UPLOADFILE, ">$upload_dir/$filename" ) or die "$!";
+binmode UPLOADFILE;
+while ( <$upload_filehandle> ){print UPLOADFILE;}
+close UPLOADFILE;
+#print $page->header ( );
+
 
 
 if(length $admin){ 	
