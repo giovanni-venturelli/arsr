@@ -64,7 +64,7 @@
 
 .mailto:hover + .invisible{
 	text-decoration: none;
-	display:inline;
+	display:none;
 }
 
 /*CSS Servizio */
