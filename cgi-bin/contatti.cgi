@@ -32,7 +32,6 @@ $htmlprint= "$header$menu<div id=\"content\">";
 $htmlprint="$htmlprint
 		<div class='TContact'>
 			<div class='left'>
-
 				<div class='pair'>
 					<div class='TFirst'>Ditta:</div>
 					<div class='TSecond'>A.R.S.R.</div>
