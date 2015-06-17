@@ -5,103 +5,103 @@
 				<nome>Microfono Shure sm57</nome>
 				<codice_prodotto>1</codice_prodotto>
 				<descrizione>Microfono dinamico per strumenti</descrizione>
-				<prezzo>5 &euro;</prezzo>
+				<prezzo>5 </prezzo>
 				<img>
-					<source>/attrezzature/sm57.jpg</source>
-					<alt>Microfono Shure sm57 <alt/>
+					<source>sm57.jpg</source>
+					<alt>Microfono Shure sm57 </alt>
 				</img>
-				<disponibile>4</disponibile>
+				<disponibile>disponibile</disponibile>
 	</attrezzatura>
 	<attrezzatura>
 				<nome>Microfono Shure sm58</nome>
 				<codice_prodotto>2</codice_prodotto>
 				<descrizione>Microfono dinamico per voce/strumenti </descrizione>
-				<prezzo>5 &euro;</prezzo>
+				<prezzo>5 euro</prezzo>
 				<img>
-					<source>/attrezzature/sm58.jpg</source>
-					<alt>Microfono Shure sm57 <alt/>
-				</img>
-				<disponibile>4</disponibile>
-	</attrezzatura>
-	
-	<attrezzatura>
-				<nome>Cane</nome>
-				<codice_prodotto>6</codice_prodotto>
-				<descrizione>animale che puzza e abbaia</descrizione>
-				<prezzo>50  €</prezzo>
-				<img>
-					<source></source>
-					<alt><alt/>
+					<source>sm58.jpg</source>
+					<alt>Microfono Shure sm57 </alt>
 				</img>
 				<disponibile>disponibile</disponibile>
 	</attrezzatura>
 	
 	<attrezzatura>
-				<nome>Cane</nome>
-				<codice_prodotto>8</codice_prodotto>
-				<descrizione>animale che puzza e abbaia</descrizione>
-				<prezzo>50  €</prezzo>
+				<nome>Shure beta 58A</nome>
+				<codice_prodotto>3</codice_prodotto>
+				<descrizione>Microfono specifico per il canto</descrizione>
+				<prezzo>6 €</prezzo>
 				<img>
 					<source></source>
-					<alt><alt/>
+					<alt>Shure beta 58A</alt>
+				</img>
+				<disponibile>disponibile</disponibile>
+	</attrezzatura>
+	
+	<attrezzatura>
+				<nome>AKG c1000</nome>
+				<codice_prodotto>4</codice_prodotto>
+				<descrizione>Microfono dinamico da voce</descrizione>
+				<prezzo>7 €</prezzo>
+				<img>
+					<source>AKG-c1000.jpg</source>
+					<alt>AKG c1000</alt>
 				</img>
 				<disponibile>disponibile</disponibile>
 	</attrezzatura>
 	<attrezzatura>
-				<nome>Cane</nome>
-				<codice_prodotto>9</codice_prodotto>
-				<descrizione>animale che puzza e abbaia</descrizione>
-				<prezzo>50  €</prezzo>
+				<nome>DrumSet T.Bone 4xCD55 1xBD200</nome>
+				<codice_prodotto>5</codice_prodotto>
+				<descrizione>kit microfono da batteria</descrizione>
+				<prezzo>10 €</prezzo>
 				<img>
-					<source></source>
-					<alt><alt/>
+					<source>/kitbatteria.jpg</source>
+					<alt>DrumSet T.Bone 4xCD55 1xBD200</alt>
 				</img>
 				<disponibile>disponibile</disponibile>
 	</attrezzatura>
 	
 <attrezzatura>
-			<nome>Cane</nome>
-			<codice_prodotto>11</codice_prodotto>
-			<descrizione>animale che puzza e abbaia2</descrizione>
-			<prezzo>50  €</prezzo>
+			<nome>Monitor The Box M1520 (300W)</nome>
+			<codice_prodotto>6</codice_prodotto>
+			<descrizione>monitor passivo 300 watt</descrizione>
+			<prezzo>15 €</prezzo>
 			<img>
-				<source/>
-				<alt><alt/>
+				<source>monitortbox.jpg</source>
+				<alt>Monitor The Box M1520 (300W)</alt>
 			</img>
 			<disponibile>disponibile</disponibile>
 		</attrezzatura>
 <attrezzatura>
-			<nome>Cane</nome>
-			<codice_prodotto>10</codice_prodotto>
-			<descrizione>animale che puzza e abbaia ottosuggg</descrizione>
-			<prezzo>50  €</prezzo>
-			<img>
-				<source/>
-				<alt/>
-			</img>
-			<disponibile>disponibile</disponibile>
-		</attrezzatura>
-
-<attrezzatura>
-			<nome>Cane</nome>
+			<nome>SoundCraft 38Ch</nome>
 			<codice_prodotto>7</codice_prodotto>
-			<descrizione>animale che puzza e abbaia hhhhlldsaslkòk</descrizione>
-			<prezzo>50  €</prezzo>
+			<descrizione>mixer analogico 38 canali</descrizione>
+			<prezzo>25 €</prezzo>
 			<img>
-				<source/>
-				<alt/>
+				<source>soundcragt32.jpg</source>
+				<alt>SoundCraft 38Ch</alt>
 			</img>
 			<disponibile>disponibile</disponibile>
 		</attrezzatura>
 
 <attrezzatura>
-			<nome>Cane</nome>
-			<codice_prodotto>5</codice_prodotto>
-			<descrizione>animale che puzza e abbaiadsadasas</descrizione>
-			<prezzo>50  €</prezzo>
+			<nome>Mixer Allen and Heath 16Ch</nome>
+			<codice_prodotto>8</codice_prodotto>
+			<descrizione>mixer analogico 16 canali</descrizione>
+			<prezzo>15 €</prezzo>
 			<img>
-				<source/>
-				<alt><alt/>
+				<source>makie16.jpg</source>
+				<alt>Allen and Heath 16Ch</alt>
+			</img>
+			<disponibile>disponibile</disponibile>
+		</attrezzatura>
+
+<attrezzatura>
+			<nome>Behringer 8ch</nome>
+			<codice_prodotto>9</codice_prodotto>
+			<descrizione>mixer eurorack 16</descrizione>
+			<prezzo>10 €</prezzo>
+			<img>
+				<source>behringer.jpg</source>
+				<alt>Behringer 8ch</alt>
 			</img>
 			<disponibile>disponibile</disponibile>
 		</attrezzatura>

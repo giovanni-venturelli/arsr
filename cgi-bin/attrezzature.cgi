@@ -90,7 +90,7 @@ $pagina;
 		my $cod=$item->find('codice_prodotto');
 		my $desc=$item->find('descrizione');
 		my $prezzo=$item->find('prezzo');
-		my $source=$item->find('img/source');
+		my $source=$item->find('img/attrezzature/source'); ###da cambiare con cartella giusta
 		my $alt=$item->find('img/alt');
 		my $disp=$item->find('disponibile');
 
