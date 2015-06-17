@@ -14,8 +14,8 @@
 	margin-top: 0.25em;
 	margin-left: 0.25em;
 	margin-right:0.25em;
-	height: 4.5em;
-	width: 4.5em;
+	max-height: 4.5em;
+	max-width: 4.5em;
 	margin:solid;
 }
 

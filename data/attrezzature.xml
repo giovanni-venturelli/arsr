@@ -24,17 +24,7 @@
 				<disponibile>disponibile</disponibile>
 	</attrezzatura>
 	
-	<attrezzatura>
-				<nome>Shure beta 58A</nome>
-				<codice_prodotto>3</codice_prodotto>
-				<descrizione>Microfono specifico per il canto</descrizione>
-				<prezzo>6 €</prezzo>
-				<img>
-					<source></source>
-					<alt>Shure beta 58A</alt>
-				</img>
-				<disponibile>disponibile</disponibile>
-	</attrezzatura>
+	
 	
 	<attrezzatura>
 				<nome>AKG c1000</nome>
@@ -59,17 +49,7 @@
 				<disponibile>disponibile</disponibile>
 	</attrezzatura>
 	
-<attrezzatura>
-			<nome>Monitor The Box M1520 (300W)</nome>
-			<codice_prodotto>6</codice_prodotto>
-			<descrizione>monitor passivo 300 watt</descrizione>
-			<prezzo>15 €</prezzo>
-			<img>
-				<source>monitortbox.jpg</source>
-				<alt>Monitor The Box M1520 (300W)</alt>
-			</img>
-			<disponibile>disponibile</disponibile>
-		</attrezzatura>
+
 <attrezzatura>
 			<nome>SoundCraft 38Ch</nome>
 			<codice_prodotto>7</codice_prodotto>
@@ -105,5 +85,11 @@
 			</img>
 			<disponibile>disponibile</disponibile>
 		</attrezzatura>
+
+
+
+
+
+
 
 </database>

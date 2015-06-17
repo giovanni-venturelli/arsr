@@ -78,6 +78,6 @@ if($session || !$session){ # se la sessione è aperta (ATTUALMENTE SE NON ESISTE
 		open(OUT, ">$file");
 		print OUT $doc->toString;
 		close(OUT);
-		print redirect(-uri=>'admin_attrezzature.cgi');
+		print redirect(-uri=>'attrezzature.cgi');
 		exit;
 }

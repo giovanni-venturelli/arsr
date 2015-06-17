@@ -30,7 +30,7 @@ use XML::LibXML::XPathContext;
 		require("menu.cgi");
 		print "content-type: text/html\n\n";
 		$htmlprint="$header$menu<div id=\"content\">";
-		$htmlprint="$htmlprint<form id=\"insert_attrezzatura\" action=\"check_insert_attrezzature.cgi\" method=\"post\">
+		$htmlprint="$htmlprint<form id=\"insert_attrezzatura\" action=\"check_insert_attrezzature.cgi\" method=\"post\" enctype='multipart/form-data'>
 								<div class=\"form_attr_nome\">
 									<div id=\"form_attr_nome_nome\">
 										nome:

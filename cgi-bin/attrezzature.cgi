@@ -43,7 +43,7 @@ $pagina;
 
 	$htmlprint="$header$menu<div id=\"content\">";
 	
-	$htmlprint="$htmlprint <div id=\"feedback_main\"><h3>NOLEGGIO ATTREZZATURE</h3> Da qua puoi vedere quali attrezzature sono disponibili per il noleggio. Per informazioni puoi chiamare il numero 666</div>";
+	$htmlprint="$htmlprint <div id=\"feedback_main\"><h3>NOLEGGIO ATTREZZATURE</h3> Da qua puoi vedere quali attrezzature sono disponibili per il noleggio. Per informazioni puoi chiamare il numero 3469468480</div>";
 	if($admin){
 		$htmlprint="$htmlprint<div id=\"new_attr\"><a href=\"insert_attrezzature.cgi\"><button class=\"pulsante submit\">NEW</button></a></div>";
 	}
@@ -90,14 +90,14 @@ $pagina;
 		my $cod=$item->find('codice_prodotto');
 		my $desc=$item->find('descrizione');
 		my $prezzo=$item->find('prezzo');
-		my $source=$item->find('img/attrezzature/source'); ###da cambiare con cartella giusta
+		my $source=$item->find('img/source'); ###da cambiare con cartella giusta
 		my $alt=$item->find('img/alt');
 		my $disp=$item->find('disponibile');
 
 		$htmlprint="$htmlprint  <div class=\"attr_content\">
 
 									<div class=\"attr_img\">
-										<img src=\"$source\" alt=\"$alt\" class=\"img_attr\" />
+										<img src=\"../public_html/img/attrezzature/$source\" alt=\"$alt\" class=\"attr_img\" />
 									</div>
 										<div class=\"div_cont\">";
 
