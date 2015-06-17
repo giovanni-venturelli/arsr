@@ -60,7 +60,7 @@
 	100% { transform: rotate(-2deg); }
 }
 
-@media  (min-width: 767px) and (min-device-width: 1024px) {
+@media  (min-width: 51em) and (min-device-width: 1024px) {
 body {
 	background-color:#191a1c;
 	color:#EFEFEF;
@@ -534,4 +534,8 @@ margin-bottom:200px;
 
 #content a:visited:active{
 	color: #602a7a;
+}
+
+#new_attr{
+	margin-bottom:0.5em;
 }

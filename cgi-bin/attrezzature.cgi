@@ -45,7 +45,7 @@ $pagina;
 	
 	$htmlprint="$htmlprint <div id=\"feedback_main\"><h3>NOLEGGIO ATTREZZATURE</h3> Da qua puoi vedere quali attrezzature sono disponibili per il noleggio. Per informazioni puoi chiamare il numero 666</div>";
 	if($admin){
-		$htmlprint="$htmlprint<form action=\"insert_attrezzature.cgi\"><input type=\"submit\" class=\"pulsante submit\" id=\"inserisci_pulsante\" value=\"NEW\"></form>";
+		$htmlprint="$htmlprint<div id=\"new_attr\"><a href=\"insert_attrezzature.cgi\"><button class=\"pulsante submit\">NEW</button></a></div>";
 	}
 
 	if(($num_attr/10) > 1){
@@ -141,7 +141,7 @@ $pagina;
 	}
 
 		$htmlprint="$htmlprint<div id=\"pr\">*il prezzo si riferisce al noleggio giornaliero</div>";
-		$htmlprint="$htmlprint<div><div id=\"back_to_top\"><a href=\# id=\"back_to_top_link\">torna in alto</a></div>$htmlpag</div>";
+		$htmlprint="$htmlprint<div class=\"pagine\"><div id=\"back_to_top\"><a href=\# id=\"back_to_top_link\">torna in alto</a></div>$htmlpag</div>";
 		$htmlprint="$htmlprint</div>";
 		
 
