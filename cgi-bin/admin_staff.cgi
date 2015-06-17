@@ -14,10 +14,6 @@ use utf8;
 $title = 'Admin Staff';
 $where = "Admin Staff";
 
-$session = CGI::Session->load() or die $!;
-my $admin = $session->param('utente');
-$page=new CGI;
-
 $parser = XML::LibXML->new();
 my $file = "../data/staff.xml";
 my $doc = $parser->parse_file($file);
@@ -33,15 +29,17 @@ foreach $item(@items){
 	$h_opt="$h_opt\n <option value='$id'>$nome $cognome</option>";
 }
 	
-print($page->header());
-
-my $htmlprint;
-require("session.cgi");
+require ("session.cgi");
 require ("header.cgi");
 require ("menu.cgi");
 require ("footer.cgi");
+$page = new CGI;
+print $page->header;
+
+my $htmlprint;
 $htmlprint= "$header$menu<div id=\"content\">";
-if ($admin eq 'admin'){$htmlprint="$htmlprint
+if (length $admin){
+	$htmlprint="$htmlprint
 	<div id='inserisci'>
 	<fieldset class='container form-group'>
 		<legend><h4 class='legend'>Inserisci</h4></legend>
