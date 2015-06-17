@@ -10,7 +10,7 @@
 	height: 5em;
 }
 .attr_img{
-	float: left;
+	float:left;
 	margin-top: 0.25em;
 	margin-left: 0.25em;
 	margin-right:0.25em;
@@ -20,12 +20,13 @@
 }
 
 .div_cont{
-	margin-right: 2em;
-	float:right;
+margin-left:5.5em;
+	
 }
 
 .attr_nome{
 	font-size: large;
+
 }
 .attr_cod{
 	color: #999;
@@ -57,13 +58,11 @@
 }
 
 .attr_button{
-	float:left;
+	display:inline;
 }
-.attr_form{
-	opacity:0;
-}
-.attr_form:hover{
-	opacity:1;
+
+.attr_button2{
+	display:inline;
 }
 
 #img_mod{
@@ -99,6 +98,7 @@
 
 .img_attr{
 	height: 100%;
+	
 }
 #pr{
 	font-size:xx-small;
@@ -136,7 +136,7 @@
 	border-color:#28324E;
 }
 #form_attr_img{
-	float:left;
+	
 }
 #form_attr_img_alt{
 	float:rigth;
