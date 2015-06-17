@@ -2,26 +2,26 @@
 <?xml-stylesheet type="text/xsl" href="attrezzature.xsl"  xmlns="http://www.ASRS.com" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="attrezzature.xsd"?>
 <database>	
 	<attrezzatura>
-				<nome>Patata</nome>
-				<codice_prodotto>3</codice_prodotto>
-				<descrizione>patata</descrizione>
-				<prezzo>750€</prezzo>
+				<nome>Microfono Shure sm57</nome>
+				<codice_prodotto>1</codice_prodotto>
+				<descrizione>Microfono dinamico per strumenti</descrizione>
+				<prezzo>5 &euro;</prezzo>
 				<img>
-					<source></source>
-					<alt/>
+					<source>/attrezzature/sm57.jpg</source>
+					<alt>Microfono Shure sm57 <alt/>
 				</img>
-				<disponibile>non disponibile</disponibile>
+				<disponibile>4</disponibile>
 	</attrezzatura>
 	<attrezzatura>
-				<nome>Gatto</nome>
-				<codice_prodotto>4</codice_prodotto>
-				<descrizione>animale che perde pelo ovunque animale che perde pelo ovunque animale che perde pelo ovunque </descrizione>
-				<prezzo>2€</prezzo>
+				<nome>Microfono Shure sm58</nome>
+				<codice_prodotto>2</codice_prodotto>
+				<descrizione>Microfono dinamico per voce/strumenti </descrizione>
+				<prezzo>5 &euro;</prezzo>
 				<img>
-					<source></source>
-					<alt/>
+					<source>/attrezzature/sm58.jpg</source>
+					<alt>Microfono Shure sm57 <alt/>
 				</img>
-				<disponibile>non disponibile</disponibile>
+				<disponibile>4</disponibile>
 	</attrezzatura>
 	
 	<attrezzatura>
@@ -31,7 +31,7 @@
 				<prezzo>50  €</prezzo>
 				<img>
 					<source></source>
-					<alt/>
+					<alt><alt/>
 				</img>
 				<disponibile>disponibile</disponibile>
 	</attrezzatura>
@@ -43,7 +43,7 @@
 				<prezzo>50  €</prezzo>
 				<img>
 					<source></source>
-					<alt/>
+					<alt><alt/>
 				</img>
 				<disponibile>disponibile</disponibile>
 	</attrezzatura>
@@ -54,7 +54,7 @@
 				<prezzo>50  €</prezzo>
 				<img>
 					<source></source>
-					<alt/>
+					<alt><alt/>
 				</img>
 				<disponibile>disponibile</disponibile>
 	</attrezzatura>
@@ -66,7 +66,7 @@
 			<prezzo>50  €</prezzo>
 			<img>
 				<source/>
-				<alt/>
+				<alt><alt/>
 			</img>
 			<disponibile>disponibile</disponibile>
 		</attrezzatura>
@@ -101,7 +101,7 @@
 			<prezzo>50  €</prezzo>
 			<img>
 				<source/>
-				<alt/>
+				<alt><alt/>
 			</img>
 			<disponibile>disponibile</disponibile>
 		</attrezzatura>

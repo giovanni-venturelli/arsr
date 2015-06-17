@@ -4,24 +4,24 @@
 	
 
 <persona>
-	<id>5</id>
+	<id>3</id>
 	<nome>Paolo</nome>
 	<cognome>Tizianel</cognome>
-	<ruolo>fonico</ruolo>
+	<ruolo>Fonico e tecnico luci</ruolo>
 	<img>
-		<source>arsr.jpg</source>
+		<source>paolo_tizianel.jpg</source>
 		<alt>Foto di Paolo Tizianel</alt>
 	</img>
 </persona>
 
 <persona>
-	<id>6</id>
-	<nome>Leonardo</nome>
-	<cognome>Benetollo</cognome>
-	<ruolo>capo</ruolo>
+	<id>2</id>
+	<nome>Amilcar</nome>
+	<cognome>Rodriguez</cognome>
+	<ruolo>Dirigente</ruolo>
 	<img>
-		<source>arsr.jpg</source>
-		<alt>Foto di Leonardo Benetollo</alt>
+		<source>amilcar.jpg</source>
+		<alt>Foto di Amilcar Rodriguez</alt>
 	</img>
 </persona>
 
@@ -29,39 +29,21 @@
 	<id>1</id>
 	<nome>Francesco</nome>
 	<cognome> Agostini</cognome>
-	<ruolo>Presidente</ruolo>
+	<ruolo>Fonico e tecnico luci</ruolo>
 	<img>
-		<source>cesco.jpg</source>
-		<alt>Foto di Francesco  Agostini</alt>
+		<source>francesco_agostini.jpg</source>
+		<alt>Foto di Francesco Agostini</alt>
 	</img>
 </persona>
 <persona>
 	<id>4</id>
-	<nome>stolfo</nome>
-	<cognome>fent</cognome>
-	<ruolo>fonico</ruolo>
+	<nome>Stolfo</nome>
+	<cognome>Fent</cognome>
+	<ruolo>Fonico</ruolo>
 	<img>
-		<source>impossible-triangle-md.png</source>
-		<alt>Foto di stolfo fent</alt>
+		<source>stolfo_fent.jpg</source>
+		<alt>Foto di Stolfo Fent</alt>
 	</img>
 </persona>
-<persona>
-	<id>5</id>
-	<nome/>
-	<cognome/>
-	<ruolo/>
-	<img>
-		<source/>
-		<alt>Foto di  </alt>
-	</img>
-</persona>
-<persona>
-	<id>6</id>
-	<nome>a</nome>
-	<cognome>a</cognome>
-	<ruolo>a</ruolo>
-	<img>
-		<source>10968366_10205002789022780_7819915266057635743_n.jpg</source>
-		<alt>Foto di a a</alt>
-	</img>
-</persona></Database>
+
+</Database>

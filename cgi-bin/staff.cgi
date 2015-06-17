@@ -31,6 +31,10 @@ require ("session.cgi");
 
 	$htmlprint="$header $menu <div id=\"content\">";
 
+	if (length $admin){
+		$htmlprint=$htmlprint.'<div id="editindex"><a href="admin_staff.cgi"><button class="pulsante">Modifica <span lang="en">staff</span></button></a></div>'
+	}
+	
 		foreach $item(@items){
 			my $nome=$item->find('nome');
 			my $cognome=$item->find('cognome');
