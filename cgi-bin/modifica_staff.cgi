@@ -63,19 +63,18 @@ require ("menu.cgi");
 require ("footer.cgi");
 $htmlprint= "$header$menu<div id=\"content\">";
 $htmlprint="$htmlprint
-	<h3 class='SubTitle'>Modifica-Staff</h3>
-	<fieldset class='form-group'>
-		<legend><h4 class='legend'>Modifica dati:</h4></legend>
-		<form action='modifica_staff_xml.cgi' method='POST' enctype='multipart/form-data'>		
-			<p class='invisible'><label class='label invisible'>Nome:</label><input value='$id_form' type='text' name='id'/></p>
-			<p><label class='label'>Nome:</label><input value='$nome' type='text' name='nome'/></p>
-			<p><label class='label'>Cognome:</label><input value='$cognome' type='text' name='cognome'/></p>
-			<p><label class='label'>Ruolo:</label><input value='$ruolo' type='text' name='ruolo'/></p>
-			<p><label class='label'>Sostituisci Foto:</label><input type='file' name='foto' accept='image/*'/></p>		
-			<p>PORCODDIO $source</p>
-			<input type='submit' value='Modifica'/>
+		<form action='modifica_staff_xml.cgi' method='post' enctype='multipart/form-data'>	
+			<fieldset class='container form-group'>
+				<legend>Modifica dati:</legend>
+				<p class='invisible'><label class='label invisible'>Nome:</label><input value='$id_form' type='text' name='id'/></p>
+				<p><label class='label'>Nome:</label><input value='$nome' type='text' name='nome'/></p>
+				<p><label class='label'>Cognome:</label><input value='$cognome' type='text' name='cognome'/></p>
+				<p><label class='label'>Ruolo:</label><input value='$ruolo' type='text' name='ruolo'/></p>
+				<p><label class='label'>Sostituisci Foto:</label><input class='pulsante' type='file' name='foto' accept='image/*'/></p>		
+				<p>$source</p>
+				<input type='submit' value='Modifica' class='pulsante'/>
+			</fieldset>
 		</form>
-	</fieldset>
 	</div>
 	$footer";
 print($htmlprint);

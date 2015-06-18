@@ -40,40 +40,40 @@ my $htmlprint;
 $htmlprint= "$header$menu<div id=\"content\">";
 if (length $admin){
 	$htmlprint="$htmlprint
-	<div id='inserisci'>
-	<fieldset class='container form-group'>
-		<legend><h4 class='legend'>Inserisci</h4></legend>
-		<form action='inserisci_staff.cgi' method='POST' enctype='multipart/form-data'>
-			<p><label class='label'>Nome:</label><input type='text' name='nome'/></p>
-			<p><label class='label'>Cognome:</label><input type='text' name='cognome'/></p>
-			<p><label class='label'>Ruolo:</label><input type='text' name='ruolo'/></p>
-			<p><label class='label'>Foto:</label><input type='file' name='foto' accept='image/*'/></p>
-			
-			<input type='submit' value='Aggiungi'/>
-		</form>
-	</fieldset>
+	<div id='inserisci'>	
+		<form action='inserisci_staff.cgi' method='post' enctype='multipart/form-data'>
+			<fieldset class='container form-group'>
+				<legend>Inserisci</legend>
+				<p><label class='label'>Nome:</label><input type='text' name='nome'/></p>
+				<p><label class='label'>Cognome:</label><input type='text' name='cognome'/></p>
+				<p><label class='label'>Ruolo:</label><input type='text' name='ruolo'/></p>
+				<p><label class='label'>Foto:</label><input type='file' name='foto' accept='image/*' class='pulsante' /></p>
+				
+				<input class='pulsante' type='submit' value='Aggiungi'/>
+			</fieldset>
+		</form>	
 	</div>
-	<div id='modifica'>
-	<fieldset class='container  form-group'>
-		<legend><h4 class='legend'>Modifica</h4></legend>
-		<form action='modifica_staff.cgi' method='POST'>
-			<p><select name='staff'>
-				$h_opt
-			</select></p>
-			<input type='submit' value='Modifica'/>
-		</form>
-	</fieldset>
+	<div id='modifica'>	
+		<form action='modifica_staff.cgi' method='post'>
+			<fieldset class='container  form-group'>
+			<legend>Modifica</legend>
+				<p><select name='staff'>
+					$h_opt
+				</select></p>
+				<input class='pulsante' type='submit' value='Modifica' />
+			</fieldset>
+		</form>	
 	</div>
 	<div id='elimina'>
-	<fieldset class='container  form-group'>
-		<legend><h4 class='legend'>Elimina</h4></legend>
-		<form action='elimina_staff.cgi' method='POST'>
-			<p><select name='staff'>
-				$h_opt
-			</select></p>
-			<input type='submit' value='Elimina'/>
+		<form action='elimina_staff.cgi' method='post'>
+			<fieldset class='container  form-group'>
+				<legend>Elimina</legend>
+				<p><select name='staff'>
+					$h_opt
+				</select></p>
+				<input class='pulsante' type='submit' value='Elimina' />
+			</fieldset>
 		</form>
-	</fieldset>
 	</div>
 	<div id='break'></div>
 	</div>

@@ -3,16 +3,7 @@
 <Database>
 	
 
-<persona>
-	<id>3</id>
-	<nome>Paolo</nome>
-	<cognome>Tizianel</cognome>
-	<ruolo>Fonico e tecnico luci</ruolo>
-	<img>
-		<source>paolo_tizianel.jpg</source>
-		<alt>Foto di Paolo Tizianel</alt>
-	</img>
-</persona>
+
 
 <persona>
 	<id>2</id>
@@ -46,4 +37,15 @@
 	</img>
 </persona>
 
-</Database>
+
+
+<persona>
+	<id>3</id>
+	<nome>Paolo</nome>
+	<cognome>Tizianel</cognome>
+	<ruolo>Fonico e tecnico luci</ruolo>
+	<img>
+		<source>paolo_tizianel.jpg</source>
+		<alt>Foto di Paolo Tizianel</alt>
+	</img>
+</persona></Database>
