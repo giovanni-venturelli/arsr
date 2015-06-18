@@ -17,4 +17,4 @@ sub destroySession(){
 
 my $page=CGI->new;
 destroySession();
-print $page->redirect(-uri=>'attrezzature.cgi');
+print $page->redirect(-uri=>'index.cgi');
