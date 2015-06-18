@@ -140,6 +140,7 @@ min-height: 2em;
 	color:#EFEFEF;
 	outline:0;
 	border-radius: 0.2em;
+	margin-bottom:0.2em;
 }
 
 .pulsante:hover{
@@ -260,7 +261,7 @@ min-height: 2em;
 
 .div_cont{
 	margin-right: 2em;
-	float:right;
+	/*float:right;*/
 }
 
 .attr_nome{
@@ -402,3 +403,12 @@ min-height: 2em;
 
 }
 
+.pagine{
+	height:1.5em;
+}
+
+.commento_immagine{
+	width:3em;
+	margin-left:0.1em;
+	float: left;
+}
