@@ -31,13 +31,12 @@
 	}
 else{
 	$ref="$log
-	<a href=\"index.cgi\">
 	<h1>
 	<abbr>ARSR</abbr>
 	<span lang=\"en\">Service</span>
 	</h1>
 	<h2>Audio e luci di qualità per il tuo Spettacolo</h2>
-	</a>";
+	";
 }
 	$header= "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
 	<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\">
@@ -69,7 +68,7 @@ $ref
 	<div id=\"position\">
 	Ti trovi in: $where</div>
 	<div class=\"social\" id=\"facebook\">
-	<a href=\"https://www.facebook.com/arsrservice?fref=ts\" target=\"new\" title=\"Pagina Facebook\" id=\"range-logo\">pagina <span lang=\"en\">facebook</span>
+	<a href=\"https://www.facebook.com/arsrservice?fref=ts\" title=\"Pagina Facebook\" id=\"range-logo\">pagina <span lang=\"en\">facebook</span>
 	</a>
 	</div>
 	</div>";

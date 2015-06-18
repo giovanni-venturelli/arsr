@@ -25,7 +25,7 @@ $temp=ActiveLink($where, "<span lang=\"en\">Home</span>", "index.cgi");
 $menu="$menu$temp";
 $menu="$menu
 </li><li class=\"menulist\"";
-$temp=ActiveLink($where, "Noleggio Attrezzature", "attrezzature.cgi\"");
+$temp=ActiveLink($where, "Noleggio Attrezzature", "attrezzature.cgi");
 $menu="$menu$temp";
 $menu="$menu</li>
 <li class=\"menulist\"";
@@ -39,12 +39,12 @@ $menu="$menu$temp";
 $menu="$menu
 </li>
 <li  class=\"menulist\"";
-$temp=ActiveLink($where, "Dicono di Noi", "feedback.cgi\"");
+$temp=ActiveLink($where, "Dicono di Noi", "feedback.cgi");
 $menu="$menu$temp";
 $menu="$menu
 </li>
 <li  class=\"menulist\"";
-$temp=ActiveLink($where, "Contatti", "contatti.cgi\"");
+$temp=ActiveLink($where, "Contatti", "contatti.cgi");
 $menu="$menu$temp";
 $menu="$menu</li>
 </ul>
