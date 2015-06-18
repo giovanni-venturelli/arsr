@@ -59,7 +59,7 @@ use XML::LibXML::XPathContext;
 										<div id=\"form_attr_img_nome\">
 											immagine:
 										</div>
-											<input id=\"form_attr_img_input\" name=\"img\" type=\"file\"  name=\"img\" value=\"$source\" />					
+											<input id=\"form_attr_img_input\" name=\"foto\" type=\"file\"  value=\"$source\" />					
 									</div>
 									<div id=\"form_attr_img_alt\">
 										<div id=\"form_attr_img_alt_nome\">

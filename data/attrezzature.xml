@@ -92,4 +92,30 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<attrezzatura>
+			<nome>Microfoni Studio</nome>
+			<codice_prodotto>10</codice_prodotto>
+			<descrizione>Microfoni a diaframma largo per registrazioni da studio</descrizione>
+			<prezzo>50 €</prezzo>
+			<img>
+				<source>C01-SP01-right.jpg</source>
+				<alt>mic-diaf-largo</alt>
+			</img>
+			<disponibile>disponibile</disponibile>
+		</attrezzatura>
 </database>

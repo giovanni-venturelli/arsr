@@ -8,6 +8,7 @@ use CGI;
 use DBI;
 use XML::LibXML::NodeList;
 use XML::LibXML::XPathContext;
+use File::Basename;
 use utf8;
 
 sub getSession() 
@@ -36,7 +37,7 @@ if($session || !$session){ # se la sessione è aperta (ATTUALMENTE SE NON ESISTE
 	
 	my $nome = $page->param('nome');
 		$nome =~ s/([<>])/$map{$1}/g;
-	my $img = $page->param('img');
+	my $filename = $page->param('foto');
 	my $alt = $page->param('alt');
 		$alt =~ s/([<>])/$map{$1}/g;
 	my $descr = $page->param('descr');
@@ -68,7 +69,7 @@ if($session || !$session){ # se la sessione è aperta (ATTUALMENTE SE NON ESISTE
 			<descrizione>$descr</descrizione>
 			<prezzo>$prezzo €</prezzo>
 			<img>
-				<source>$img</source>
+				<source>$filename</source>
 				<alt>$alt</alt>
 			</img>
 			<disponibile>$disp</disponibile>
@@ -78,6 +79,28 @@ if($session || !$session){ # se la sessione è aperta (ATTUALMENTE SE NON ESISTE
 		open(OUT, ">$file");
 		print OUT $doc->toString;
 		close(OUT);
+		
+		#upload del file immagine
+		$CGI::POST_MAX = 1024 * 5000;
+		my $safe_filename_characters = "a-zA-Z0-9_.-";
+		my $upload_dir = "../public_html/img/attrezzature";
+		if ( !$filename ){
+			print $page->header ( );
+			print "There was a problem uploading your photo (try a smaller file).";
+			exit;
+		}
+		my ( $name, $path, $extension ) = fileparse ( $filename, '..*' );
+		$filename = $name . $extension;
+		$filename =~ tr/ /_/;
+		$filename =~ s/[^$safe_filename_characters]//g;
+		if ( $filename =~ /^([$safe_filename_characters]+)$/ ){$filename = $1;}
+		else{die "Filename contains invalid characters";}
+		my $upload_filehandle = $page->upload("foto");
+		open ( UPLOADFILE, ">$upload_dir/$filename" ) or die "$!";
+		binmode UPLOADFILE;
+		while ( <$upload_filehandle> ){print UPLOADFILE;}
+		close UPLOADFILE;
+		#print $page->header ( );
 		print redirect(-uri=>'attrezzature.cgi');
 		exit;
 }

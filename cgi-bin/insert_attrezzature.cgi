@@ -23,12 +23,13 @@ use XML::LibXML::XPathContext;
 	}
 	
 	my $session=getSession;
-	$page=new CGI;
+	$page = new CGI;
+	print $page->header;
 	if($session){ #ATTENZIONE! ENTRO NELL'IF SENZA SESSIONE SOLO PER PROVARE LA PAGINA, DA MODIFICARE DOPO LA CREAZIONE DELLA PAGINA DI LOGIN
 		require ("session.cgi");
 		require("header.cgi");
 		require("menu.cgi");
-		print "content-type: text/html\n\n";
+
 		$htmlprint="$header$menu<div id=\"content\">";
 		$htmlprint="$htmlprint<form id=\"insert_attrezzatura\" action=\"check_insert_attrezzature.cgi\" method=\"post\" enctype='multipart/form-data'>
 								<div class=\"form_attr_nome\">
@@ -45,7 +46,7 @@ use XML::LibXML::XPathContext;
 											immagine:
 										</div>
 										<div id=\"form_attr_img_input\">
-											<input name=\"img\" type=\"file\" name=\"img\" />
+											<input name=\"foto\" type=\"file\" />
 										</div>
 									</div>
 									<div id=\"form_attr_img_alt\">

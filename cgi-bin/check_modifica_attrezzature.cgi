@@ -8,54 +8,10 @@ use Time::localtime;#data e ora
 use Time::Piece;
 use XML::LibXML::NodeList;
 use XML::LibXML::XPathContext;
+use File::Basename;
 
 require 'session.cgi';
 $page=new CGI;	#creo un oggetto CGI per recuperare i parametri passati con POST
-
-
-
-  my $random_number = rand();
-my $file = "temp$random_number.txt";
-
-# Use the open() function to create the file.
-unless(open FILE, '>'.$file) {
-  # Die with error message 
-  # if we can't open it.
- die "nUnable to create $filen";
-}
-
-# Write some text to the file.
-
-print FILE "Hello theren";
-print FILE "How are you?n";
-
-# close the file.
-close FILE;
-
-#modifica di francesco per l'upload del file
-#upload del file immagine
-my $filename = $page->param("img");
-$CGI::POST_MAX = 1024 * 5000;
-my $safe_filename_characters = "a-zA-Z0-9_.-";
-my $upload_dir = "../public_html/img";
-if ( !$filename ){
-	print $page->header ( );
-	print "There was a problem uploading your photo (try a smaller file).";
-	exit;
-}
-my ( $name, $path, $extension ) = fileparse ( $filename, '..*' );
-$filename = $name . $extension;
-$filename =~ tr/ /_/;
-$filename =~ s/[^$safe_filename_characters]//g;
-if ( $filename =~ /^([$safe_filename_characters]+)$/ ){$filename = $1;}
-else{die "Filename contains invalid characters";}
-my $upload_filehandle = $page->upload("foto");
-open ( UPLOADFILE, ">$upload_dir/$filename" ) or die "$!";
-binmode UPLOADFILE;
-while ( <$upload_filehandle> ){print UPLOADFILE;}
-close UPLOADFILE;
-#print $page->header ( );
-
 
 
 if(length $admin){ 	
@@ -67,7 +23,7 @@ if(length $admin){
 	
 	my $nome = $page->param('nome');
 		$nome =~ s/([<>])/$map{$1}/g;
-	my $img = $page->param('img');
+	my $filename = $page->param('foto');
 	my $alt = $page->param('alt');
 		$alt =~ s/([<>])/$map{$1}/g;
 	my $descr = $page->param('descr');
@@ -102,7 +58,7 @@ if(length $admin){
 			<descrizione>$descr</descrizione>
 			<prezzo>$prezzo€</prezzo>
 			<img>
-				<source>$img</source>
+				<source>$filename</source>
 				<alt>$alt</alt>
 			</img>
 			<disponibile>$disp</disponibile>
@@ -112,6 +68,22 @@ if(length $admin){
 		open(OUT, ">$file");
 		print OUT $doc->toString;
 		close(OUT);
+		#upload del file immagine
+		$CGI::POST_MAX = 1024 * 5000;
+		my $safe_filename_characters = "a-zA-Z0-9_.-";
+		my $upload_dir = "../public_html/img/attrezzature";
+		my ( $name, $path, $extension ) = fileparse ( $filename, '..*' );
+		$filename = $name . $extension;
+		$filename =~ tr/ /_/;
+		$filename =~ s/[^$safe_filename_characters]//g;
+		if ( $filename =~ /^([$safe_filename_characters]+)$/ ){$filename = $1;}
+		else{die "Filename contains invalid characters";}
+		my $upload_filehandle = $page->upload("foto");
+		open ( UPLOADFILE, ">$upload_dir/$filename" ) or die "$!";
+		binmode UPLOADFILE;
+		while ( <$upload_filehandle> ){print UPLOADFILE;}
+		close UPLOADFILE;
+		#print $page->header ( );
 		print redirect(-uri=>'attrezzature.cgi');
 		exit;
 }
