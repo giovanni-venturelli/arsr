@@ -49,7 +49,7 @@ $pagina;
 	}
 
 	if(($num_attr/10) > 1){
-			$htmlpag="$htmlpag<form id=\"num_pagine\" name=\"num\" method=\"get\" action=\"attrezzature.cgi\">sei a pagina";
+			$htmlpag="$htmlpag<form id=\"num_pagine\" name=\"num\" method=\"get\" action=\"attrezzature.cgi\"><fieldset class=\"\">sei a pagina";
 			if($pagina){
 					$htmlpag="$htmlpag	$pagina, vai a pagina  ";
 			}
@@ -78,7 +78,7 @@ $pagina;
 			if($bool==1){
 				$htmlpag="$htmlpag<input class=\"pulsante submit\" id=\"pulsante_vai\" type=\"submit\" value=\"VAI\" >";
 			}
-			$htmlpag="$htmlpag</select></form>";
+			$htmlpag="$htmlpag</select></fieldset></form>";
 		}
 
 	$htmlprint="$htmlprint$htmlpag";
@@ -120,12 +120,16 @@ $pagina;
 											if($admin){
 												$htmlprint="$htmlprint<div class=\"attr_form\">
 																		<form class=\"attr_button\" action=\"modifica_attrezzature.cgi\" method=\"post\">
+																		<fieldset class=\"fieldset_feedback\">
 																			<input type=\"hidden\" name=\"cod_\" value=\"$cod\" />
 																			<input type=\"submit\" name=\"modifica\" value=\"MODIFICA\" class=\"pulsante\" />
+																		</fieldset>
 																		</form>
 																		<form class=\"attr_button2\" action=\"check_remove_attrezzature.cgi\" method=\"post\">
+																		<fieldset class=\"fieldset_feedback\">
 																			<input type=\"hidden\" name=\"codice\" value=\"$cod\" />
 																			<input type=\"submit\" name=\"rimuovi\" value=\"RIMUOVI\" class=\"pulsante\" />
+																		</fieldset>
 																		</form>
 																	</div>";
 	
@@ -141,7 +145,7 @@ $pagina;
 	}
 
 		$htmlprint="$htmlprint<div id=\"pr\">*il prezzo si riferisce al noleggio giornaliero</div>";
-		$htmlprint="$htmlprint<div class=\"pagine\"><div id=\"back_to_top\"><a href=\# id=\"back_to_top_link\">torna in alto</a></div>$htmlpag</div>";
+		$htmlprint="$htmlprint<div class=\"pagine\"><div id=\"back_to_top\"><a href=\"\#\" id=\"back_to_top_link\">torna in alto</a></div>$htmlpag</div>";
 		$htmlprint="$htmlprint</div>";
 		
 

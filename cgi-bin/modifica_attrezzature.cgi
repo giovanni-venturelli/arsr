@@ -45,10 +45,11 @@ use XML::LibXML::XPathContext;
 		print "content-type: text/html\n\n";
 		$htmlprint="$header$menu<div id=\"content\">";
 		$htmlprint="$htmlprint<form id=\"insert_attrezzatura\" action=\"check_modifica_attrezzature.cgi\" method=\"post\" enctype='multipart/form-data'>
+								<fieldset>
 								<input type=\"hidden\" name=\"codice\" value=\"$codice\" />
 								<div class=\"form_attr_nome\">
 									<div id=\"form_attr_nome_nome\">
-										nome:
+										<label>nome:</label>
 									</div>
 									<div id=\"form_attr_nome_input\">
 										<input name=\"nome\" type=\"text\" maxlength=\"64\" value=\"$name\" />
@@ -57,13 +58,13 @@ use XML::LibXML::XPathContext;
 								<div class=\"form_attr_nome\">
 									<div id=\"form_attr_img\">
 										<div id=\"form_attr_img_nome\">
-											immagine:
+											<label>immagine:</label>
 										</div>
-											<input id=\"form_attr_img_input\" name=\"foto\" type=\"file\"  value=\"$source\" />					
+											<input id=\"form_attr_img_input\" name=\"foto\" type=\"file\"  value=\"$source\" />
 									</div>
 									<div id=\"form_attr_img_alt\">
 										<div id=\"form_attr_img_alt_nome\">
-											descrizione immagine:
+											<label>descrizione immagine:</label>
 										</div>
 										
 											<textarea id=\"form_attr_img_alt_input\" name=\"alt\" rows=\"2\" cols=\"22\">$alt</textarea>
@@ -94,26 +95,25 @@ use XML::LibXML::XPathContext;
 									
 										$htmlprint="$htmlprint<input type=\"radio\" name=\"disp\" value=\"disponibile\"";
 										if($disp eq "disponibile"){
-										$htmlprint="$htmlprint checked";
+										$htmlprint="$htmlprint selected=\"selected\"";
 										}
-										$htmlprint="$htmlprint>disponibile</div>
+										$htmlprint="$htmlprint/><label>disponibile</label></div>
 										<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\" value=\"non disponibile\"";
 										if($disp eq "non disponibile"){
-											$htmlprint="$htmlprint checked";
+											$htmlprint="$htmlprint selected=\"selected\"";
 										}
-										$htmlprint="$htmlprint>non disponibile</div>";
+										$htmlprint="$htmlprint/>non disponibile</div>";
 										if($disp ne "non disponibile" && $disp ne "disponibile"){
-											$htmlprint="$htmlprint<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\" checked>disponibile tra <input name=\"day\" type=\"number\" min=\"1\" max=\"9\" value=\"$day\"> giorni </div>";
+											$htmlprint="$htmlprint<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\" selected=\"selected\"/>disponibile tra <input name=\"day\" type=\"number\" min=\"1\" max=\"9\" value=\"$day\"/> giorni </div>";
 										}
 										else{
-										$htmlprint="$htmlprint<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\">disponibile tra <input name=\"day\" type=\"number\" min=\"1\" max=\"9\"> giorni </div>"
+										$htmlprint="$htmlprint<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\"/>disponibile tra <input name=\"day\" type=\"number\" min=\"1\" max=\"9\"/> giorni </div>"
 										}
-									$htmlprint="$htmlprint	
+									$htmlprint="$htmlprint
 									
 								</div>
-								
 									<input class=\"pulsante\" id=\"pulsante_vai\" type=\"submit\" value=\"MODIFICA\" />
-								
+							</fieldset>
 							</form>
 							</div>";
 		require("footer.cgi");
