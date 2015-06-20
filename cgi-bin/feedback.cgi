@@ -8,6 +8,45 @@ use CGI;
 use DBI;
 use utf8;
 
+
+my $htmlprint;
+sub pageList{
+	$numero= @_[0];
+	my $ret="";
+	my $numid=@_[1];
+	my $num=@_[2];
+	if($numid<=10 && $utente){
+$ret="<div><a href=\"\#bottom\">Lascia un commento</a></div>";
+} 
+if($numid>10){
+if($utente){
+$ret="$ret<span id=\"link_to_comment\"><a href=\"\#bottom\">Lascia un commento</a></span>";
+} 
+	$pagelist=" <fieldset class=\"fieldset_page\"><label for=\"page_number_$numero\">Sei a pagina $num vai a pagina</label><select name=\"pagina\" id=\"page_number_$numero\"";
+$top;
+$top=$numid/10;
+
+for($p=1;$p<($top+1);$p++){
+
+if($p != $num){
+$pagelist="$pagelist><option value=\"$p\"";
+	if($p==$num+1){
+$pagelist="$pagelist selected=\"selected\"";
+}
+$pagelist="$pagelist>$p</option>";
+}
+}
+$pagelist="$pagelist</select>";
+
+$ret="$ret<div class=\"pagine\"><form method=\"get\" class=\"form_pagine\" action=\"#\">$pagelist
+<input class=\"pulsante pagine_submit\"  type=\"submit\" value=\"VAI\"/>
+</fieldset></form></div>";
+}# end if ($numid>10)
+
+return $ret;
+}
+
+
 $title = 'Guestbook';
 $where = "Dicono di Noi";
 
@@ -27,7 +66,6 @@ $header;
 $menu;
 $footer;
 
-my $htmlprint;
 
 
 require ("menu.cgi");
@@ -59,36 +97,12 @@ else {
 $lim1=$num*10;
 $lim2=$lim1-10;
 $pagelist;
-$pagelist="$pagelist</select>";
+
 if($num eq 1){ #se siamo a pagina 1 visualizza il riquadro di descrizione
 $htmlprint="$htmlprint <div id=\"feedback_main\"><h3>GUESTBOOK</h3>Questo è il libro degli ospiti, puoi leggere cosa pensano di noi i nostri collaboratori e puoi tu stesso lasciare un commento.</div>";
 }
-if($numid<=10 && $utente){
-$htmlprint="$htmlprint<div><a href=\"\#bottom\">Lascia un commento</a></div>";
-} 
-if($numid>10){
-if($utente){
-$htmlprint="$htmlprint<span id=\"link_to_comment\"><a href=\"\#bottom\">Lascia un commento</a></span>";
-} 
-$pagelist="<span>Sei a pagina $num vai a pagina </span><select name=\"pagina\">";
-$top;
-$top=$numid/10;
 
-for($p=1;$p<($top+1);$p++){
-if($p != $num){
-$pagelist="$pagelist<option value=\"$p\"";
-if($p==$num+1){
-$pagelist="$pagelist selected";
-}
-$pagelist="$pagelist>$p</option>";
-}
-}
-
-
-$htmlprint="$htmlprint<div class=\"pagine\"><form method=\"get\" class=\"form_pagine\" id=\"form_pagine_top\" action=\"#\">$pagelist
-<input class=\"pulsante pagine_submit\" id=\"pagine_submit_top\" type=\"submit\" value=\"VAI\"/>
-</form></div>";
-}# end if ($numid>10)
+$htmlprint=$htmlprint.pageList(1, $numid, $num);
 		foreach $nod (@reversefeed){
 			if (((!$numpair||$num == 1)&&($contatore < 10))||($contatore < $lim1 && $contatore >= $lim2)){
 				my $nodid=$nod->findvalue('id');
@@ -104,10 +118,12 @@ $htmlprint="$htmlprint<div class=\"pagine\"><form method=\"get\" class=\"form_pa
 				$htmlprint="$htmlprint<div class=\"commento\">
 				<img class=\"commento_immagine\" src=\"..\/public_html\/img\/avatars\/$image\" alt=\"Immagine di profilo di $author\"/>
 				<form action=\"delete_feedback.cgi\" method=\"post\">
+				<fieldset class=\"fieldset_feedback\">
 				<input type=\"hidden\" name=\"id\" value=\"$nodid\" />";
 					if($author eq $utente || $admin){
 						$htmlprint="$htmlprint<input type=\"submit\" class=\"pulsante erase\" value=\"elimina\"/>";
 					}
+				$htmlprint="$htmlprint</fieldset>";
 				$htmlprint="$htmlprint</form>
 				<div class=\"commento_content\">$prova
 				<p class=\"commento_autore\"><strong>$author</strong></p>
@@ -129,10 +145,8 @@ $htmlprint="$htmlprint
 <div id=\"back_to_top\"><a href=\"\#\" id=\"back_to_top_link\">torna in alto</a></div>";
 
 if($numid>10){
-  $htmlprint="$htmlprint
-<form method=\"get\" class=\"form_pagine\" id=\"form_pagine_bottom\" action=\"#\">$pagelist
-<input class=\"pulsante pagine_submit\" type=\"submit\" value=\"VAI\"/>
-</form>";
+  $htmlprint=$htmlprint
+.pageList(2,$numid,$num);
 }
 $htmlprint="$htmlprint</div>";
 	if($utente){
