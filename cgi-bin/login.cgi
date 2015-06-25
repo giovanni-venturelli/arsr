@@ -50,8 +50,9 @@ my $htmlprimt;
 						</label>
 					
 				
-				<input class=\"pulsante\" name=\"annulla\"  value=\"Reset\" type=\"reset\" tabindex=\"3\"/>
-				<input class=\"pulsante\" name=\"login\"  value=\"Entra\" type=\"submit\" tabindex=\"4\"/>
+				
+				<input class=\"pulsante\" name=\"login\"  value=\"Entra\" type=\"submit\" tabindex=\"3\"/>
+				<input class=\"pulsante\" name=\"annulla\"  value=\"Reset\" type=\"reset\" tabindex=\"4\"/>
 				</fieldset>  
 			</div>
 		</form>

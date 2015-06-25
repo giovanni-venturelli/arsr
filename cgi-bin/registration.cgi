@@ -107,8 +107,9 @@ $htmlprint="$htmlprint
 							$htmlprint="$htmlprint checked";
 						}
 						$htmlprint="$htmlprint> Codice Fiscale
-				<div><input class=\"pulsante\" type=\"reset\" value=\"Reset\"/>
-				<input class=\"pulsante\" type=\"submit\" value=\"Registrati\"/>
+				<div>
+					<input class=\"pulsante\" type=\"submit\" value=\"Registrati\"/>
+					<input class=\"pulsante\" type=\"reset\" value=\"Reset\"/>
 				</div>
 			</fieldset>
 			</div>
