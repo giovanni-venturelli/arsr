@@ -169,6 +169,7 @@ ul {
 	list-style: none;
 	text-align: center;
 	border-radius: 0.2;
+
 }
 
 #active{
@@ -181,19 +182,23 @@ ul {
 
 .menulist a:link{
 	transition: all .2s ease-in-out;
-	background-color: #75706B;
+	background-color: #806952;
+
 	text-decoration: none;
 	color: #EFEFEF;
 	display:block;
 	font-weight: bolder;
 	border-radius: 0.2em;
 }
-.menulist a:visited{
-	color: #28324E;
-	display:block;
-	background-color: #75706B;
-}
 
+.menulist a:visited{
+	/*color: #28324E;*/
+	color:white;
+	
+	/*background-color: #75706B;*/
+	background-color: rgba(114, 95, 95, 0.6);
+
+}
 .menulist a:hover{
 	transform: scale(1.1); 
 	text-decoration: none;
