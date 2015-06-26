@@ -35,35 +35,35 @@ if($erroreDati){
 		
 	}
 	if($errorePwd ){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: <span xml:lang='en'> Password</span> </div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare la  <span xml:lang='en'> Password</span> inserita </div>";
 		
 	}
 	if($firstname ){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: Nome </div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare il  Nome inserito </div>";
 		
 	}
 	if($erroreCognome ){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: cognome</div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare il cognome inserita</div>";
 		
 	}
 	if($erroreVia ){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: via</div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare la  via inserita</div>";
 		
 	}
 	if($erroreCivico ){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: civico</div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare il numero civico inserito</div>";
 		
 	}
 	if($erroreProvincia ){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: provincia</div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare la  provincia inserita</div>";
 		
 	}
 	if($errorePaese ){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: Stato</div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare lo stato inserito</div>";
 		
 	}
 	if($ErroreFatt ){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: fatturazione </div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare i dati di fatturazione inseriti </div>";
 		
 	}
 }
