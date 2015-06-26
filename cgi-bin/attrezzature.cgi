@@ -120,13 +120,13 @@ $pagina;
 											if($admin){
 												$htmlprint="$htmlprint<div class=\"attr_form\">
 																		<form class=\"attr_button\" action=\"modifica_attrezzature.cgi\" method=\"post\">
-																		<fieldset class=\"fieldset_feedback\">
+																		<fieldset class=\"fieldset_attrezzature\">
 																			<input type=\"hidden\" name=\"cod_\" value=\"$cod\" />
 																			<input type=\"submit\" name=\"modifica\" value=\"MODIFICA\" class=\"pulsante\" />
 																		</fieldset>
 																		</form>
 																		<form class=\"attr_button2\" action=\"check_remove_attrezzature.cgi\" method=\"post\">
-																		<fieldset class=\"fieldset_feedback\">
+																		<fieldset class=\"fieldset_attrezzature\">
 																			<input type=\"hidden\" name=\"codice\" value=\"$cod\" />
 																			<input type=\"submit\" name=\"rimuovi\" value=\"RIMUOVI\" class=\"pulsante\" />
 																		</fieldset>

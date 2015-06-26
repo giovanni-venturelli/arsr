@@ -45,7 +45,7 @@ use XML::LibXML::XPathContext;
 		print "content-type: text/html\n\n";
 		$htmlprint="$header$menu<div id=\"content\">";
 		$htmlprint="$htmlprint<form id=\"insert_attrezzatura\" action=\"check_modifica_attrezzature.cgi\" method=\"post\" enctype='multipart/form-data'>
-								<fieldset>
+								<fieldset class=\"fieldset_attrezzature\">
 								<input type=\"hidden\" name=\"codice\" value=\"$codice\" />
 								<div class=\"form_attr_nome\">
 									<div id=\"form_attr_nome_nome\">

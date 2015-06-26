@@ -5,19 +5,19 @@
 
 	
 	if($utente){
-		$log="<div id=\"stato_utente\">sei collegato come $utente, <a href=\"logout.cgi\">[esci]</a></div>";
+		$log="<div id=\"stato_utente\">sei collegato come $utente, <a href=\"logout.cgi\" class=\"link_header\">[esci]</a></div>";
 	}
 	elsif($admin){
-		$log="<div id=\"stato_utente\">sei collegato come $admin, <a href=\"logout.cgi\">[esci]</a></div>";
+		$log="<div id=\"stato_utente\">sei collegato come $admin, <a href=\"logout.cgi\" class=\"link_header\">[esci]</a></div>";
 	}
 	elsif($title ne "Login" && $title ne "Registrazione"){
-		$log="<div id=\"stato_utente\">non sei collegato, <a href=\"login.cgi\">[login]</a> , <a href=\"registration.cgi\">[registrati]</a></div>";
+		$log="<div id=\"stato_utente\">non sei collegato, <a href=\"login.cgi\" class=\"link_header\">[login]</a> , <a href=\"registration.cgi\" class=\"link_header\">[registrati]</a></div>";
 	}
 	elsif($title eq "Registrazione"){
-		$log="<div id=\"stato_utente\">non sei collegato, <a href=\"login.cgi\">[login]</a> </div>";
+		$log="<div id=\"stato_utente\">non sei collegato, <a href=\"login.cgi\" class=\"link_header\">[login]</a> </div>";
 	}
 	else{
-		$log="<div id=\"stato_utente\">non sei collegato, <a href=\"registration.cgi\">[registrati]</a></div>";
+		$log="<div id=\"stato_utente\">non sei collegato, <a href=\"registration.cgi\" class=\"link_header\">[registrati]</a></div>";
 	}
 	
 	$ref;
