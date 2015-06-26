@@ -12,8 +12,7 @@ else
 }
 }
 
-function checkNotEmpty(id){
-	var inp=document.getElementById(id);
+function checkNotEmpty(inp){
 if (inp.value == '')
 {
     inp.style.borderColor = "red";
