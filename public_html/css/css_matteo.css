@@ -157,3 +157,8 @@ display:block;
 	display:block;
 	resize: none;
 }
+
+#fieldset_attrezzature{
+	border:none;
+	padding:0;
+}
