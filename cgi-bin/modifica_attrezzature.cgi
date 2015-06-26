@@ -75,7 +75,7 @@ use XML::LibXML::XPathContext;
 									<div id=\"form_attr_descr_nome\">
 										descrizione:
 									</div>
-										<textarea id=\"form_attr_descr_input\" name=\"descr\" rows=\"6\" cols=\"100\">$desc</textarea>
+										<textarea id=\"form_attr_descr_input\" name=\"descr\" rows=\"6\" cols=\"50\">$desc</textarea>
 									
 								</div>
 								<div class=\"form_attr_nome\">
@@ -95,19 +95,19 @@ use XML::LibXML::XPathContext;
 									
 										$htmlprint="$htmlprint<input type=\"radio\" name=\"disp\" value=\"disponibile\"";
 										if($disp eq "disponibile"){
-										$htmlprint="$htmlprint selected=\"selected\"";
+										$htmlprint="$htmlprint checked=\"checked\"";
 										}
 										$htmlprint="$htmlprint/><label>disponibile</label></div>
 										<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\" value=\"non disponibile\"";
 										if($disp eq "non disponibile"){
-											$htmlprint="$htmlprint selected=\"selected\"";
+											$htmlprint="$htmlprint checked=\"checked\"";
 										}
 										$htmlprint="$htmlprint/>non disponibile</div>";
 										if($disp ne "non disponibile" && $disp ne "disponibile"){
-											$htmlprint="$htmlprint<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\" selected=\"selected\"/>disponibile tra <input name=\"day\" type=\"number\" min=\"1\" max=\"9\" value=\"$day\"/> giorni </div>";
+											$htmlprint="$htmlprint<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\" checked=\"checked\"/>disponibile tra <input name=\"day\" type=\"text\" value=\"$day\" id=\"day_number\"/> giorni </div>";
 										}
 										else{
-										$htmlprint="$htmlprint<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\"/>disponibile tra <input name=\"day\" type=\"number\" min=\"1\" max=\"9\"/> giorni </div>"
+										$htmlprint="$htmlprint<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\"/>disponibile tra <input name=\"day\" type=\"text\" id=\"day_number\"/> giorni </div>"
 										}
 									$htmlprint="$htmlprint
 									
