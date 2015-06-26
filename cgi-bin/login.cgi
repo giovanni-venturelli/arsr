@@ -37,20 +37,12 @@ my $htmlprimt;
 			<div class=\"content_form\">
 				<fieldset>
 					<legend>Inserire i dati di <span xml:lang=\"eng\">login</span></legend>
-						<label title=\"utente\">Utente
-							<div class=\"inp_utente\">
-								<input title=\"utente\" type=\"text\" name=\"user\" tabindex=\"1\"/>
-							<\div>
-						</label>
-							
-						<label title=\"password\"><span xml:lang=\"en\">Password</span>
-							<div class=\"inp_pass\">	
-								<input title=\"password\" type=\"password\" name=\"pass\" tabindex=\"2\"/>
-							<\div>
-						</label>
-					
-				
-				
+						<label title=\"utente\" class=\"inp_utente\">Utente </label>
+								<input title=\"utente\" type=\"text\" name=\"user\" />
+
+						<label title=\"password\" class=\"inp_pass\"><span xml:lang=\"en\">Password</span></label>
+								<input title=\"password\" type=\"password\" name=\"pass\" />
+
 				<input class=\"pulsante\" name=\"login\"  value=\"Entra\" type=\"submit\" tabindex=\"3\"/>
 				<input class=\"pulsante\" name=\"annulla\"  value=\"Reset\" type=\"reset\" tabindex=\"4\"/>
 				</fieldset>  
