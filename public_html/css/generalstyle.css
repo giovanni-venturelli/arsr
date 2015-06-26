@@ -455,18 +455,18 @@ margin-left:0.4em;
 
 	}
 
-#link_to_comment{
+.link_to_comment{
 	float:left;
 }
 
-#link_to_comment a{
+.link_to_comment a{
 	text-decoration:none;
 	color: #EFEFEF;
 	text-decoration: underline;
 
 }
 
-#link_to_comment a:hover{
+.link_to_comment a:hover{
 	text-decoration:none;
 	color:#F30808;
 	text-decoration: underline;
