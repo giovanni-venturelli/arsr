@@ -42,7 +42,7 @@ foreach $item(@items){
 			<label class=\"label_block\" for='titolo_$id'>Titolo</label>
 			<input type='text' id='titolo_$id' name='titolo_$id' value='$titolo'/>
 			<label class=\"label_block\" for='corpo_$id'>Contenuto</label>
-			<textarea class='inputcorpo' id='corpo_$id' name='corpo_$id' >$corpo</textarea>
+			<textarea class='inputcorpo' id='corpo_$id' name='corpo_$id' rows=\"20\" cols=\"40\">$corpo</textarea>
 			</div>
 		";
 }
