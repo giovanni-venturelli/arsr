@@ -95,19 +95,20 @@ $htmlprint="$htmlprint
 					<label class=\"label_block\" for=\"paese\">Stato</label>
 						<input class=\"registration_input\" type=\"text\" value=\"$paese\"  name=\"paese\" id=\"paese\" maxlength=\"20\" onkeyup=\"checkNotEmpty(this)\"/><div class=\"registration_message\" id=\"paese_check\">campo non valido</div>
 					<label class=\"label_block\" for=\"fatturazione\">Dati e tipo di fatturazione</label>
-						<input class=\"registration_input\" type=\"text\" value=\"$fatturazione\"  name=\"fatturazione\" id=\"fatturazione\" maxlength=\"16\"  onkeyup=\"checkNotEmpty(this)\"/><div class=\"registration_message\" id=\"fatturazione_check\">campo non valido</div>
+						<input class=\"registration_input\" type=\"text\" value=\"$fatturazione\"  name=\"fatturazione\" id=\"fatturazione\" maxlength=\"16\"  onkeyup=\"checkNotEmpty(this)\"/>
 				
-					<input type=\"radio\" name=\"tipo_fatt\" ";
+					<input type=\"radio\" name=\"tipo_fatt\" id=\"seleziona_partita_iva\"";
 						if($tipo_fatt=="p.iva"){
 							$htmlprint="$htmlprint checked ";
 						}
-						$htmlprint="$htmlprint> Partita Iva
+						$htmlprint="$htmlprint> <label for=\"seleziona_partita_iva\">Partita Iva</label>
 					
-					<input type=\"radio\" name=\"tipo_fatt\" value=\"cod.fiscale\" ";
+					<input type=\"radio\" name=\"tipo_fatt\" id=\"seleziona_codice\" value=\"cod.fiscale\" ";
 						if($tipo_fatt=="cod.fiscale"){
 							$htmlprint="$htmlprint checked ";
 						}
-						$htmlprint="$htmlprint> Codice Fiscale
+						$htmlprint="$htmlprint> <label for=\"seleziona_codice\">Codice Fiscale</label>
+				<div class=\"registration_message\" id=\"fatturazione_check\">campo non valido</div>
 				<div>
 					<input class=\"pulsante\" type=\"submit\" value=\"Registrati\"/>
 					<input class=\"pulsante\" type=\"reset\" value=\"Reset\"/>
