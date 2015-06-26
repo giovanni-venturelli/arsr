@@ -85,7 +85,6 @@ $htmlprint="$htmlprint
 						<input class=\"registration_input\" type=\"text\" value=\"$firstname\"  name=\"firstname\" id=\"nome\" maxlength=\"20\" onkeyup=\"checkNotEmpty(this)\"/><div class=\"registration_message\" id=\"nome_check\">campo non valido</div>
 					<label class=\"label_block\" for=\"cognome\">Cognome</label>
 						<input class=\"registration_input\" type=\"text\" value=\"$cognome\"  name=\"cognome\" id=\"cognome\" maxlength=\"20\" onkeyup=\"checkNotEmpty(this)\"/><div class=\"registration_message\" id=\"cognome_check\">campo non valido</div>
-					
 					<label class=\"label_block\" for=\"via\">Indirizzo</label>
 						<input class=\"registration_input\" type=\"text\" value=\"$via\"  name=\"via\" id=\"via\" maxlength=\"20\" onkeyup=\"checkNotEmpty(this)\"/><div class=\"registration_message\" id=\"via_check\">campo non valido</div>
 					<label class=\"label_block\" for=\"civico\"> Numero civico</label>
@@ -115,13 +114,7 @@ $htmlprint="$htmlprint
 				</div>
 			</fieldset>
 			</div>
-	</form>
-
-			
-
-	
-
-";
+	</form>";
 
 
 $htmlprint="$htmlprint</div>\n$footer";
