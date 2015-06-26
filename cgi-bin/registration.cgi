@@ -76,26 +76,26 @@ $htmlprint="$htmlprint
 				<legend>Registrazione: completare i campi come richiesto</legend>
 				
 					<label class=\"label_block\" for=\"username\" >Username</label>
-						<input type=\"text\" value=\"$username\"  name=\"username\" id=\"username\" maxlength=\"10\" onkeyup=\"checkNotEmpty(this)\"/>
+						<input class=\"registration_input\" type=\"text\" value=\"$username\"  name=\"username\" id=\"username\" maxlength=\"10\" onkeyup=\"checkNotEmpty(this)\"/><div class=\"registration_message\" id=\"username_check\">campo non valido</div>
 					<label class=\"label_block\" for=\"email\" >Indirizzo email</label>
-						<input type=\"email\" value=\"$email\"  name=\"email\" id=\"email\" maxlength=\"80\" onkeyup=\"checkEmail()\"/>
+						<input class=\"registration_input\" type=\"email\" value=\"$email\"  name=\"email\" id=\"email\" maxlength=\"80\" onkeyup=\"checkEmail()\"/><div class=\"registration_message\" id=\"email_check\">campo non valido</div>
 					<label class=\"label_block\" for=\"password\" >Password</label>
-						<input type=\"password\" value=\"$password\"  name=\"password\" id=\"password\" maxlength=\"8\" onkeyup=\"checkNotEmpty(this)\"/>
+						<input class=\"registration_input\" type=\"password\" value=\"$password\"  name=\"password\" id=\"password\" maxlength=\"8\" onkeyup=\"checkNotEmpty(this)\"/><div class=\"registration_message\" id=\"password_check\">campo non valido</div>
 					<label class=\"label_block\" for=\"nome\">Nome</label>
-						<input type=\"text\" value=\"$firstname\"  name=\"firstname\" id=\"nome\" maxlength=\"20\" ronkeyup=\"checkNotEmpty(this)\"/>
+						<input class=\"registration_input\" type=\"text\" value=\"$firstname\"  name=\"firstname\" id=\"nome\" maxlength=\"20\" onkeyup=\"checkNotEmpty(this)\"/><div class=\"registration_message\" id=\"nome_check\">campo non valido</div>
 					<label class=\"label_block\" for=\"cognome\">Cognome</label>
-						<input type=\"text\" value=\"$cognome\"  name=\"cognome\" id=\"cognome\" maxlength=\"20\" onkeyup=\"checkNotEmpty(this)\"/>
+						<input class=\"registration_input\" type=\"text\" value=\"$cognome\"  name=\"cognome\" id=\"cognome\" maxlength=\"20\" onkeyup=\"checkNotEmpty(this)\"/><div class=\"registration_message\" id=\"cognome_check\">campo non valido</div>
 					
 					<label class=\"label_block\" for=\"via\">Indirizzo</label>
-						<input type=\"text\" value=\"$via\"  name=\"via\" id=\"via\" maxlength=\"20\" onkeyup=\"checkNotEmpty(this)\"/>
+						<input class=\"registration_input\" type=\"text\" value=\"$via\"  name=\"via\" id=\"via\" maxlength=\"20\" onkeyup=\"checkNotEmpty(this)\"/><div class=\"registration_message\" id=\"via_check\">campo non valido</div>
 					<label class=\"label_block\" for=\"civico\"> Numero civico</label>
-						<input type=\"text\" value=\"$civico\"  name=\"civico\" id=\"civico\" maxlength=\"8\" onkeyup=\"checkNotEmpty(this)\"/>
+						<input class=\"registration_input\" type=\"text\" value=\"$civico\"  name=\"civico\" id=\"civico\" maxlength=\"8\" onkeyup=\"checkNotEmpty(this)\"/><div class=\"registration_message\" id=\"civico_check\">campo non valido</div>
 					<label class=\"label_block\" for=\"provincia\">Provincia </label>
-						<input type=\"text\" value=\"$provincia\"  name=\"provincia\" id=\"provincia\" maxlength=\"20\" onkeyup=\"checkNotEmpty(this)\"/>
+						<input class=\"registration_input\" type=\"text\" value=\"$provincia\"  name=\"provincia\" id=\"provincia\" maxlength=\"20\" onkeyup=\"checkNotEmpty(this)\"/><div class=\"registration_message\" id=\"provincia_check\">campo non valido</div>
 					<label class=\"label_block\" for=\"paese\">Stato</label>
-						<input type=\"text\" value=\"$paese\"  name=\"paese\" id=\"paese\" maxlength=\"20\" onkeyup=\"checkNotEmpty(this)\"/>
+						<input class=\"registration_input\" type=\"text\" value=\"$paese\"  name=\"paese\" id=\"paese\" maxlength=\"20\" onkeyup=\"checkNotEmpty(this)\"/><div class=\"registration_message\" id=\"paese_check\">campo non valido</div>
 					<label class=\"label_block\" for=\"fatturazione\">Dati e tipo di fatturazione</label>
-						<input type=\"text\" value=\"$fatturazione\"  name=\"fatturazione\" id=\"fatturazione\" maxlength=\"16\"  onkeyup=\"checkNotEmpty(this)\"/>
+						<input class=\"registration_input\" type=\"text\" value=\"$fatturazione\"  name=\"fatturazione\" id=\"fatturazione\" maxlength=\"16\"  onkeyup=\"checkNotEmpty(this)\"/><div class=\"registration_message\" id=\"fatturazione_check\">campo non valido</div>
 				
 					<input type=\"radio\" name=\"tipo_fatt\" ";
 						if($tipo_fatt=="p.iva"){

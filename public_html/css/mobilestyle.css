@@ -583,3 +583,14 @@ min-height: 2em;
 	padding:0;
 	width:100%;
 }
+
+.registration_input{
+	display:inline-block;
+}
+
+.registration_message{
+	display:none;
+	margin-left: 0.3em;
+	color: red;
+
+}
