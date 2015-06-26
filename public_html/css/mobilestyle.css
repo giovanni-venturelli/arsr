@@ -412,3 +412,118 @@ min-height: 2em;
 	margin-left:0.1em;
 	float: left;
 }
+
+.commento{
+
+	margin-bottom: 0.4em;
+	width:100%;
+	font-size:0.9em;
+	padding: 0.5%;
+	padding-bottom: 0.2em;
+	background-color: #E6E6E6;
+	color: #191a1c;
+	width: auto;
+	line-height:1em;
+}
+
+.commento_intestazione{
+	padding-top:0;
+	margin-top:0;
+	margin-bottom:0;
+	color:#9F9F9F;
+	font-size:0.7em;
+}
+
+.commento_numdat{
+		margin-top:0.6em;
+		padding-top:0;
+		display:inline-block;
+		margin-bottom: 0;
+		padding-bottom: 0;
+}
+
+.commento_autore{
+	margin-top:0.1em;
+	color: #28324E;
+	padding:0;
+	margin-bottom:0;
+}
+
+.commento_data{
+	margin-left: 1em;
+}
+
+#commento_label{
+	display:block;
+}
+
+#commento_submit{
+	margin-top:0.2em;
+}
+
+#commento_textarea{
+	min-width:80%;
+	max-width:80%;
+	height:5em;
+}
+
+.commento_immagine{
+	width:8%;
+	margin-left:0.1em;
+	float: left;
+}
+
+.commento_corpo{
+	height:auto;
+	margin-bottom:0.3em;
+}
+.commento_content{
+	margin-left:9%;
+	margin-right:0.2em;
+}
+
+#commento_submit{
+	border-style: none;
+	height: 2em;
+	color:#EFEFEF;
+	outline:0;
+	border-radius: 0.2em;
+}
+.fieldset_page{
+	border-style: none;
+	
+	padding:0;
+}
+
+
+.fieldset_feedback{
+	border-style: none;
+	float:right;
+	padding:0;
+}
+
+.link_to_comment{
+	float:left;
+}
+
+.link_to_comment a{
+	text-decoration:none;
+	color: #EFEFEF;
+	text-decoration: underline;
+
+}
+
+.link_to_comment a:hover{
+	text-decoration:none;
+	color:#F30808;
+	text-decoration: underline;
+}
+
+.form_pagine{
+	float:right;
+}
+#feedbackfieldset{
+	border:none;
+	padding:0;
+	width:100%;
+}
