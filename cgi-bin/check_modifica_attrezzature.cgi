@@ -21,18 +21,25 @@ if(length $admin){
 	'<' => '&lt;'
 	);
 	
-	my $nome = $page->param('nome');
-		$nome =~ s/([<>])/$map{$1}/g;
-	my $filename = $page->param('foto');
-	my $alt = $page->param('alt');
+	$name = $page->param('nome');
+		$name =~ s/([<>])/$map{$1}/g;
+	$filename = $page->param('foto');
+	$alt = $page->param('alt');
 		$alt =~ s/([<>])/$map{$1}/g;
-	my $descr = $page->param('descr');
-		$descr =~ s/([<>])/$map{$1}/g;
-	my $prezzo = $page->param('prezzo');
-	my $disp = $page->param('disp');
+	$desc = $page->param('descr');
+		$desc =~ s/([<>])/$map{$1}/g;
+	$prezzo = $page->param('prezzo');
+	$disp = $page->param('disp');
 	if($disp ne "disponibile" and $disp ne "non disponibile"){
 		$day=$page->param('day');
+		if(!($day !~ /[0-9]/)){
 		$disp="disponibile tra $day giorni";
+		}
+		else{
+			$errore_numero=1;
+			require('modifica_attrezzature.cgi');
+			print redirect(-uri=>'modifica_attrezzature.cgi');
+		}
 	}
 		my $file='../data/attrezzature.xml';
 		my $doc = $parser->parse_file($file);
@@ -53,9 +60,9 @@ if(length $admin){
 	
 
 		my $frammento="<attrezzatura>
-			<nome>$nome</nome>
+			<nome>$name</nome>
 			<codice_prodotto>$code</codice_prodotto>
-			<descrizione>$descr</descrizione>
+			<descrizione>$desc</descrizione>
 			<prezzo>$prezzo€</prezzo>
 			<img>
 				<source>$filename</source>

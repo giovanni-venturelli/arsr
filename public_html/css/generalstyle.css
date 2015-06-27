@@ -595,3 +595,8 @@ margin-left:0.4em;
 #day_number{
 	width:2em;
 }
+
+#errore_numero{
+	float:right;
+	color:red;
+}

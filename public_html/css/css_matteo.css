@@ -162,3 +162,7 @@ display:block;
 	border:none;
 	padding:0;
 }
+#errore_numero{
+	float:right;
+	color:red;
+}

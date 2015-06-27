@@ -104,7 +104,11 @@ use XML::LibXML::XPathContext;
 										}
 										$htmlprint="$htmlprint/>non disponibile</div>";
 										if($disp ne "non disponibile" && $disp ne "disponibile"){
-											$htmlprint="$htmlprint<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\" checked=\"checked\"/>disponibile tra <input name=\"day\" type=\"text\" value=\"$day\" id=\"day_number\"/> giorni </div>";
+											$htmlprint="$htmlprint<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\" checked=\"checked\"/>disponibile tra <input name=\"day\" type=\"text\" value=\"$day\" id=\"day_number\"/> giorni";
+											if($errore_numero){
+												$htmlprint="$htmlprint <div id=\"errore_numero\"> ATTENZIONE: inserire un numero compreso tra 0 e 9 </div> "
+											}
+											$htmlprint="$htmlprint </div>";
 										}
 										else{
 										$htmlprint="$htmlprint<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\"/>disponibile tra <input name=\"day\" type=\"text\" id=\"day_number\"/> giorni </div>"
