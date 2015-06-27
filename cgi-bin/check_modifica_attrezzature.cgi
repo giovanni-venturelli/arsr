@@ -21,6 +21,7 @@ if(length $admin){
 	'<' => '&lt;'
 	);
 	
+	$codice = $page->param('codice'); #salvo il codice prodotto dal file di modifica (passato come input type="hidden")
 	$name = $page->param('nome');
 		$name =~ s/([<>])/$map{$1}/g;
 	$filename = $page->param('foto');
@@ -32,15 +33,28 @@ if(length $admin){
 	$disp = $page->param('disp');
 	if($disp ne "disponibile" and $disp ne "non disponibile"){
 		$day=$page->param('day');
-		if(!($day !~ /[0-9]/)){
+		if(!($day =~ /[1-9].{1}/) and !($day =~ /[a-zA-Z]/)){
 		$disp="disponibile tra $day giorni";
 		}
 		else{
+			$errori=1;
 			$errore_numero=1;
-			require('modifica_attrezzature.cgi');
-			print redirect(-uri=>'modifica_attrezzature.cgi');
 		}
 	}
+	if(!$filename){
+		$errori=1;
+		$errore_foto=1;
+
+	}
+	if(!($prezzo =~ /[0-9]{1,4}/)){
+		$errori=1;
+		$errore_prezzo=1;
+	}
+	if($errori){
+		require('modifica_attrezzature.cgi');
+		print redirect(-uri=>'modifica_attrezzature.cgi');
+	}
+	else{
 		my $file='../data/attrezzature.xml';
 		my $doc = $parser->parse_file($file);
 			if(!$doc){
@@ -49,8 +63,7 @@ if(length $admin){
 		my $root = $doc->getDocumentElement;
 		@items = $root->getElementsByTagName('attrezzatura');
 		
-		my $code = $page->param('codice'); #salvo il codice prodotto dal file di modifica (passato come input type="hidden")
-			my $Xpath = "/database/attrezzatura[codice_prodotto=\"$code\"]"; # salva la stringa xpath in variabile
+			my $Xpath = "/database/attrezzatura[codice_prodotto=\"$codice\"]"; # salva la stringa xpath in variabile
 			for my $dead ($doc ->findnodes ($Xpath)){ # elimina il nodo
 				$dead->unbindNode; # elimino il nodo 
 				open(OUT, ">$file"); # tre istruzioni per salvare lo stato del file xml
@@ -58,10 +71,10 @@ if(length $admin){
 				close(OUT);
 			}
 	
-
+		
 		my $frammento="<attrezzatura>
 			<nome>$name</nome>
-			<codice_prodotto>$code</codice_prodotto>
+			<codice_prodotto>$codice</codice_prodotto>
 			<descrizione>$desc</descrizione>
 			<prezzo>$prezzo€</prezzo>
 			<img>
@@ -92,6 +105,8 @@ if(length $admin){
 		close UPLOADFILE;
 		#print $page->header ( );
 		print redirect(-uri=>'attrezzature.cgi');
-		exit;
+	}
+	exit;
+
 }
 

@@ -596,7 +596,7 @@ margin-left:0.4em;
 	width:2em;
 }
 
-#errore_numero{
+.errore_attrezzature{
 	float:right;
 	color:red;
 }

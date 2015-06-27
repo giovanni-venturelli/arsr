@@ -60,8 +60,11 @@ use XML::LibXML::XPathContext;
 										<div id=\"form_attr_img_nome\">
 											<label>immagine:</label>
 										</div>
-											<input id=\"form_attr_img_input\" name=\"foto\" type=\"file\"  value=\"$source\" />
-									</div>
+											<input id=\"form_attr_img_input\" name=\"foto\" type=\"file\"  value=\"$source\" /> ";
+											if($errore_foto){
+												$htmlprint="$htmlprint <div class=\"errore_attrezzature\"> ERRORE: selezionare un file immagine valido </div>"
+											}
+									$htmlprint="$htmlprint</div>
 									<div id=\"form_attr_img_alt\">
 										<div id=\"form_attr_img_alt_nome\">
 											<label>descrizione immagine:</label>
@@ -83,7 +86,11 @@ use XML::LibXML::XPathContext;
 										prezzo:
 									</div>
 									
-										<input id=\"fomr_attr_prezzo_input\" name=\"prezzo\" type=\"text\" value=\"$prezzo\" />€
+										<input id=\"fomr_attr_prezzo_input\" name=\"prezzo\" type=\"text\" value=\"$prezzo\" />€ ";
+										if($errore_prezzo){
+											$htmlprint="$htmlprint <div class=\"errore_attrezzature\"> ERRORE: inserire un numero compreso tra 0 a 9999 </div>";
+										}
+										$htmlprint="$htmlprint
 								
 								</div>
 								<div class=\"form_attr_nome\">
@@ -106,7 +113,7 @@ use XML::LibXML::XPathContext;
 										if($disp ne "non disponibile" && $disp ne "disponibile"){
 											$htmlprint="$htmlprint<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\" checked=\"checked\"/>disponibile tra <input name=\"day\" type=\"text\" value=\"$day\" id=\"day_number\"/> giorni";
 											if($errore_numero){
-												$htmlprint="$htmlprint <div id=\"errore_numero\"> ATTENZIONE: inserire un numero compreso tra 0 e 9 </div> "
+												$htmlprint="$htmlprint <div class=\"errore_attrezzature\"> ERRORE: inserire un numero compreso tra 1 e 9 </div> "
 											}
 											$htmlprint="$htmlprint </div>";
 										}
