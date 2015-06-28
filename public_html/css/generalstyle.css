@@ -108,11 +108,6 @@ h1{
 	width:94.4%;
 }
 
-.social{
-
-	
-}
-
 #range-logo {
 	float:right;
 	margin-top:0.1em;
@@ -140,9 +135,7 @@ h1{
 	border-radius: 0.2em;
 	transform: scale(1); 
 }
-#container{
-	
-}
+
 #menu {
 	float:left;
 	margin-top: -1em;
@@ -162,7 +155,7 @@ ul {
 }
 
 .menulist {
-	font-size:1.2em;
+
 	margin-bottom: 0.5em;
 	margin-left: -2em;
 	margin-right: 0.5em;
@@ -192,9 +185,8 @@ ul {
 }
 
 .menulist a:visited{
-	/*color: #28324E;*/
 	color:white;
-	
+	font-size:1em;
 	/*background-color: #75706B;*/
 	background-color: rgba(114, 95, 95, 0.6);
 
@@ -208,6 +200,7 @@ ul {
 }
 .menulist a:visited:hover{
 	background-color: #A38F84;
+	text-decoration: underline;
 }
 
 
@@ -248,33 +241,11 @@ ul {
 	background-repeat:no-repeat;
 }
 
-#colleft{	
-	float: left;
-	background-image: url(../img/colonnasinistra.png);
-	background-color:#b8312e;
-	}
-#colcent{
-	float: left;
-	margin-left:2%;
-	background-color: #602a7a;
-	background-image: url(../img/colonnacentrale.png);
-}
-#colright{
-	margin-left:68%;
-	background-color: #10a88a;
-	background-image: url(../img/colonnadestra.png);
-}
+
 .textcol{
 margin-bottom:200px;
 }
-#slideshow {
-	width: 90%;
-	margin-left: 5%;
-	margin-right: 5%;
-	margin-top: 5%;
-	margin-bottom: 5%;
-	border: thin solid #000;
-}
+
 
 .contentimage{
 	max-width:85%;
@@ -327,7 +298,6 @@ margin-bottom:200px;
 .commento{
 
 	margin-bottom: 0.4em;
-	width:100%;
 	font-size:0.9em;
 	padding: 0.5%;
 	padding-bottom: 0.2em;
@@ -341,7 +311,7 @@ margin-bottom:200px;
 	padding-top:0;
 	margin-top:0;
 	margin-bottom:0;
-	color:#9F9F9F;
+	color:#191a1c;
 	font-size:0.7em;
 }
 
@@ -447,7 +417,7 @@ margin-left:0.4em;
 	background-size: contain;
 	height:1.3em;
 	width:1.3em;
-	display:inline-block;
+
 	float:right;
 	margin-left:0.5em;
 	margin-top:0.2em;
@@ -468,16 +438,14 @@ margin-left:0.4em;
 }
 
 .link_to_comment a{
-	text-decoration:none;
+	text-decoration:underline;
 	color: #EFEFEF;
-	text-decoration: underline;
 
 }
 
 .link_to_comment a:hover{
-	text-decoration:none;
+	text-decoration:underline;
 	color:#F30808;
-	text-decoration: underline;
 }
 
 .erase{
@@ -508,7 +476,7 @@ margin-left:0.4em;
 	margin-left:0.2em;
 }
 .modifica{
-	background-color: #10a88a;
+	background-color: #055b4a;
 }
 
 .modifica:hover{
@@ -525,7 +493,7 @@ margin-left:0.4em;
 
 #feedback_main{
 
-	background-color: #10a88a;
+	background-color: #055b4a;
 	margin-bottom: 0.5em;
 	padding:0.3em;
 }
@@ -535,10 +503,11 @@ margin-left:0.4em;
 }
 
 #content a:visited{
-	color: #10a88a;
+	color: #10a88a
 }
 #content a:visited:hover{
 	color: #F30808;
+	font-style:italic;
 }
 
 #content a:active{
@@ -547,6 +516,7 @@ margin-left:0.4em;
 
 #content a:visited:active{
 	color: #602a7a;
+	
 }
 
 #new_attr{
@@ -566,9 +536,6 @@ margin-left:0.4em;
 	padding:0;
 }
 
-.link_header{
-
-}
 
 .link_header:hover{
 	background-color: red;
@@ -599,4 +566,410 @@ margin-left:0.4em;
 .errore_attrezzature{
 	float:right;
 	color:red;
+}
+
+/* CSS MATTEO */
+
+
+.attr_content{
+	padding:0;
+	margin-top: 0.5em;
+	border: solid;
+	border-color: #28324E;
+	height: 5em;
+}
+.attr_img{
+	float:left;
+	margin-top: 0.25em;
+	margin-left: 0.25em;
+	margin-right:0.25em;
+	max-height: 4.5em;
+	max-width: 4.5em;
+}
+
+.div_cont{
+margin-left:5.5em;
+	
+}
+
+.attr_nome{
+	font-size: large;
+
+}
+.attr_cod{
+	color: #999;
+	font-size: x-small;
+}
+.attr_descr{
+	font-size: xx-small;
+}
+.attr_prezzo{
+	float:right;
+	margin-right: 1em;
+	margin-left: 0.50em;
+	color:#C06;
+	
+}
+.attr_disp{
+	float:right;
+	margin-right:1em;
+}
+.attr_disp_no{
+	float:right;
+	margin-right:1em;
+	color: red;
+}
+.attr_disp_si{
+	float:right;
+	margin-right:1em;
+	color: #2CDC2C;
+}
+
+.attr_button{
+	display:inline;
+}
+
+.attr_button2{
+	display:inline;
+}
+
+#img_mod{
+	background-image: url("../img/m.png");
+	background-size:cover;
+}
+#img_rem{
+	background-image: url("../img/x.png");
+	background-size:cover;
+}
+#num_pagine{
+	text-align:right;
+}
+#admin_benvenuti{
+	text-align:center
+}
+#admin_benvenuti2{
+	text-align:center;
+}
+#pagina_button{
+	border-style:none;
+	margin-left: 0.5em;
+	height: 1.5em;
+	border-radius: 0.2em;
+	background-color: #75706B;
+	text-decoration: none;
+	color: #EFEFEF;
+	font-weight: bolder;
+}
+#pagina_button:hover{
+	background-color: #A38F84;
+}
+
+.img_attr{
+	height: 100%;
+	
+}
+#pr{
+	font-size:xx-small;
+	text-align:left;
+}
+#pulsante_vai{
+	border-style: none;
+	height: 1.6em;
+	outline:0;
+	border-radius: 0.2em;
+	margin-left: 0.2em;
+}
+#inserisci_pulsante{
+	float:left;
+	border-style: none;
+	height: 1.6em;
+	outline:0;
+	border-radius: 0.2em;
+	margin-left: 0.2em;
+	padding-bottom: 0.1%;
+}
+/*#inserisci_pulsante_unixpage{
+	border-style: none;
+	height: 1.6em;
+	background-color:#b8312e;
+	color:#EFEFEF;
+	outline:0;
+	border-radius: 0.2em;
+	margin-left: 0.2em;
+	padding-bottom: 0.1%;
+}*/
+.form_attr_nome{
+	padding:2%;
+	border:solid;
+	border-color:#28324E;
+}
+
+
+#form_attr_descr_input{
+	width:96%;
+	min-width:96%;
+display:block;
+	margin:0.5%;
+	resize: none;
+}
+
+#form_attr_img_alt_input{
+	width: 96%;
+	max-width:96%;
+	margin:1%;
+	display:block;
+	resize: none;
+}
+
+#fieldset_attrezzature{
+	border:none;
+	padding:0;
+}
+#errore_numero{
+	float:right;
+	color:red;
+}
+
+/* CSS registrazione, login,staff(vedi note) */
+
+.content_staff{
+	padding:0;
+	margin-top: 0.5em;
+	border: solid;
+	border-color: #28324E;
+	height: 5em;
+	border-radius: 0.5em;
+}
+.img_staff{
+	margin-top: 0.25em;
+	margin-left: 0.25em;
+	margin-right:0.25em;
+	height: 4.5em;
+	width: 4.5em;
+}
+
+.inp_utente, .inp_pass{ /*box inserimento utente e pwd in login*/
+	margin-left: 4em;
+}
+
+.content_form{
+	text-align: center;
+}
+
+#errore_login{ /*colore e posizione del testo in caso di err. login e registr. */
+	color: red;
+	text-align:center;
+}
+
+#colonna_uno{
+	float: left;
+	background-image: url(../img/colonnasinistra.png);
+	background-color:#b8312e;
+}
+
+#colonna_due{
+	float: left;
+	margin-left:2%;
+	background-color: #602a7a;
+	background-image: url(../img/colonnacentrale.png);
+}
+
+#colonna_tre{
+	margin-left:68%;
+	background-color: #055b4a;
+	background-image: url(../img/colonnadestra.png);
+}
+
+.break{
+	clear: both;
+}
+
+.imgpos{
+	float:left;
+}
+
+.text{
+	float:left;
+}
+
+/*immagini del footer*/
+.image_footer{
+margin-top:0;
+width: 5em;
+}
+/*css_francesco.css*/
+/*CSS Riguardante Admin Staff*/
+#inserisci{
+	float:left;
+}
+#modifica{
+	float:left;
+}
+#elimina{
+	float:left;
+}
+#break{
+	clear: both;
+	margin-bottom:15px;
+}
+
+.container{
+	height:20em;
+	border:solid 0.15em #28324E;
+}
+
+/*CSS riguardante la parte dei contatti*/
+
+.TContact{
+	margin:0.1em;
+	padding:0.1em;
+	padding-bottom:0.3em;
+	background: linear-gradient(to bottom right, #191a1c , black);
+	border: solid 0.1em #28324E;
+	width:100%;
+}
+.pair{
+
+}
+.TFirst{
+	margin:0.3em;
+	padding:0.3em;
+	display:inline-block;
+	border-radius: 15px;
+    border: 0.1em solid #191a1c;
+	width:9em;
+	background: linear-gradient(to right, #191a1c , #28324E);
+}
+
+.TSecond{
+	margin:0.3em;
+	display:inline;
+	padding:0.1em;
+	width:10em;
+}
+
+.image{
+	width:9em;
+	height:auto;
+}
+
+.mailto{
+	text-decoration: none;
+	text-decoration: underline;
+	color:#FFFFFF;
+	
+}
+
+.mailto:hover + .invisible{
+	text-decoration: none;
+	display:inline;
+}
+
+.mailto:visited{
+	color: #10a88a;
+	display:inline;
+}
+
+/*CSS Servizio */
+.par{
+	margin:0;
+	padding:0.25em;
+}
+.par1{
+	
+    border: 0.1em solid #28324E;
+	/*background-image: url('../img/bgc-2.jpg');
+	background-color:black;
+	background-repeat: no-repeat;
+	background-size: 300px 200px;
+	background-position:right;
+	*/
+}
+
+.par2{
+    border: 0.1em solid #28324E;
+	/*
+	background-image: url('../img/bgdj.jpg');
+	background-color:black;
+	background-repeat: no-repeat;
+	background-size: 300px 200px;
+	background-position:left;
+	*/
+
+}
+
+.par3{
+	border: 0.1em solid #28324E;
+	/*
+	background-image: url('../img/bgrecord.jpg');
+	background-color:black;
+	background-repeat: no-repeat;
+	background-size: 300px 200px;
+	background-position:right;
+	margin-bottom:15px;
+	*/
+}
+.sub{
+	margin:0;
+	padding:0.3em;
+	font-size:1.4em;
+
+}
+.sub1{
+	background-color:#B8312E;
+}
+
+.sub2{
+	background-color:#602a7a;
+}
+
+.sub3{
+	background-color:#055b4a;
+}
+
+/*common CSS*/
+
+.break{
+	clear: both;
+}
+
+.left{
+	display:inline-block;
+}
+
+.right{
+	display:inline-block;
+	float:right;
+}
+
+.center{
+	left: 50%;
+}
+
+.SubTitle{
+	/*font-family:myfont;*/
+	font-size:2.25em;
+	margin-bottom:0.5em;
+}
+
+.HParag{
+	margin:0;
+	border-radius: 0.75em;
+	padding:0.5em;
+    border: 0.1em solid #FFFFFF;
+	/*background:linear-gradient(to right,black 30%,blue,indigo);*/
+	/*font-family:myfont;*/
+	font-size:1.6em;
+}
+
+.invisible{
+	height:0.9em;
+	width:0.9em;
+	display:none;
+}
+
+@font-face {
+    font-family: "myfont";
+    src: url("web fonts/main_font/SFSportsNight.woff") format('woff');
+}
 }

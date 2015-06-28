@@ -31,22 +31,22 @@
 	text-align:center;
 }
 
-#colonna_live{
+#colonna_uno{
 	float: left;
 	background-image: url(../img/colonnasinistra.png);
 	background-color:#b8312e;
 }
 
-#colonna_djset{
+#colonna_due{
 	float: left;
 	margin-left:2%;
 	background-color: #602a7a;
 	background-image: url(../img/colonnacentrale.png);
 }
 
-#colonna_studio{
+#colonna_tre{
 	margin-left:68%;
-	background-color: #10a88a;
+	background-color: #055b4a;
 	background-image: url(../img/colonnadestra.png);
 }
 

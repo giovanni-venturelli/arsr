@@ -50,12 +50,6 @@ else{
 
 			<link rel=\"stylesheet\" type=\"text/css\" media=\"(max-width: 50.99em)\" href=\"../public_html/css/mobilestyle.css\" />
 			<link rel=\"stylesheet\" type=\"text/css\" media =\"(min-width: 51em) and (min-device-width: 68em)\"  href=\"../public_html/css/generalstyle.css\" />
-			<link rel=\"stylesheet\" type=\"text/css\" media =\"(min-width: 51em) and (min-device-width: 68em)\"  href=\"../public_html/css/css_matteo.css\" />
-			
-			<link rel=\"stylesheet\" type=\"text/css\" media =\"(min-width: 51em) and (min-device-width: 68em)\"  href=\"../public_html/css/css_nico.css\" />
-			<link rel=\"stylesheet\" type=\"text/css\" media =\"(min-width: 51em) and (min-device-width: 68em)\"  href=\"../public_html/css/css_francesco.css\" />
-			<link rel=\"stylesheet\" type=\"text/css\" media=\"(max-width: 50.9em)\" href=\"../public_html/css/css_francesco_mobile.css\" />
-			<link rel=\"stylesheet\" type=\"text/css\" media=\"(max-width: 50.9em)\" href=\"../public_html/css/mobile_nico.css\" />
 			<script type=\"text/javascript\" src=\"../public_html/js/script.js\"></script>
 		</head>
 		<body>

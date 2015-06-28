@@ -17,17 +17,17 @@
 			
 			
 	<frame>
-			<id>live</id>
+			<id>uno</id>
 			<titolo>Musica Dal Vivo</titolo>
 			<corpo>Per eventi musicali, dal piccolo locale alla piazza del paese, abbiamo a disposizione attrezzature audio per ogni tipo di esigenza.</corpo>
 			</frame>
 			<frame>
-			<id>djset</id>
+			<id>due</id>
 			<titolo>DJ set live</titolo>
 			<corpo>Festa di compleanno? Voglia di ballare? Vuoi rendere indimenticabile il tuo 18° compleanno? Perché spendere milioni per far la festa in discoteca quando la discoteca puoi farla a casa tua? Abbiamo impianti su misura per feste domestiche fino alle sale più grandi.</corpo>
 			</frame>
 			<frame>
-			<id>studio</id>
+			<id>tre</id>
 			<titolo>Studio Recording</titolo>
 			<corpo>Hai una band e vorresti registrare una demo? Hai il pezzo del secolo in mente e vorresti registrarlo? Spesso e volentieri gli studi per registrare una semplice demo, offrendo servizi di altissimo livello e strutture hanno prezzi inaccessibili ai privati e alle band emergenti.</corpo>
 			</frame>

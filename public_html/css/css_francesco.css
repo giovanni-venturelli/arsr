@@ -56,12 +56,18 @@
 
 .mailto{
 	text-decoration: none;
+	text-decoration: underline;
 	color:#FFFFFF;
 	
 }
 
 .mailto:hover + .invisible{
 	text-decoration: none;
+	display:inline;
+}
+
+.mailto:visited{
+	color: ;
 	display:inline;
 }
 
@@ -119,7 +125,7 @@
 }
 
 .sub3{
-	background-color:#10a88a;
+	background-color:#055b4a;
 }
 
 /*common CSS*/

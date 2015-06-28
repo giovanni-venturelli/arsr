@@ -16,8 +16,7 @@ body {
 	font-family: 'open_sansregular';
 }
 #header {
-	background-image: url(../img/headmix.png);
-	background-repeat: no-repeat;
+	background-color:#28324E;
 	color: #EFEFEF;
 	text-align: center;
 	padding: 0.1em;
@@ -81,6 +80,7 @@ ul{
 .menulist a:visited{
 	color:white;
 	background-color: rgba(114, 95, 95, 0.6);
+	font-style: italic;
 
 }
 .menulist a:hover{
@@ -88,9 +88,11 @@ ul{
 	background-color: #A38F84;
 	color: #EFEFEF;
 	display:block;
+
 }
 .menulist a:visited:hover{
 	background-color: #A38F84;
+	font-style: italic;
 }
 
 
@@ -101,60 +103,6 @@ ul{
 	font-weight: bolder;
 	border-radius: 0.2em;
 }
-
-/*.menulist{
-padding:none;
-margin-top: 0.2em;
-list-style: none;
-text-align: center;
-border-radius: 0.3em 0.3em 0.3em 0.3em;
-border:solid thin #333;
-min-height: 2em;
-}
-
-#active{
-	border-radius: 0.2em;
-	border-style: solid;
-	border-color:#28324E;
-}
-
-.menulist a:link{
-	background-color: #75706B;
-	padding-top:0.4em;
-	text-decoration: none;
-	display:block;
-	font-weight: bolder;
-	border-radius: 0.3em 0.3em 0.3em 0.3em;
-	min-height: 2em;
-
-
-}
-
-.menulist a:hover{ 
-	text-decoration: none;
-	background-color: #A38F84;
-	color: #EFEFEF;
-	display:block;
-}
-
-.menulist a:active{ 
-	transform: scale(1);
-	background-color: #75706B;
-	text-decoration: none;
-	display:block;
-	font-weight: bolder;
-	border-radius: 0.2em;
-}
-
-.menulist a:visited{
-	color: #28324E;
-	display:block;
-	background-color: #75706B;
-}
-
-.menulist a:visited:hover{ 
-	background-color: #A38F84;
-}*/
 
 #footer {
 	font-size:0.8em;
@@ -179,7 +127,7 @@ min-height: 2em;
 	border: thin solid #000;
 }
 
-.contentimage{
+#contentimage{
 	max-width:85%;
 	margin-left:7.5%;
 	margin-right:7.5%;
@@ -187,7 +135,9 @@ min-height: 2em;
 	margin-bottom:5%;
 	
 }
-
+#content a:visited{
+	color: #10a88a;
+}
 .pulsante{
 	border-style: none;
 	height: 1.6em;
@@ -236,21 +186,21 @@ min-height: 2em;
 	background-repeat:no-repeat;
 }
 
-#colonna_live{	
+#colonna_uno{	
 	background-image: url(../img/colonnasinistramobile.png);
 	background-color:#b8312e;
 	background-position:left -30%;
 	}
-#colonna_djset{
+#colonna_due{
 	margin-top:0.5em;
 	background-image: url(../img/colonnacentrale.png);
 	background-color: #602a7a;
 	background-position:right;
 }
-#colonna_studio{
+#colonna_tre{
 	margin-top:0.5em;
 	background-image: url(../img/colonnadestra.png);
-	background-color: #10a88a;
+	background-color: #055b4a;
 	
 }
 #range-logo{
@@ -290,7 +240,7 @@ min-height: 2em;
 }
 #feedback_main{
 
-	background-color: #10a88a;
+	background-color: #055b4a;
 	margin-bottom: 0.5em;
 	padding:0.3em;
 }
@@ -413,11 +363,6 @@ min-height: 2em;
 	border:solid;
 	border-color:#28324E;
 }
-#form_attr_img{
-}
-#form_attr_img_alt{
-
-}
 
 #form_attr_descr_input{
 	width:99%;
@@ -454,11 +399,8 @@ min-height: 2em;
 
 	}
 
-
-}
-
 .pagine{
-	height:1.5em;
+	min-height:1.5em;
 }
 
 .commento_immagine{
@@ -484,7 +426,6 @@ min-height: 2em;
 	padding-top:0;
 	margin-top:0;
 	margin-bottom:0;
-	color:#9F9F9F;
 	font-size:0.7em;
 }
 
@@ -545,7 +486,7 @@ min-height: 2em;
 }
 .fieldset_page{
 	border-style: none;
-	
+	display:block;
 	padding:0;
 }
 
@@ -557,7 +498,7 @@ min-height: 2em;
 }
 
 .link_to_comment{
-	float:left;
+	display:block;
 }
 
 .link_to_comment a{
@@ -573,9 +514,7 @@ min-height: 2em;
 	text-decoration: underline;
 }
 
-.form_pagine{
-	float:right;
-}
+
 #feedbackfieldset{
 	border:none;
 	padding:0;
@@ -596,4 +535,216 @@ min-height: 2em;
 #fieldset_attrezzature{
 	border:none;
 	padding:0;
+}
+
+/*CSS Riguardante Admin Staff*/
+#inserisci{
+	float:left;
+}
+#modifica{
+	float:left;
+}
+#elimina{
+	float:left;
+}
+#break{
+	clear: both;
+	margin-bottom:15px;
+}
+
+.container{
+	height:20em;
+	border:solid 0.15em #28324E;
+}
+
+/*CSS riguardante la parte dei contatti*/
+
+.TContact{
+	margin:0.1em;
+	padding:0.1em;
+	padding-bottom:0.3em;
+	background: linear-gradient(to bottom right, #191a1c , black);
+	border: solid 0.1em #28324E;
+	width:100%;
+}
+.pair{
+
+}
+.TFirst{
+	margin:0.3em;
+	padding:0.3em;
+	display:inline-block;
+	border-radius: 15px;
+    border: 0.1em solid #191a1c;
+	width:9em;
+	background: linear-gradient(to right, #191a1c , #28324E);
+}
+
+.TSecond{
+	margin:0.3em;
+	display:inline;
+	padding:0.1em;
+	width:10em;
+}
+
+.image{
+	display:none;
+	width:9em;
+	height:auto;
+}
+
+.mailto{
+	text-decoration: none;
+	text-decoration: underline;
+	color:#FFFFFF;
+	
+}
+
+.mailto:hover{
+	color: red;
+	display:inline;
+}
+
+.mailto:visited{
+	color: ;
+	display:inline;
+}
+
+/*CSS Servizio */
+.par{
+	margin:0;
+	padding:0.25em;
+}
+.par1{
+	
+    border: 0.1em solid #28324E;
+	/*background-image: url('../img/bgc-2.jpg');
+	background-color:black;
+	background-repeat: no-repeat;
+	background-size: 300px 200px;
+	background-position:right;
+	*/
+}
+
+.par2{
+    border: 0.1em solid #28324E;
+	/*
+	background-image: url('../img/bgdj.jpg');
+	background-color:black;
+	background-repeat: no-repeat;
+	background-size: 300px 200px;
+	background-position:left;
+	*/
+
+}
+
+.par3{
+	border: 0.1em solid #28324E;
+	/*
+	background-image: url('../img/bgrecord.jpg');
+	background-color:black;
+	background-repeat: no-repeat;
+	background-size: 300px 200px;
+	background-position:right;
+	margin-bottom:15px;
+	*/
+}
+.sub{
+	margin:0;
+	padding:0.3em;
+	font-size:1.4em;
+
+}
+.sub1{
+	background-color:#B8312E;
+}
+
+.sub2{
+	background-color:#602a7a;
+}
+
+.sub3{
+	background-color:#097b65;
+}
+
+/*common CSS*/
+
+.break{
+	clear: both;
+}
+
+.left{
+	display:inline-block;
+}
+
+.right{
+	display:inline-block;
+	float:right;
+}
+
+.center{
+	left: 50%;
+}
+
+.SubTitle{
+	/*font-family:myfont;*/
+	font-size:2.25em;
+	margin-bottom:0.5em;
+}
+
+.HParag{
+	margin:0;
+	border-radius: 0.75em;
+	padding:0.5em;
+    border: 0.1em solid #FFFFFF;
+	/*background:linear-gradient(to right,black 30%,blue,indigo);*/
+	/*font-family:myfont;*/
+	font-size:1.6em;
+}
+
+.invisible{
+	height:0.9em;
+	width:0.9em;
+	display:none;
+}
+
+@font-face {
+    font-family: "myfont";
+    src: url("web fonts/main_font/SFSportsNight.woff") format('woff');
+}
+
+	.content_staff{
+		padding: 0;
+		margin-top: 0.5em;
+		border: solid;
+		height: 5em;
+		border-radius: 0.5em;
+		border-color:#28324E;
+	}
+	.img_staff{
+		float: left;
+		margin-top: 0.25em;
+		margin-left: 0.25em;
+		margin-right:0.25em;
+		height: 4.5em;
+		width: 4.5em;
+		margin:solid;
+	}
+	.ruolo_staff{
+		
+		text-align: left;
+	}
+
+	.nome_staff{
+		/*margin-left: 8em;*/
+		font-size: large;
+		text-align: left;
+	}
+	
+	.break{
+	clear: both;
+}
+.image_footer{
+	width:4.5em;
+}
 }
