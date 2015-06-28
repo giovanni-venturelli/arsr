@@ -21,21 +21,21 @@ if(length $utente + length $admin && $page->param('modifica')){
 		'<' => '&lt;'
 		);
 	
-	my $titololive = $page->param('titolo_live');
-	$titololive =~ s/([<>])/$map{$1}/g;
-	utf8::encode($titololive);
-	my $corpolive = $page->param('corpo_live');
-	utf8::encode($corpolive);
-	my $titolodj = $page->param('titolo_djset');
-	$titolodj =~ s/([<>])/$map{$1}/g;
-	utf8::encode($titolodj);
-	my $corpodj = $page->param('corpo_djset');
-	utf8::encode($corpodj);
-	my $titolostudio = $page->param('titolo_studio');
-	$titolostudio =~ s/([<>])/$map{$1}/g;
-	utf8::encode($titolostudio);
-	my $corpostudio = $page->param('corpo_studio');
-	utf8::encode($corpostudio);
+	my $titolouno = $page->param('titolo_uno');
+	$titolouno =~ s/([<>])/$map{$1}/g;
+	utf8::encode($titolouno);
+	my $corpouno = $page->param('corpo_uno');
+	utf8::encode($corpouno);
+	my $titolodue = $page->param('titolo_due');
+	$titolodue =~ s/([<>])/$map{$1}/g;
+	utf8::encode($titolodue);
+	my $corpodue = $page->param('corpo_due');
+	utf8::encode($corpodue);
+	my $titolotre = $page->param('titolo_tre');
+	$titolotre =~ s/([<>])/$map{$1}/g;
+	utf8::encode($titolotre);
+	my $corpotre = $page->param('corpo_tre');
+	utf8::encode($corpotre);
 	my $file='../data/index.xml';
 	my $doc = $parser->parse_file($file);
 	if(!$doc){
@@ -53,19 +53,19 @@ if(length $utente + length $admin && $page->param('modifica')){
 			
 
 			my $frammento="	<frame >
-			<id>live</id>
-			<titolo>$titololive</titolo>
-			<corpo>$corpolive</corpo>
+			<id>uno</id>
+			<titolo>$titolouno</titolo>
+			<corpo>$corpouno</corpo>
 			</frame>
 			<frame>
-			<id>djset</id>
-			<titolo>$titolodj</titolo>
-			<corpo>$corpodj</corpo>
+			<id>due</id>
+			<titolo>$titolodue</titolo>
+			<corpo>$corpodue</corpo>
 			</frame>
 			<frame >
-			<id>studio</id>
-			<titolo>$titolostudio</titolo>
-			<corpo>$corpostudio</corpo>
+			<id>tre</id>
+			<titolo>$titolotre</titolo>
+			<corpo>$corpotre</corpo>
 			</frame>\n";
 			my $nodo = $parser->parse_balanced_chunk($frammento) || die("frammento non ben formato");
 			$root->appendChild($nodo) || die("non riesco a trovare il padre");

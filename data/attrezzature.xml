@@ -97,18 +97,15 @@
 
 
 
-
-
-
 <attrezzatura>
 			<nome>Microfono AKgMic</nome>
 			<codice_prodotto>5</codice_prodotto>
 			<descrizione>kit microfono da batteria</descrizione>
-			<prezzo>10€</prezzo>
+			<prezzo>10 €</prezzo>
 			<img>
 				<source>akgmic.jpg</source>
 				<alt>DrumSet T.Bone 4xCD55 1xBD200</alt>
 			</img>
-			<disponibile>disponibile tra 9 giorni</disponibile>
+			<disponibile>disponibile tra 90 giorni</disponibile>
 		</attrezzatura>
 </database>

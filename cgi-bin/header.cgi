@@ -5,19 +5,19 @@
 
 	
 	if($utente){
-		$log="<div id=\"stato_utente\">sei collegato come $utente, <a href=\"logout.cgi\" class=\"link_header\">[esci]</a></div>";
+		$log="<div id=\"stato_utente\">sei collegato come $utente <a href=\"logout.cgi\" class=\"link_header pulsante\">esci</a></div>";
 	}
 	elsif($admin){
-		$log="<div id=\"stato_utente\">sei collegato come $admin, <a href=\"logout.cgi\" class=\"link_header\">[esci]</a></div>";
+		$log="<div id=\"stato_utente\">sei collegato come $admin <a href=\"logout.cgi\" class=\"link_header pulsante\">esci</a></div>";
 	}
 	elsif($title ne "Login" && $title ne "Registrazione"){
-		$log="<div id=\"stato_utente\">non sei collegato, <a href=\"login.cgi\" class=\"link_header\">[login]</a> , <a href=\"registration.cgi\" class=\"link_header\">[registrati]</a></div>";
+		$log="<div id=\"stato_utente\">non sei collegato <a href=\"login.cgi\" class=\"link_header pulsante\">login</a> <a href=\"registration.cgi\" class=\"link_header pulsante\">registrati</a></div>";
 	}
 	elsif($title eq "Registrazione"){
-		$log="<div id=\"stato_utente\">non sei collegato, <a href=\"login.cgi\" class=\"link_header\">[login]</a> </div>";
+		$log="<div id=\"stato_utente\">non sei collegato <a href=\"login.cgi\" class=\"link_header pulsante\">login</a> </div>";
 	}
 	else{
-		$log="<div id=\"stato_utente\">non sei collegato, <a href=\"registration.cgi\" class=\"link_header\">[registrati]</a></div>";
+		$log="<div id=\"stato_utente\">non sei collegato <a href=\"registration.cgi\" class=\"link_header pulsante\">registrati</a></div>";
 	}
 	
 	$ref;
@@ -47,9 +47,9 @@ else{
 			<meta name=\"keywords\" content=\"attrezzatura, inserimento\"/> 
 	        <meta name=\"language\" content=\"italian it\"/> 
 			<meta name=\"author\" content=\"y-tech\"/>
-
+			<link rel=\"stylesheet\" type=\"text/css\" href=\"../public_html/css/generalstyle.css\" />
 			<link rel=\"stylesheet\" type=\"text/css\" media=\"(max-width: 50.99em)\" href=\"../public_html/css/mobilestyle.css\" />
-			<link rel=\"stylesheet\" type=\"text/css\" media =\"(min-width: 51em) and (min-device-width: 68em)\"  href=\"../public_html/css/generalstyle.css\" />
+			<link rel=\"stylesheet\" type=\"text/css\" media =\"(min-width: 51em) and (min-device-width: 68em)\"  href=\"../public_html/css/desktopstyle.css\" />
 			<script type=\"text/javascript\" src=\"../public_html/js/script.js\"></script>
 		</head>
 		<body>
