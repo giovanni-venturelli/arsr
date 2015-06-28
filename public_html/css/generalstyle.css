@@ -94,7 +94,10 @@ body
 {
     background-color:#5b0303;
 }
-
+.pulsante:hover:active
+{
+    background-color:#5b0303;
+}
 .pagine_submit:hover button,input[type=submit]
 {
     cursor:pointer!important;
