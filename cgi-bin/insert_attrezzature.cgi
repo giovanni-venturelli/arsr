@@ -10,27 +10,16 @@ use utf8;
 
 use XML::LibXML::NodeList;
 use XML::LibXML::XPathContext;
+$page = new CGI;
+$title="Inserisci Attrezzatura";
+$where="Inserisci attrezzatura";
+	require("session.cgi");
+	require("header.cgi");
+	require("menu.cgi");
+	$htmlprint="$header$menu<div id=\"content\">";
 
-	sub getSession(){
-		$session = CGI::Session->load() or die $!;
-		if($session->is_expired || $session->is_empty){
-			return undef;
-		}
-		else{
-			my $admin = $session->param('admin');
-			$session;
-		}
-	}
-	
-	my $session=getSession;
-	$page = new CGI;
-	print $page->header;
-	if($session){ #ATTENZIONE! ENTRO NELL'IF SENZA SESSIONE SOLO PER PROVARE LA PAGINA, DA MODIFICARE DOPO LA CREAZIONE DELLA PAGINA DI LOGIN
-		require ("session.cgi");
-		require("header.cgi");
-		require("menu.cgi");
-
-		$htmlprint="$header$menu<div id=\"content\">";
+	if($admin){
+		print "content-type: text/html\n\n";
 		$htmlprint="$htmlprint<form id=\"insert_attrezzatura\" action=\"check_insert_attrezzature.cgi\" method=\"post\" enctype='multipart/form-data'>
 								<div class=\"form_attr_nome\">
 									<div id=\"form_attr_nome_nome\">
@@ -85,7 +74,7 @@ use XML::LibXML::XPathContext;
 									</div>
 								</div>
 								<div class=\"form_attr_nome\">
-									<input class=\"pulsante_vai\" type=\"submit\" value=\"AGGIUNGI\" />
+									<input class=\"pulsante\" type=\"submit\" value=\"AGGIUNGI\" />
 								</div>
 							</form>
 							</div>";

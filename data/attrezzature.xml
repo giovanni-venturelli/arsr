@@ -97,6 +97,7 @@
 
 
 
+
 <attrezzatura>
 			<nome>Microfono AKgMic</nome>
 			<codice_prodotto>5</codice_prodotto>
@@ -106,6 +107,6 @@
 				<source>akgmic.jpg</source>
 				<alt>DrumSet T.Bone 4xCD55 1xBD200</alt>
 			</img>
-			<disponibile>disponibile tra 90 giorni</disponibile>
+			<disponibile>disponibile tra 9 giorni</disponibile>
 		</attrezzatura>
 </database>
