@@ -11,43 +11,49 @@ use XML::LibXML::XPathContext;
 use File::Basename;
 use utf8;
 
-sub getSession() 
-{
-	$session = CGI::Session->load() or die $!;
-	if ($session->is_expired || $session->is_empty ) 
-		{
-			return undef;
-		}#end if
-	else 
-		{
-			my $utente = $session->param('utente');
-			$session;
-		}#end else
-}#end sub getSession()
 
-my $session=getSession; #richiamo la sessione
+require('session.cgi');
 $page=new CGI;	#creo un oggetto CGI per recuperare i parametri passati con POST
-if($session || !$session){ # se la sessione è aperta (ATTUALMENTE SE NON ESISTE SOLO PER PROVA)
-	
+if(length $admin){
 	my $parser = XML::LibXML->new();	#creo un parser per il file xml
 	my %map = (							#creo una mappa per eseguire l'escape
 		'>' => '<![CDATA[>]]>',
 		'<' => '<![CDATA[<]]>'
 	);
 	
-	my $nome = $page->param('nome');
+	$nome = $page->param('nome');
 		$nome =~ s/([<>])/$map{$1}/g;
-	my $filename = $page->param('foto');
-	my $alt = $page->param('alt');
+	$filename = $page->param('foto');
+	$alt = $page->param('alt');
 		$alt =~ s/([<>])/$map{$1}/g;
-	my $descr = $page->param('descr');
+	$descr = $page->param('descr');
 		$descr =~ s/([<>])/$map{$1}/g;
-	my $prezzo = $page->param('prezzo');
-	my $disp = $page->param('disp');
+	$prezzo = $page->param('prezzo');
+	$disp = $page->param('disp');
 	if($disp ne "disponibile" and $disp ne "non disponibile"){
 		$day=$page->param('day');
+		if(!($day =~ /[1-9].{1}/) and !($day =~ /[a-zA-Z]/)){
 		$disp="disponibile tra $day giorni";
+		}
+		else{
+			$errori=1;
+			$errore_numero=1;
+		}
 	}
+	if(!$filename){
+		$errori=1;
+		$errore_foto=1;
+
+	}
+	if(!($prezzo =~ /[0-9]{1,4}/)){
+		$errori=1;
+		$errore_prezzo=1;
+	}
+	if($errori){
+		require('insert_attrezzature.cgi');
+		print redirect(-uri=>'insert_attrezzature.cgi');
+	}
+	else{
 	
 		my $file='../data/attrezzature.xml';
 		my $doc = $parser->parse_file($file);
@@ -102,5 +108,6 @@ if($session || !$session){ # se la sessione è aperta (ATTUALMENTE SE NON ESISTE
 		close UPLOADFILE;
 		#print $page->header ( );
 		print redirect(-uri=>'attrezzature.cgi');
-		exit;
+	}
+	exit;
 }
