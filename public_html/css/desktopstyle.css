@@ -266,6 +266,7 @@ ul
 {
     height:2em;
     width:100%;
+    display:inline;
 }
 
 #back_to_top
@@ -549,7 +550,11 @@ ul
     float:right;
 }
 
-.link_to_comment,.imgpos,.text,#inserisci,#modifica,#elimina
+.link_to_commet{
+    display:inline-block;
+}
+
+.imgpos,.text,#inserisci,#modifica,#elimina
 {
     float:left;
 }
