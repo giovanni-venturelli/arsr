@@ -112,8 +112,12 @@ $pagelist;
 if($num eq 1){ #se siamo a pagina 1 visualizza il riquadro di descrizione
 $htmlprint="$htmlprint <div id=\"feedback_main\"><h3>GUESTBOOK</h3>Questo è il libro degli ospiti, puoi leggere cosa pensano di noi i nostri collaboratori e puoi tu stesso lasciare un commento.</div>";
 }
-if(!$utente){
+
+if(!$utente && !$admin){
 	$htmlprint="$htmlprint<div>Effettua il log in per lasciare un commento.</div>";
+}
+elsif(!$utente && $admin){
+	$htmlprint="$htmlprint<div>Effettua il log in come utente normale per lasciare un commento.</div>";
 }
 $htmlprint=$htmlprint.pageList(1, $numid, $num,1);
 		foreach $nod (@reversefeed){
@@ -153,13 +157,13 @@ $htmlprint=$htmlprint.pageList(1, $numid, $num,1);
 		}
 
 $htmlprint="$htmlprint
-<div class=\"pagine\">
-<div id=\"back_to_top\"><a href=\"\#\" id=\"back_to_top_link\">torna in alto</a></div>";
-
+<div class=\"pagine\">";
 if($numid>10){
   $htmlprint=$htmlprint
 .pageList(2,$numid,$num,0);
 }
+$htmlprint="$htmlprint<div id=\"back_to_top\"><a href=\"\#\" id=\"back_to_top_link\">torna in alto</a></div>";
+
 $htmlprint="$htmlprint</div>";
 	if($utente){
 		$htmlprint="$htmlprint
