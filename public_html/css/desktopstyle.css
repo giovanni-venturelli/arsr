@@ -285,6 +285,7 @@ ul
 #content a:hover
 {
     color:#F30808;
+    font-weight: bolder;
 }
 
 #content a:visited
@@ -295,7 +296,7 @@ ul
 #content a:visited:hover
 {
     color:#F30808;
-    font-style:italic;
+    font-weight: bolder;
 }
 
 .fieldset_feedback
@@ -490,6 +491,7 @@ ul
 .pulsante:hover,#back_to_top:hover
 {
     background-color:#F30808;
+    text-decoration: underline
 }
 
 #pagine_submit_top,#editindex,#new_attr

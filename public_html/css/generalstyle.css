@@ -330,6 +330,12 @@ body
 .link_header{
     padding: 0.2em;
 }
+
+.link_header:hover{
+    padding: 0.2em;
+    text-decoration: underline;
+}
+
 .fieldset_attrezzature
 {
     border:none;
