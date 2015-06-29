@@ -335,3 +335,58 @@ body
     border:none;
     padding:0;
 }
+
+#subheader
+{
+    margin-bottom:3em;
+    margin-top:.4em;
+    position:relative;
+}
+
+#position
+{
+    background-color:#28324E;
+    color:#EFEFEF;
+    float:left;
+    margin-bottom:.5em;
+    margin-top:.1em;
+    padding-bottom:.3em;
+    padding-left:1.5%;
+    padding-top:.3em;
+    width:94.4%;
+}
+
+#range-logo
+{
+    background-image:url(../img/flat_facebook_logo.png);
+    background-repeat:no-repeat;
+    background-size:contain;
+    display:block;
+    float:right;
+    margin-bottom:.5em;
+    /*margin-right:-3.2em;*/
+    margin-top:.1em;
+    opacity:0.8;
+    /*padding-bottom:.5%;
+    padding-left:1.5%;*/
+    padding-top:.5%;
+    text-indent:-9999em;
+    transition:all .2s ease-in-out;
+    height: 2em;
+    width: 2em;
+
+}
+
+#range-logo:hover
+{
+    border-radius:.2em;
+    opacity:1;
+    transform:scale(1.1);
+}
+
+#range-logo:active
+{
+    border-radius:.2em;
+    opacity:1;
+    transform:scale(1);
+}
