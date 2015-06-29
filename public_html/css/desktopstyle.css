@@ -414,6 +414,10 @@ ul
     resize:none;
     width:96%;
 }
+#form_attr_descr_input textarea
+{
+    width:100%;
+}
 
 #form_attr_img_alt_input
 {
@@ -576,7 +580,7 @@ ul
     color:#602a7a;
 }
 
-.fieldset_page,.fieldset_attrezzature
+.fieldset_page
 {
     border-style:none;
     padding:0;
@@ -596,5 +600,33 @@ ul
 .content_form
 {
     text-align:center;
+}
+
+.attr_prezzo
+{
+    color:#C06;
+    float:right;
+    margin-left:.5em;
+    margin-right:1em;
+}
+
+.attr_disp
+{
+    float:right;
+    margin-right:1em;
+}
+
+.attr_disp_no
+{
+    color:red;
+    float:right;
+    margin-right:1em;
+}
+
+.attr_disp_si
+{
+    color:#2CDC2C;
+    float:right;
+    margin-right:1em;
 }
 }

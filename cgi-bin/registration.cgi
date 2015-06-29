@@ -78,7 +78,7 @@ $htmlprint="$htmlprint
 					<label class=\"label_block\" for=\"username\" >Username</label>
 						<input class=\"registration_input\" type=\"text\" value=\"$username\"  name=\"username\" id=\"username\" maxlength=\"10\" onkeyup=\"checkNotEmpty(this)\"/><div class=\"registration_message\" id=\"username_check\">campo non valido</div>
 					<label class=\"label_block\" for=\"email\" >Indirizzo email</label>
-						<input class=\"registration_input\" type=\"email\" value=\"$email\"  name=\"email\" id=\"email\" maxlength=\"80\" onkeyup=\"checkEmail()\"/><div class=\"registration_message\" id=\"email_check\">campo non valido</div>
+						<input class=\"registration_input\" type=\"email\" value=\"$email\"  name=\"email\" id=\"email\" maxlength=\"80\" onkeyup=\"checkEmail(this)\"/><div class=\"registration_message\" id=\"email_check\">campo non valido</div>
 					<label class=\"label_block\" for=\"password\" >Password</label>
 						<input class=\"registration_input\" type=\"password\" value=\"$password\"  name=\"password\" id=\"password\" maxlength=\"8\" onkeyup=\"checkNotEmpty(this)\"/><div class=\"registration_message\" id=\"password_check\">campo non valido</div>
 					<label class=\"label_block\" for=\"nome\">Nome</label>

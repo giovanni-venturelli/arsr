@@ -32,7 +32,7 @@ if(length $admin){
 	$disp = $page->param('disp');
 	if($disp ne "disponibile" and $disp ne "non disponibile"){
 		$day=$page->param('day');
-		if(!($day =~ /[1-9].{1}/) and !($day =~ /[a-zA-Z]/)){
+		if($day =~ /^[1-9]{1}$/){
 		$disp="disponibile tra $day giorni";
 		}
 		else{
@@ -45,13 +45,12 @@ if(length $admin){
 		$errore_foto=1;
 
 	}
-	if(!($prezzo =~ /[0-9]{1,4}/)){
+	if(!($prezzo =~ /^[0-9]{1,4}$/)){
 		$errori=1;
 		$errore_prezzo=1;
 	}
 	if($errori){
 		require('insert_attrezzature.cgi');
-		print redirect(-uri=>'insert_attrezzature.cgi');
 	}
 	else{
 	

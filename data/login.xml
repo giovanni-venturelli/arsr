@@ -47,49 +47,7 @@
 		</indirizzo>
 		<admin>si</admin>
 	</utente>
-		<utente>
-		<username>scapincuea</username>
-		<email>amministrazione@arsr.com</email>
-		<password>arsr</password>
-		<nome>Nicoletta</nome>
-		<cognome>Scapin</cognome>
-		<indirizzo>
-			<via>via in cueo</via>
-			<numero>0</numero>
-			<paese>Cina</paese>
-			<provincia>cc</provincia>
-		</indirizzo>
-		<admin>no</admin>
-	</utente>
-		<utente>
-		<username>scapincuea</username>
-		<email>amministrazione@arsr.com</email>
-		<password>arsr</password>
-		<nome>Nicoletta</nome>
-		<cognome>Scapin</cognome>
-		<indirizzo>
-			<via>via in cueo</via>
-			<numero>0</numero>
-			<paese>Cina</paese>
-			<provincia>cc</provincia>
-		</indirizzo>
-		<admin>no</admin>
-	</utente>			
 
-						<utente>
-							<username><![CDATA[<]]>/div<![CDATA[>]]>a</username>
-							<email>admin@admin.it</email>
-							<password>protozoo</password>
-							<nome>asdas</nome>
-							<cognome>adasda</cognome>
-							<indirizzo>
-								<via>dasdas</via>
-								<numero>23</numero>
-								<paese>adasd</paese>
-								<provincia>asda</provincia>
-							</indirizzo>
-							<fatturazione>vntgnn85a22g224a</fatturazione>
-							<tipo_fatt>cod.fiscale</tipo_fatt>
-						</utente>
+
 						
 </login>

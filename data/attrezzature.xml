@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="attrezzature.xsl"  xmlns="http://www.ASRS.com" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="attrezzature.xsd"?>
 <database>	
-<attrezzatura>
-			<nome>SoundCraft 38Ch</nome>
-			<codice_prodotto>7</codice_prodotto>
-			<descrizione>mixer analogico 38 canali</descrizione>
-			<prezzo>25 €</prezzo>
-			<img>
-				<source>soundcragt32.jpg</source>
-				<alt>SoundCraft 38Ch</alt>
-			</img>
-			<disponibile>disponibile</disponibile>
-		</attrezzatura>
+
 
 <attrezzatura>
 			<nome>Mixer Allen and Heath 16Ch</nome>
@@ -91,4 +81,12 @@
 			</img>
 			<disponibile>disponibile tra 9 giorni</disponibile>
 		</attrezzatura>
+
+
+
+
+
+
+
+
 </database>

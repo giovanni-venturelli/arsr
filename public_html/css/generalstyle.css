@@ -129,36 +129,10 @@ body
 
 .attr_descr
 {
-    font-size:xx-small;
+    font-size:small;
 }
 
-.attr_prezzo
-{
-    color:#C06;
-    float:right;
-    margin-left:.5em;
-    margin-right:1em;
-}
 
-.attr_disp
-{
-    float:right;
-    margin-right:1em;
-}
-
-.attr_disp_no
-{
-    color:red;
-    float:right;
-    margin-right:1em;
-}
-
-.attr_disp_si
-{
-    color:#2CDC2C;
-    float:right;
-    margin-right:1em;
-}
 
 #img_mod
 {
@@ -229,9 +203,12 @@ body
 
 #form_attr_img_alt_input
 {
-   resize:none;
+   resize: none;
 }
-
+#form_attr_descr_input
+{
+    resize: none;
+}
 .container
 {
     border:solid .15em #28324E;
@@ -352,4 +329,9 @@ body
 
 .link_header{
     padding: 0.2em;
+}
+.fieldset_attrezzature
+{
+    border:none;
+    padding:0;
 }
