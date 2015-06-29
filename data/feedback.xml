@@ -105,4 +105,19 @@
 <data>2015-06-14</data>
 <corpo>prova2</corpo>
 </feedback>
+<feedback>
+<id>18</id>
+<autore>user1</autore>
+<immagine>avatar.jpg</immagine>
+<data>2015-06-29</data>
+<corpo>commento di prova
+</corpo>
+</feedback>
+<feedback>
+<id>19</id>
+<autore>user1</autore>
+<immagine>avatar.jpg</immagine>
+<data>2015-06-29</data>
+<corpo>commento di prova 2</corpo>
+</feedback>
 </commenti>

@@ -5,19 +5,19 @@
 
 	
 	if($utente){
-		$log="<div id=\"stato_utente\">sei collegato come $utente <a href=\"logout.cgi\" class=\"link_header pulsante\">esci</a></div>";
+		$log="<div id=\"stato_utente\">sei collegato come $utente <a href=\"logout.cgi\" class=\"link_header pulsante\" tabindex=\"1\">esci</a></div>";
 	}
 	elsif($admin){
 		$log="<div id=\"stato_utente\">sei collegato come $admin <a href=\"logout.cgi\" class=\"link_header pulsante\">esci</a></div>";
 	}
 	elsif($title ne "Login" && $title ne "Registrazione"){
-		$log="<div id=\"stato_utente\">non sei collegato <a href=\"login.cgi\" class=\"link_header pulsante\">login</a> <a href=\"registration.cgi\" class=\"link_header pulsante\">registrati</a></div>";
+		$log="<div id=\"stato_utente\">non sei collegato <a href=\"login.cgi\" class=\"link_header pulsante\" tabindex=\"1\">login</a> <a href=\"registration.cgi\" class=\"link_header pulsante\" tabindex=\"2\">registrati</a></div>";
 	}
 	elsif($title eq "Registrazione"){
-		$log="<div id=\"stato_utente\">non sei collegato <a href=\"login.cgi\" class=\"link_header pulsante\">login</a> </div>";
+		$log="<div id=\"stato_utente\">non sei collegato <a href=\"login.cgi\" class=\"link_header pulsante\" tabindex=\"1\">login</a> </div>";
 	}
 	else{
-		$log="<div id=\"stato_utente\">non sei collegato <a href=\"registration.cgi\" class=\"link_header pulsante\">registrati</a></div>";
+		$log="<div id=\"stato_utente\">non sei collegato <a href=\"registration.cgi\" class=\"link_header pulsante\" tabindex=\"1\">registrati</a></div>";
 	}
 	
 	$ref;
@@ -62,7 +62,7 @@ $ref
 	<div id=\"position\">
 	Ti trovi in: $where</div>
 	<div class=\"social\" id=\"facebook\">
-	<a href=\"https://www.facebook.com/arsrservice?fref=ts\" title=\"Pagina Facebook\" id=\"range-logo\">pagina <span lang=\"en\">facebook</span>
+	<a href=\"https://www.facebook.com/arsrservice?fref=ts\" title=\"Pagina Facebook\" id=\"range-logo\" tabindex=\"3\">pagina <span lang=\"en\">facebook</span>
 	</a>
 	</div>
 	</div>";

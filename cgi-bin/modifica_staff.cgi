@@ -11,21 +11,11 @@ use CGI qw(:standard);
 use DBI;
 use utf8;
 
+require ('session.cgi');
+if(length $admin){
 $title = 'Modifica Staff';
 $where = "Modifica Staff";
 
-sub getSession(){
-	$session = CGI::Session->load() or die $!;
-	if($session->is_expired || $session->is_empty){
-		return undef;
-	}
-	else{
-		my $admin = $session->param('admin');
-		$session;
-	}
-}
-
-my $session=getSession;
 $page=new CGI;
 
 my $id_form = $page->param('staff');
@@ -57,7 +47,6 @@ foreach $item(@items){
 print($page->header());
 
 my $htmlprint;
-require ("session.cgi");
 require ("header.cgi");
 require ("menu.cgi");
 require ("footer.cgi");
@@ -67,10 +56,10 @@ $htmlprint="$htmlprint
 			<fieldset class='container form-group'>
 				<legend>Modifica dati:</legend>
 				<p class='invisible'><label class='label invisible'>Nome:</label><input value='$id_form' type='text' name='id'/></p>
-				<p><label class='label'>Nome:</label><input value='$nome' type='text' name='nome'/></p>
-				<p><label class='label'>Cognome:</label><input value='$cognome' type='text' name='cognome'/></p>
-				<p><label class='label'>Ruolo:</label><input value='$ruolo' type='text' name='ruolo'/></p>
-				<p><label class='label'>Sostituisci Foto:</label><input class='pulsante' type='file' name='foto' accept='image/*'/></p>		
+				<p><label class='label'>Nome:</label><input value='$nome' tabindex=\"10\" type='text' name='nome'/></p>
+				<p><label class='label'>Cognome:</label><input value='$cognome' tabindex=\"11\" type='text' name='cognome'/></p>
+				<p><label class='label'>Ruolo:</label><input value='$ruolo' tabindex=\"12\" type='text' name='ruolo'/></p>
+				<p><label class='label'>Sostituisci Foto:</label><input class='pulsante' type='file' name='foto' tabindex=\"13\" accept='image/*'/></p>		
 				<p>$source</p>
 				<input type='submit' value='Modifica' class='pulsante'/>
 			</fieldset>
@@ -78,3 +67,4 @@ $htmlprint="$htmlprint
 	</div>
 	$footer";
 print($htmlprint);
+}

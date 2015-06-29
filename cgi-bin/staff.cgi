@@ -32,7 +32,7 @@ require ("session.cgi");
 	$htmlprint="$header $menu <div id=\"content\">";
 
 	if (length $admin){
-		$htmlprint=$htmlprint.'<div id="editindex"><a href="admin_staff.cgi"><button class="pulsante">Modifica <span lang="en">staff</span></button></a></div>'
+		$htmlprint=$htmlprint.'<div id="editindex"><a href="admin_staff.cgi" tabindex="9"><button class="pulsante">Modifica <span lang="en">staff</span></button></a></div>'
 	}
 	
 		foreach $item(@items){

@@ -2,6 +2,7 @@
 
 use utf8;
 
+$tab=4;
 sub ActiveLink{
 	$nome = @_[0];
 	$link = @_[1];
@@ -11,7 +12,8 @@ sub ActiveLink{
 	$ret=" id=\"active\">$link";
 }
 else {
-	$ret="><a href=\"$ref\"> $link</a>";
+	$ret="><a href=\"$ref\" tabindex=\"$tab\"> $link</a>";
+	$tab=$tab+1;
 }
 return $ret;
 }

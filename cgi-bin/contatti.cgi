@@ -47,7 +47,7 @@ $htmlprint="$htmlprint
 				<div class='pair'>
 					<div class='TFirst'>E-Mail:</div>
 					<div class='TSecond'>
-						<a class='mailto' href='mailto:arsr.service".'@'."gmail.com'>arsr.service".'@'."gmail.com </a>
+						<a class='mailto' href='mailto:arsr.service".'@'."gmail.com' tabindex=\"9\">arsr.service".'@'."gmail.com </a>
 						<img class='invisible' src='../public_html/img/mailto.png' alt='icona mail'/>
 					</div>
 				</div>
@@ -65,7 +65,7 @@ $htmlprint="$htmlprint
 				<div class='pair'><div class='TFirst'>Nome:</div><div class='TSecond'>Francesco</div></div>
 				<div class='pair'><div class='TFirst'>Cognome: </div><div class='TSecond'>Agostini</div></div>
 				<div class='pair'><div class='TFirst'>Telefono:</div><div class='TSecond'>3469468480</div></div>
-				<div class='pair'><div class='TFirst'>E-Mail:</div><div class='TSecond'><a class='mailto' href='mailto:altair80486".'@'."gmail.com'>altair80486".'@'."gmail.com </a><img class='invisible' src='../public_html/img/mailto.png' alt='icona mail'/></div></div>
+				<div class='pair'><div class='TFirst'>E-Mail:</div><div class='TSecond'><a class='mailto' tabindex=\"10\" href='mailto:altair80486".'@'."gmail.com'>altair80486".'@'."gmail.com </a><img class='invisible' src='../public_html/img/mailto.png' alt='icona mail'/></div></div>
 			</div>
 			<div class='contact_image'>
 				<img class='image' src='../public_html/img/mixer.png' alt='immagine contatto'/>
@@ -77,7 +77,7 @@ $htmlprint="$htmlprint
 				<div class='pair'><div class='TFirst'>Nome:</div><div class='TSecond'>Amilcar Rafael</div><div class='break'></div></div>
 				<div class='pair'><div class='TFirst'>Cognome: </div><div class='TSecond'>Rodriguez</div><div class='break'></div></div>
 				<div class='pair'><div class='TFirst'>Telefono:</div><div class='TSecond'>342995486</div><div class='break'></div></div>
-				<div class='pair'><div class='TFirst'>E-Mail:</div><div class='TSecond'><a class='mailto' href='mailto:sotorodriguez".'@'."gmail.com'>sotorodriguez".'@'."gmail.com </a><img class='invisible' src='../public_html/img/mailto.png' alt='icona mail'/></div></div>
+				<div class='pair'><div class='TFirst'>E-Mail:</div><div class='TSecond'><a class='mailto' tabindex=\"11\" href='mailto:sotorodriguez".'@'."gmail.com'>sotorodriguez".'@'."gmail.com </a><img class='invisible' src='../public_html/img/mailto.png' alt='icona mail'/></div></div>
 			</div>
 			<div class='contact_image'>
 				<img class='image' src='../public_html/img/nota2.png' alt='immagine contatto'/>

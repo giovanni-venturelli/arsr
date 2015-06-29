@@ -34,7 +34,7 @@ my $htmlprint;
 $htmlprint= "$header$menu<div id=\"content\">";
 
 if (length $admin){
-	$htmlprint=$htmlprint.'<div id="editindex"><a href="editindex.cgi"><button class="pulsante">Modifica informazioni</button></a></div>'
+	$htmlprint=$htmlprint.'<div id="editindex"><a href="editindex.cgi" tabindex="9"><button class="pulsante">Modifica informazioni</button></a></div>'
 }
 foreach $item(@items){
 		my $titolo=$item->find('titolo');

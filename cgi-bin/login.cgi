@@ -38,18 +38,18 @@ my $htmlprimt;
 				<fieldset>
 					<legend>Inserire i dati di <span xml:lang=\"eng\">login</span></legend>
 						<label title=\"utente\" class=\"inp_utente\">Utente </label>
-								<input title=\"utente\" type=\"text\" name=\"user\" />
+								<input title=\"utente\" type=\"text\" name=\"user\" tabindex=\"10\" />
 
 						<label title=\"password\" class=\"inp_pass\"><span xml:lang=\"en\">Password</span></label>
-								<input title=\"password\" type=\"password\" name=\"pass\" />
+								<input title=\"password\" type=\"password\" name=\"pass\" tabindex=\"11\" />
 
-				<input class=\"pulsante\" name=\"login\"  value=\"Entra\" type=\"submit\" tabindex=\"3\"/>
-				<input class=\"pulsante\" name=\"annulla\"  value=\"Reset\" type=\"reset\" tabindex=\"4\"/>
+				<input class=\"pulsante\" name=\"login\"  value=\"Entra\" type=\"submit\" tabindex=\"12\"/>
+				<input class=\"pulsante\" name=\"annulla\"  value=\"Reset\" type=\"reset\" tabindex=\"13\"/>
 				</fieldset>  
 			</div>
 		</form>
 				<div class=\"registrati_ora\">
-					Non sei ancora registrato? fallo ora <a href=\"registration.cgi\"> Cliccando QUI</a>
+					Non sei ancora registrato? fallo ora <a href=\"registration.cgi\" tabindex=\"14\"> Cliccando QUI</a>
 				</div>
 		";
 	

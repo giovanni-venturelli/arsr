@@ -19,7 +19,7 @@ sub pageList{
 	if( $utente){
 $ret="<span class=\"link_to_comment\">";
 if($link!=0){
-$ret="$ret<a href=\"\#bottom\">";
+$ret="$ret<a href=\"\#bottom\" tabindex=\"9\">";
 }
 $ret="$ret Lascia un commento";
 if($link!=0){
@@ -33,7 +33,7 @@ if($numid>10){
 #$ret="$ret<span class=\"link_to_comment\"><a href=\"\#bottom\">Lascia un commento</a></span>";
 #} 
 #=cut
-	$pagelist=" <fieldset class=\"fieldset_page\"><label for=\"page_number_$numero\">Sei a pagina $num vai a pagina</label><select name=\"pagina\" id=\"page_number_$numero\"";
+	$pagelist=" <fieldset class=\"fieldset_page\"><label for=\"page_number_$numero\">Sei a pagina $num vai a pagina</label><select name=\"pagina\" tabindex=\"10\" id=\"page_number_$numero\"";
 $top;
 $top=$numid/10;
 
@@ -50,7 +50,7 @@ $pagelist="$pagelist>$p</option>";
 $pagelist="$pagelist</select>";
 
 $ret="$ret<div class=\"pagine\"><form method=\"get\" class=\"form_pagine\" action=\"#\">$pagelist
-<input class=\"pulsante pagine_submit\"  type=\"submit\" value=\"VAI\"/>
+<input class=\"pulsante pagine_submit\"  type=\"submit\" value=\"VAI\" tabindex=\"11\"/>
 </fieldset></form></div>";
 }# end if ($numid>10)
 
@@ -108,6 +108,7 @@ else {
 $lim1=$num*10;
 $lim2=$lim1-10;
 $pagelist;
+$tab=12;
 
 if($num eq 1){ #se siamo a pagina 1 visualizza il riquadro di descrizione
 $htmlprint="$htmlprint <div id=\"feedback_main\"><h3>GUESTBOOK</h3>Questo è il libro degli ospiti, puoi leggere cosa pensano di noi i nostri collaboratori e puoi tu stesso lasciare un commento.</div>";
@@ -137,8 +138,8 @@ $htmlprint=$htmlprint.pageList(1, $numid, $num,1);
 				if($author eq $utente || $admin){
 				$htmlprint=$htmlprint."<form action=\"delete_feedback.cgi\" method=\"post\">
 				<fieldset class=\"fieldset_feedback\">
-				<input type=\"hidden\" name=\"id\" value=\"$nodid\" /><input type=\"submit\" class=\"pulsante erase\" value=\"elimina\"/>";
-				
+				<input type=\"hidden\" name=\"id\" value=\"$nodid\" /><input type=\"submit\" class=\"pulsante erase\" value=\"elimina\" tabindex=\"$tab\"/>";
+				$tab=$tab+1;
 				$htmlprint="$htmlprint</fieldset></form>";
 					}
 				$htmlprint="$htmlprint<div class=\"commento_content\">$prova
@@ -162,7 +163,8 @@ if($numid>10){
   $htmlprint=$htmlprint
 .pageList(2,$numid,$num,0);
 }
-$htmlprint="$htmlprint<div id=\"back_to_top\"><a href=\"\#\" id=\"back_to_top_link\">torna in alto</a></div>";
+$htmlprint="$htmlprint<div id=\"back_to_top\"><a href=\"\#\" id=\"back_to_top_link\" tabindex=\"$tab\">torna in alto</a></div>";
+$tab=$tab+1;
 
 $htmlprint="$htmlprint</div>";
 	if($utente){
@@ -173,7 +175,7 @@ $htmlprint="$htmlprint</div>";
 		<label id=\"commento_label\" for=\"commento_textarea\">Inserisci un commento</label>
 		<textarea name=\"feed_body\" id=\"commento_textarea\" rows=\"20\" cols=\"10\"></textarea>
 		</div> 
-		<input id=\"commento_submit\" class=\"pulsante\" type=\"submit\" value=\"INSERISCI\"/>
+		<input id=\"commento_submit\" class=\"pulsante\" type=\"submit\" value=\"INSERISCI\"/ tabindex=\"$tab\">
 		</fieldset>
 		</form>
 		";

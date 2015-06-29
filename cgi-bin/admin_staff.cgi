@@ -14,6 +14,8 @@ use utf8;
 $title = 'Admin Staff';
 $where = "Admin Staff";
 
+require('session.cgi');
+if(length $admin){
 $parser = XML::LibXML->new();
 my $file = "../data/staff.xml";
 my $doc = $parser->parse_file($file);
@@ -29,7 +31,6 @@ foreach $item(@items){
 	$h_opt="$h_opt\n <option value='$id'>$nome $cognome</option>";
 }
 	
-require ("session.cgi");
 require ("header.cgi");
 require ("menu.cgi");
 require ("footer.cgi");
@@ -44,12 +45,12 @@ if (length $admin){
 		<form action='inserisci_staff.cgi' method='post' enctype='multipart/form-data'>
 			<fieldset class='container form-group'>
 				<legend>Inserisci</legend>
-				<p><label class='label'>Nome:</label><input type='text' name='nome'/></p>
-				<p><label class='label'>Cognome:</label><input type='text' name='cognome'/></p>
-				<p><label class='label'>Ruolo:</label><input type='text' name='ruolo'/></p>
-				<p><label class='label'>Foto:</label><input type='file' name='foto' accept='image/*' class='pulsante' /></p>
+				<p><label class='label'>Nome:</label><input type='text' name='nome' tabindex=\"10\" /></p>
+				<p><label class='label'>Cognome:</label><input type='text' name='cognome' tabindex=\"11\" /></p>
+				<p><label class='label'>Ruolo:</label><input type='text' name='ruolo'tabindex=\"12\" /></p>
+				<p><label class='label'>Foto:</label><input type='file' name='foto' accept='image/*' class='pulsante' tabindex=\"13\" /></p>
 				
-				<input class='pulsante' type='submit' value='Aggiungi'/>
+				<input class='pulsante' type='submit' value='Aggiungi' tabindex=\"14\"/>
 			</fieldset>
 		</form>	
 	</div>
@@ -57,10 +58,10 @@ if (length $admin){
 		<form action='modifica_staff.cgi' method='post'>
 			<fieldset class='container  form-group'>
 			<legend>Modifica</legend>
-				<p><select name='staff'>
+				<p><select name='staff' tabindex=\"15\">
 					$h_opt
 				</select></p>
-				<input class='pulsante' type='submit' value='Modifica' />
+				<input class='pulsante' type='submit' value='Modifica' tabindex=\"16\" />
 			</fieldset>
 		</form>	
 	</div>
@@ -68,10 +69,10 @@ if (length $admin){
 		<form action='elimina_staff.cgi' method='post'>
 			<fieldset class='container  form-group'>
 				<legend>Elimina</legend>
-				<p><select name='staff'>
+				<p><select name='staff' tabindex=\"17\">
 					$h_opt
 				</select></p>
-				<input class='pulsante' type='submit' value='Elimina' />
+				<input class='pulsante' type='submit' value='Elimina' tabindex=\"18\"/>
 			</fieldset>
 		</form>
 	</div>
@@ -82,3 +83,4 @@ if (length $admin){
 else {$htmlprint="$htmlprint<p class='error'>PRIVILEGI INSUFFICIENTI PER ACCEDERE A QUESTA PAGINA</p>";}
 $htmlprint="$htmlprint $footer";
 print($htmlprint);
+}
