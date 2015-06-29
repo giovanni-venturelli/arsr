@@ -53,7 +53,7 @@ $where="Inserisci attrezzatura";
 									<label for=\"form_attr_prezzo_input\" class=\"label_block\" id=\"form_attr_prezzo_nome\">
 										prezzo:
 									</label>
-										<input name=\"prezzo\" type=\"text\"  id=\"form_attr_prezzo_input\" onkeyup=\"checkNumber(this)\"/>€ <div class=\"registration_message\" id=\"form_attr_prezzo_input_check\">campo non valido</div>
+										<input name=\"prezzo\" type=\"text\"  id=\"form_attr_prezzo_input\" onkeyup=\"checkNumber(this)\"/>€ (0-9999)<div class=\"registration_message\" id=\"form_attr_prezzo_input_check\">campo non valido</div>
 									";
 									if($errore_prezzo){
 										$htmlprint="$htmlprint<div class=\"errore_attrezzature\">ERRORE: inserire un numero compreso tra 0 e 9999</div>";

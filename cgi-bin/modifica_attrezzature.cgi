@@ -44,84 +44,69 @@ use XML::LibXML::XPathContext;
 		require("menu.cgi");
 		print "content-type: text/html\n\n";
 		$htmlprint="$header$menu<div id=\"content\">";
-		$htmlprint="$htmlprint<form id=\"insert_attrezzatura\" action=\"check_modifica_attrezzature.cgi\" method=\"post\" enctype='multipart/form-data'>
+		$htmlprint="$htmlprint<form id=\"insert_attrezzatura\" action=\"check_modifica_attrezzature.cgi\" method=\"post\" enctype='multipart/form-data' onsubmit=\"return validateAttrForm(this)\">
 								<fieldset id=\"fieldset_attrezzature\">
 								<input type=\"hidden\" name=\"codice\" value=\"$codice\" />
 								<div class=\"form_attr_nome\">
-									<div id=\"form_attr_nome_nome\">
-										<label>nome:</label>
-									</div>
-									<div id=\"form_attr_nome_input\">
-										<input name=\"nome\" type=\"text\" maxlength=\"64\" value=\"$name\" />
-									</div>
+										<label class=\"label_block\" for=\"form_attr_nome_input\">nome:</label>
+										<input id=\"form_attr_nome_input\" name=\"nome\" type=\"text\" maxlength=\"64\" value=\"$name\" />
 								</div>
 								<div class=\"form_attr_nome\">
-									<div id=\"form_attr_img\">
-										<div id=\"form_attr_img_nome\">
-											<label>immagine:</label>
-										</div>
-											<input id=\"form_attr_img_input\" name=\"foto\" type=\"file\"  value=\"$source\" /> ";
+										<label for=\"form_attr_img_input\" id=\"form_attr_img_nome\" class=\"label_block\">
+											immagine:
+										</label>
+											<input name=\"foto\" type=\"file\" id=\"form_attr_img_input\" value=\"$source\"/>";
 											if($errore_foto){
 												$htmlprint="$htmlprint <div class=\"errore_attrezzature\"> ERRORE: selezionare un file immagine valido </div>"
 											}
-									$htmlprint="$htmlprint</div>
-									<div id=\"form_attr_img_alt\">
-										<div id=\"form_attr_img_alt_nome\">
-											<label>descrizione immagine:</label>
-										</div>
-										
-											<textarea id=\"form_attr_img_alt_input\" name=\"alt\" rows=\"2\" cols=\"22\">$alt</textarea>
-										
-									</div>
+									$htmlprint="$htmlprint
+										<label for=\"form_attr_img_alt_input\" class=\"label_block\" id=\"form_attr_img_alt_nome\">
+											descrizione immagine:
+										</label>
+											<textarea name=\"alt\" rows=\"2\" cols=\"52\" id=\"form_attr_img_alt_input\" onkeyup=\"checkNotEmpty(this)\">$alt</textarea> <div class=\"registration_message\" id=\"form_attr_img_alt_input_check\">campo non valido</div>
 								</div>
 								<div class=\"form_attr_nome\">
-									<div id=\"form_attr_descr_nome\">
+									<label for=\"form_attr_descr_input\" class=\"label-block\" id=\"form_attr_descr_nome\">
 										descrizione:
-									</div>
-										<textarea id=\"form_attr_descr_input\" name=\"descr\" rows=\"6\" cols=\"50\">$desc</textarea>
-									
+									</label>
+										<textarea name=\"descr\" rows=\"6\" cols=\"10\" id=\"form_attr_descr_input\">$desc</textarea>
 								</div>
 								<div class=\"form_attr_nome\">
-									<div id=\"form_attr_prezzo_nome\">
+									<label for=\"form_attr_prezzo_input\" class=\"label_block\" id=\"form_attr_prezzo_nome\">
 										prezzo:
-									</div>
-									
-										<input id=\"fomr_attr_prezzo_input\" name=\"prezzo\" type=\"text\" value=\"$prezzo\" />€ ";
-										if($errore_prezzo){
-											$htmlprint="$htmlprint <div class=\"errore_attrezzature\"> ERRORE: inserire un numero compreso tra 0 a 9999 </div>";
-										}
-										$htmlprint="$htmlprint
-								
-								</div>
-								<div class=\"form_attr_nome\">
-									<div id=\"form_attr_disp_name\">
-										disponibilità:
-									</div>
-									<div id=\"form_attr_disp_input\" class=\"form_attr_disp_input_\">
+									</label>
+										<input name=\"prezzo\" type=\"text\"  id=\"form_attr_prezzo_input\" onkeyup=\"checkNumber(this)\" value=\"$prezzo\"/>€ (0-9999)<div class=\"registration_message\" id=\"form_attr_prezzo_input_check\">campo non valido</div>
 									";
-									
-										$htmlprint="$htmlprint<input type=\"radio\" name=\"disp\" value=\"disponibile\"";
+									if($errore_prezzo){
+										$htmlprint="$htmlprint<div class=\"errore_attrezzature\">ERRORE: inserire un numero compreso tra 0 e 9999</div>";
+									}
+								$htmlprint="$htmlprint</div>
+								<div class=\"form_attr_nome\">
+									<div class=\"label_block\" id=\"form_attr_disp_name\">
+										disponibilità:
+									</div>";
+										$htmlprint="$htmlprint<div><input type=\"radio\" name=\"disp\" id=\"form_attr_disponibile\" value=\"disponibile\"";
 										if($disp eq "disponibile"){
 										$htmlprint="$htmlprint checked=\"checked\"";
 										}
-										$htmlprint="$htmlprint/><label>disponibile</label></div>
-										<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\" value=\"non disponibile\"";
+										$htmlprint="$htmlprint/><label for=\"form_attr_disponibile\" >disponibile</label></div>
+										<div><input type=\"radio\" name=\"disp\" id=\"form_attr_non_disponibile\" value=\"non disponibile\"";
 										if($disp eq "non disponibile"){
 											$htmlprint="$htmlprint checked=\"checked\"";
 										}
-										$htmlprint="$htmlprint/>non disponibile</div>";
+										$htmlprint="$htmlprint/><label for=\"form_attr_disponibile\">non disponibile</label></div>";
 										if($disp ne "non disponibile" && $disp ne "disponibile"){
-											$htmlprint="$htmlprint<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\" checked=\"checked\"/>disponibile tra <input name=\"day\" type=\"text\" value=\"$day\" id=\"day_number\"/> giorni";
+											$htmlprint="$htmlprint<div><input type=\"radio\" name=\"disp\" id=\"disp_tra_input\" checked=\"checked\"/><label for=\"disp_tra_input\">disponibile tra</label> <input name=\"day\" type=\"text\" value=\"$day\" id=\"day_number\" onkeyup=\"checkDayNumber(this)\"/><label for=\"day_number\"> giorni (0-9)</label><div class=\"registration_message\" id=\"day_number_check\">campo non valido</div>";
 											if($errore_numero){
 												$htmlprint="$htmlprint <div class=\"errore_attrezzature\"> ERRORE: inserire un numero compreso tra 1 e 9 </div> "
 											}
 											$htmlprint="$htmlprint </div>";
 										}
 										else{
-										$htmlprint="$htmlprint<div class=\"form_attr_disp_input_\"><input type=\"radio\" name=\"disp\"/>disponibile tra <input name=\"day\" type=\"text\" id=\"day_number\"/> giorni </div>"
+										$htmlprint="$htmlprint<div><input type=\"radio\" id=\"disp_tra_input\" name=\"disp\"/><label for=\"disp_tra_input\">disponibile tra</label><input name=\"day\" type=\"text\" id=\"day_number\" value=\"$day\" onkeyup=\"checkDayNumber(this)\"/> <label for=\"day_number\"> giorni (0-9)</label><div class=\"registration_message\" id=\"day_number_check\">campo non valido</div></div>"
 										}
 									$htmlprint="$htmlprint
-									
+								
 								</div>
 									<input class=\"pulsante\" id=\"pulsante_vai\" type=\"submit\" value=\"MODIFICA\" />
 							</fieldset>
