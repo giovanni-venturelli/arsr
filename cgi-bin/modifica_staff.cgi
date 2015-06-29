@@ -55,10 +55,10 @@ $htmlprint="$htmlprint
 		<form action='modifica_staff_xml.cgi' method='post' enctype='multipart/form-data'>	
 			<fieldset class='container form-group'>
 				<legend>Modifica dati:</legend>
-				<p class='invisible'><label class='label invisible'>Nome:</label><input value='$id_form' type='text' name='id'/></p>
-				<p><label class='label'>Nome:</label><input value='$nome' tabindex=\"10\" type='text' name='nome'/></p>
-				<p><label class='label'>Cognome:</label><input value='$cognome' tabindex=\"11\" type='text' name='cognome'/></p>
-				<p><label class='label'>Ruolo:</label><input value='$ruolo' tabindex=\"12\" type='text' name='ruolo'/></p>
+				<p class='invisible'><label class='label invisible'>Nome:</label><input value=\"$id_form\" type='text' name='id'/></p>
+				<p><label class='label'>Nome:</label><input value=\"$nome\" tabindex=\"10\" type='text' name='nome'/></p>
+				<p><label class='label'>Cognome:</label><input value=\"$cognome\" tabindex=\"11\" type='text' name='cognome'/></p>
+				<p><label class='label'>Ruolo:</label><input value=\"$ruolo\" tabindex=\"12\" type='text' name='ruolo'/></p>
 				<p><label class='label'>Sostituisci Foto:</label><input class='pulsante' type='file' name='foto' tabindex=\"13\" accept='image/*'/></p>		
 				<p>$source</p>
 				<input type='submit' value='Modifica' class='pulsante'/>

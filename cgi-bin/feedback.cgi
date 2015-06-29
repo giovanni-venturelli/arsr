@@ -19,7 +19,7 @@ sub pageList{
 	if( $utente){
 $ret="<span class=\"link_to_comment\">";
 if($link!=0){
-$ret="$ret<a href=\"\#bottom\" tabindex=\"9\">";
+$ret="$ret<a href=\"\#bottom\" tabindex=\"9\" >";
 }
 $ret="$ret Lascia un commento";
 if($link!=0){
@@ -50,7 +50,7 @@ $pagelist="$pagelist>$p</option>";
 $pagelist="$pagelist</select>";
 
 $ret="$ret<div class=\"pagine\"><form method=\"get\" class=\"form_pagine\" action=\"#\">$pagelist
-<input class=\"pulsante pagine_submit\"  type=\"submit\" value=\"VAI\" tabindex=\"11\"/>
+<input class=\"pulsante pagine_submit\"  type=\"submit\" value=\"VAI\" tabindex=\"11\" />
 </fieldset></form></div>";
 }# end if ($numid>10)
 
@@ -138,7 +138,7 @@ $htmlprint=$htmlprint.pageList(1, $numid, $num,1);
 				if($author eq $utente || $admin){
 				$htmlprint=$htmlprint."<form action=\"delete_feedback.cgi\" method=\"post\">
 				<fieldset class=\"fieldset_feedback\">
-				<input type=\"hidden\" name=\"id\" value=\"$nodid\" /><input type=\"submit\" class=\"pulsante erase\" value=\"elimina\" tabindex=\"$tab\"/>";
+				<input type=\"hidden\" name=\"id\" value=\"$nodid\" /><input type=\"submit\" class=\"pulsante erase\" value=\"elimina\" tabindex=\"$tab\" />";
 				$tab=$tab+1;
 				$htmlprint="$htmlprint</fieldset></form>";
 					}
@@ -163,7 +163,7 @@ if($numid>10){
   $htmlprint=$htmlprint
 .pageList(2,$numid,$num,0);
 }
-$htmlprint="$htmlprint<div id=\"back_to_top\"><a href=\"\#\" id=\"back_to_top_link\" tabindex=\"$tab\">torna in alto</a></div>";
+$htmlprint="$htmlprint<div id=\"back_to_top\"><a href=\"\#\" id=\"back_to_top_link\" tabindex=\"$tab\" >torna in alto</a></div>";
 $tab=$tab+1;
 
 $htmlprint="$htmlprint</div>";
@@ -175,7 +175,7 @@ $htmlprint="$htmlprint</div>";
 		<label id=\"commento_label\" for=\"commento_textarea\">Inserisci un commento</label>
 		<textarea name=\"feed_body\" id=\"commento_textarea\" rows=\"20\" cols=\"10\"></textarea>
 		</div> 
-		<input id=\"commento_submit\" class=\"pulsante\" type=\"submit\" value=\"INSERISCI\"/ tabindex=\"$tab\">
+		<input id=\"commento_submit\" class=\"pulsante\" type=\"submit\" value=\"INSERISCI\" tabindex=\"$tab\" />
 		</fieldset>
 		</form>
 		";

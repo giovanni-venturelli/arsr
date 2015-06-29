@@ -47,7 +47,7 @@ if (length $admin){
 				<legend>Inserisci</legend>
 				<p><label class='label'>Nome:</label><input type='text' name='nome' tabindex=\"10\" /></p>
 				<p><label class='label'>Cognome:</label><input type='text' name='cognome' tabindex=\"11\" /></p>
-				<p><label class='label'>Ruolo:</label><input type='text' name='ruolo'tabindex=\"12\" /></p>
+				<p><label class='label'>Ruolo:</label><input type='text' name='ruolo' tabindex=\"12\" /></p>
 				<p><label class='label'>Foto:</label><input type='file' name='foto' accept='image/*' class='pulsante' tabindex=\"13\" /></p>
 				
 				<input class='pulsante' type='submit' value='Aggiungi' tabindex=\"14\"/>
