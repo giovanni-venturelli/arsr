@@ -12,11 +12,12 @@ use DBI;
 use utf8;
 
 require ('session.cgi');
+$page=new CGI;
 if(length $admin){
 $title = 'Modifica Staff';
 $where = "Modifica Staff";
 
-$page=new CGI;
+
 
 my $id_form = $page->param('staff');
 
@@ -59,7 +60,7 @@ $htmlprint="$htmlprint
 				<p><label class='label'>Nome:</label><input value=\"$nome\" tabindex=\"10\" type='text' name='nome'/></p>
 				<p><label class='label'>Cognome:</label><input value=\"$cognome\" tabindex=\"11\" type='text' name='cognome'/></p>
 				<p><label class='label'>Ruolo:</label><input value=\"$ruolo\" tabindex=\"12\" type='text' name='ruolo'/></p>
-				<p><label class='label'>Sostituisci Foto:</label><input class='pulsante' type='file' name='foto' tabindex=\"13\" accept='image/*'/></p>		
+				<p><label class='label'>Sostituisci Foto:</label><input type='file' name='foto' tabindex=\"13\" accept='image/*'/></p>		
 				<p>$source</p>
 				<input type='submit' value='Modifica' class='pulsante'/>
 			</fieldset>
@@ -67,4 +68,7 @@ $htmlprint="$htmlprint
 	</div>
 	$footer";
 print($htmlprint);
+}
+else{
+	print $page->redirect(-uri=>'index.cgi');
 }

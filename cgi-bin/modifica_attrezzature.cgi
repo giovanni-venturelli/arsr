@@ -39,8 +39,9 @@ use XML::LibXML::XPathContext;
 	$title = "Modifica Attrezzature";
 	$where = "Modifica Attrezzature";
 	require ("session.cgi");
-	require("header.cgi");
+	
 	if($admin){
+		require("header.cgi");
 		require("menu.cgi");
 		print "content-type: text/html\n\n";
 		$htmlprint="$header$menu<div id=\"content\">";
@@ -116,5 +117,8 @@ use XML::LibXML::XPathContext;
 		$htmlprint="$htmlprint$footer";
 		print $htmlprint;
 	}
+else {
+	print $page->redirect(-uri=>'index.cgi');
+}
 
 

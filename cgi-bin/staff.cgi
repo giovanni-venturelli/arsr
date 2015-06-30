@@ -31,9 +31,9 @@ require ("session.cgi");
 
 	$htmlprint="$header $menu <div id=\"content\">";
 
-	if (length $admin){
-		$htmlprint=$htmlprint.'<div id="editindex"><a href="admin_staff.cgi" tabindex="9"><button class="pulsante">Modifica <span lang="en">staff</span></button></a></div>'
-	}
+#	if (length $admin){
+#		$htmlprint=$htmlprint.'<div id="editindex"><a href="admin_staff.cgi" tabindex="9"><button class="pulsante">Modifica <span lang="en">staff</span></button></a></div>'
+#	}
 	
 		foreach $item(@items){
 			my $nome=$item->find('nome');
@@ -51,7 +51,6 @@ require ("session.cgi");
 						<div class=\"nome_staff\">$nome  $cognome</div> 
 						<div class=\"ruolo_staff\">$ruolo</div>
 					</div>
-					<div class='break'></div>
 				</div>";
 		}
 

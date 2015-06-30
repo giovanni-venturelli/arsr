@@ -110,3 +110,6 @@ if(length $admin){
 	}
 	exit;
 }
+else{
+	print $page->redirect(-uri=>'index.cgi');
+}

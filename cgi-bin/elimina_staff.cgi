@@ -15,20 +15,11 @@ $title = 'Elimina staff';
 $where = "Elimina staff";
 
 #verifica della sessione
-sub getSession(){
-	$session = CGI::Session->load() or die $!;
-	if($session->is_expired || $session->is_empty){
-		return undef;
-	}
-	else{
-		my $admin = $session->param('admin');
-		$session;
-	}
-}
-my $session=getSession;
+require "session.cgi";
 
 #lettura dei parametri
 $page=new CGI;
+if($admin){
 my $id=$page->param('staff');
 
 #apertura del file staff.xml
@@ -44,7 +35,6 @@ for my $dead ($doc ->findnodes ($Xpath)){
 	print OUT $doc->toString;
 	close(OUT);
 }
-print($page->header());
 #stampa del codice HTML
 my $htmlprint;
 
@@ -63,3 +53,7 @@ $htmlprint="$htmlprint
 	$footer
 ";
 print $htmlprint;
+}
+else{
+	print $page->redirect(-uri=>'index.cgi');
+}

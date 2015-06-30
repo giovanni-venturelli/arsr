@@ -91,7 +91,11 @@ $where="Inserisci attrezzatura";
 								</fieldset>
 							</form>
 							</div>";
-	}
+	
 	require("footer.cgi");
 	$htmlprint="$htmlprint$footer";
 	print $htmlprint;
+}
+else{
+	print $page->redirect(-uri=>'index.cgi');
+}

@@ -16,20 +16,12 @@ $title = 'Inserimento staff';
 $where = "Inserimento staff";
 
 #verifica della sessione
-sub getSession(){
-	$session = CGI::Session->load() or die $!;
-	if($session->is_expired || $session->is_empty){
-		return undef;
-	}
-	else{
-		my $admin = $session->param('admin');
-		$session;
-	}
-}
-my $session=getSession;
+require "session.cgi";
+
 
 #lettura dei parametri
 $page=new CGI;
+if($admin){
 my $nome=$page->param('nome');
 my $cognome=$page->param('cognome');
 my $ruolo=$page->param('ruolo');
@@ -87,8 +79,6 @@ open ( UPLOADFILE, ">$upload_dir/$filename" ) or die "$!";
 binmode UPLOADFILE;
 while ( <$upload_filehandle> ){print UPLOADFILE;}
 close UPLOADFILE;
-print $page->header ( );
-
 #stampa del codice HTML
 my $htmlprint;
 require ("session.cgi");
@@ -107,3 +97,7 @@ $htmlprint="$htmlprint
 	$footer
 ";
 print $htmlprint;
+}
+else{
+	print $page->redirect(-uri=>'index.cgi');
+}

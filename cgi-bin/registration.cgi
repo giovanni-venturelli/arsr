@@ -9,7 +9,7 @@ use DBI;
 use utf8;
 $page = new CGI;
 $session = new CGI::Session();
-print $session->header();
+
 
 my $parser = XML::LibXML->new();
 $title = 'Registrazione';
@@ -22,6 +22,8 @@ my $htmlprint;
 
 #print "content-type: text/html\n\n";
 require ("session.cgi");
+if(!$utente&&!$admin){
+	print $session->header();
 require ("header.cgi");
 require ("menu.cgi");
 require ("footer.cgi");
@@ -35,35 +37,35 @@ if($erroreDati){
 		
 	}
 	if($errorePwd ){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare la  <span xml:lang='en'> Password</span> inserita </div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: <span xml:lang='en'> Password</span> </div>";
 		
 	}
 	if($firstname ){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare il  Nome inserito </div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: Nome </div>";
 		
 	}
 	if($erroreCognome ){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare il cognome inserita</div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: cognome</div>";
 		
 	}
 	if($erroreVia ){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare la  via inserita</div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: via</div>";
 		
 	}
 	if($erroreCivico ){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare il numero civico inserito</div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: civico</div>";
 		
 	}
 	if($erroreProvincia ){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare la  provincia inserita</div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: provincia</div>";
 		
 	}
 	if($errorePaese ){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare lo stato inserito</div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: Stato</div>";
 		
 	}
 	if($ErroreFatt ){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare i dati di fatturazione inseriti </div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: fatturazione </div>";
 		
 	}
 }
@@ -119,3 +121,7 @@ $htmlprint="$htmlprint
 
 $htmlprint="$htmlprint</div>\n$footer";
 print $htmlprint;
+}
+else {
+	print $page->redirect(-uri=>'index.cgi');
+}

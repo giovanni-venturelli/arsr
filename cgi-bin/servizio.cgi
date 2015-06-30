@@ -8,6 +8,7 @@ use utf8;
 
 $title="Servizio";
 $where="Servizio";
+#!"C:\xampp\perl\bin\perl.exe"
 require ("session.cgi");
 require ("header.cgi");
 require ("menu.cgi");
@@ -27,9 +28,23 @@ $htmlprint= "$header$menu<div id=\"content\">
 		<h4 class='sub' id='sub3'><span lang='en'>Studio Recording</span></h4>
 		<p class='par'>Hai una band e vorresti registrare una demo? Hai il pezzo del secolo in mente e vorresti registrarlo? Spesso e volentieri gli studi per registrare una semplice <span lang='en'>demo</span>, offrendo servizi di altissimo livello e strutture hanno prezzi inaccessibili ai privati e alle band emergenti. Noi abbiamo la possibilit&agrave; di registrazione in multitraccia fino a 24 canali con possibilità di <span lang='en'>editing</span> e <span lang='en'>mastering</span> mediante software professionali! Disponiamo di una piccola struttura per la registrazione di singoli strumenti oppure la possibilit&agrave; di servizio di registrazione a domicilio direttamente nella vostra sala prove!</p>
 
+
 ";
 
 
 require("footer.cgi");
 $htmlprint="$htmlprint</div>$footer";
 print $htmlprint;
+
+
+		
+
+
+
+
+
+
+
+
+
+

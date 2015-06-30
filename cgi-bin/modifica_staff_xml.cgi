@@ -15,21 +15,11 @@ use utf8;
 $title = 'Modifica staff';
 $where = "Modifica staff";
 
-#verifica della sessione
-sub getSession(){
-	$session = CGI::Session->load() or die $!;
-	if($session->is_expired || $session->is_empty){
-		return undef;
-	}
-	else{
-		my $admin = $session->param('admin');
-		$session;
-	}
-}
-my $session=getSession;
+require "session.cgi";
 
 #lettura dei parametri
 $page=new CGI;
+if($admin){
 my $id=$page->param('id');
 my $nome=$page->param('nome');
 my $cognome=$page->param('cognome');
@@ -99,8 +89,6 @@ $root->appendChild($nodo) || die("non riesco a trovare il padre");
 open(OUT, ">$file");
 print OUT $doc->toString;
 close(OUT);	
-print($page->header());
-
 #stampa del codice HTML
 my $htmlprint;
 require ("session.cgi");
@@ -118,3 +106,7 @@ $htmlprint="$htmlprint
 	$footer
 ";
 print $htmlprint;
+}
+else{
+	print $page->redirect(-uri=>'index.cgi');
+}
