@@ -44,7 +44,7 @@ else{
 			<title>$title - ARSR</title>
 			<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/> 
 			<meta name=\"description\" content=\"login per nuove news\"/>
-			<meta name=\"keywords\" content=\"attrezzatura, inserimento\"/> 
+			<meta name=\"keywords\" content=\"service, audio, luci, noleggio, rent, PA, live, musica, feste, attrezzatura, makie, behringer, AKG, samson, proel, litec, strutture, palchi, eventi, piaza, concerti, sagre, registrazione, demo, studio, recording, soundcraft, allen heat, mixer, hk, servizi, tecnici, spettacolo, fonico, light ,designer,diffusori,casse,luci,LED,PAR,PC,fantasy,sgm,trasporto,furgone\"/> 
 	        <meta name=\"language\" content=\"italian it\"/> 
 			<meta name=\"author\" content=\"y-tech\"/>
 			<link rel=\"stylesheet\" type=\"text/css\" href=\"../public_html/css/generalstyle.css\" />
