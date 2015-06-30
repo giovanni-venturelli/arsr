@@ -98,7 +98,7 @@ require ("footer.cgi");
 $htmlprint= "$header$menu<div id=\"content\">";
 $htmlprint="$htmlprint
 	<fieldset class='container'>
-		<legend><h4 class='legend'>Modifica in Corso...</h4></legend>
+		<legend>Modifica in Corso...</legend>
 		<p>Modifica avvenuta con successo</p>
 		<p>Redirect Alla pagina di amministrazione</p>
 		<META http-equiv='refresh' content='2;URL=admin_staff.cgi'>
