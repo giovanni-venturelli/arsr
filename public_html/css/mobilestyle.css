@@ -412,7 +412,7 @@ ul
 
 #inserisci,#modifica,#elimina
 {
-	float:left;
+
 }
 
 .attr_button{
@@ -449,5 +449,8 @@ ul
 }
 #range-logo{
 	margin-right:-40%;
+}
+.label-flex{
+	display: block;
 }
 }

@@ -580,4 +580,8 @@ ul
     float:right;
     margin-right:1em;
 }
+.label-flex{
+    width:5em;
+    display:inline-block;
+}
 }
