@@ -240,6 +240,11 @@ body
     width:9em;
 }
 
+.inputcorpo
+{
+    resize:none;
+}
+
 .mailto
 {
     color:#FFF;
