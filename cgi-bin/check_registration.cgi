@@ -39,7 +39,20 @@ use utf8;
 			
 			$username=$page->param('username'); 
 				$username =~ s/([<>])/$map{$1}/g;
-				if($username !~ /[a-zA-Z0-9]+/ ){
+
+				my $doc = $parser->parse_file('../data/login.xml');
+my $root = $doc->getDocumentElement;
+my @users = $root->getElementsByTagName('utente');
+
+foreach $nod (@users) {
+	$user=$nod->getElementsByTagName('username');
+	if("$username" eq "$user"){
+		$erroreDati=1;
+		$erroreUser=2;
+	}
+}
+
+				if(($username !~ /[a-zA-Z0-9]+/) && !($erroreUser) ){
 					$erroreDati=1;
 					$erroreUser=1;
 				}
@@ -56,11 +69,11 @@ use utf8;
 				$name =~ s/([<>])/$map{$1}/g;
 				if($firstname !~/[a-zA-Z]+/ ){
 					$erroreDati=1;
-					$firstname=1;
+					$erroreFirstname=1;
 				}
 			 $cognome=$page->param('cognome');
 				$cognome =~ s/([<>])/$map{$1}/g;
-				if($cognome !~ /[a-zA-Z]+/ ){
+				if(($cognome !~ /[a-zA-Z]+/) && ($page->param('tipo_fatt') eq ("cod.fiscale"))){
 					$erroreDati=1;
 					$erroreCognome=1;
 				}

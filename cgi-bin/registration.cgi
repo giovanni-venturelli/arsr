@@ -32,15 +32,19 @@ require ("footer.cgi");
 $htmlprint= "$header$menu<div id=\"content\">";
 
 if($erroreDati){
-	if($erroreUser ){
+	if($erroreUser==1){
 		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: <span xml:lang='en'> Username</span> </div>";
+		
+	}
+	elsif($erroreUser==2 ){
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. Username già in uso. </div>";
 		
 	}
 	if($errorePwd ){
 		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: <span xml:lang='en'> Password</span> </div>";
 		
 	}
-	if($firstname ){
+	if($erroreFirstname ){
 		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: Nome </div>";
 		
 	}
@@ -98,17 +102,17 @@ $htmlprint="$htmlprint
 					<label class=\"label_block\" for=\"fatturazione\">Dati e tipo di fatturazione</label>
 						<input class=\"registration_input\" type=\"text\" value=\"$fatturazione\" tabindex=\"19\"  name=\"fatturazione\" id=\"fatturazione\" maxlength=\"16\"  onkeyup=\"checkNotEmpty(this)\"/>
 				
-					<input type=\"radio\" name=\"tipo_fatt\" tabindex=\"20\" id=\"seleziona_partita_iva\"";
+					<input type=\"radio\" name=\"tipo_fatt\" tabindex=\"20\" id=\"seleziona_partita_iva\" onchange=\"handleCognome()\"";
 						if($tipo_fatt=="p.iva"){
 							$htmlprint="$htmlprint checked ";
 						}
 						$htmlprint="$htmlprint> <label for=\"seleziona_partita_iva\">Partita Iva</label>
 					
-					<input type=\"radio\" name=\"tipo_fatt\" tabindex=\"21\" id=\"seleziona_codice\" value=\"cod.fiscale\" ";
+					<input type=\"radio\" name=\"tipo_fatt\" tabindex=\"21\" id=\"seleziona_codice\" value=\"cod.fiscale\" onchange=\"handleCognome()\" ";
 						if($tipo_fatt=="cod.fiscale"){
 							$htmlprint="$htmlprint checked ";
 						}
-						$htmlprint="$htmlprint> <label for=\"seleziona_codice\">Codice Fiscale</label>
+						$htmlprint="$htmlprint> <label for=\"seleziona_codice\" >Codice Fiscale</label>
 				<div class=\"registration_message\" id=\"fatturazione_check\">campo non valido</div>
 				<div>
 					<input class=\"pulsante\" type=\"submit\" value=\"Registrati\" tabindex=\"22\"/>
