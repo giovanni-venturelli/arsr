@@ -66,7 +66,6 @@ ul
 	color:#EFEFEF;
 	margin-bottom:.5em;
 	margin-top:.5em;
-	text-align:justify;
 }
 
 #contentimage
@@ -360,7 +359,10 @@ ul
 	height:.9em;
 }
 
-
+.inp_utente
+{
+    display:block;
+}
 
 .content_staff
 {

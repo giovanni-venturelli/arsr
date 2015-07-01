@@ -3,17 +3,7 @@
 <database>	
 
 
-<attrezzatura>
-			<nome>Mixer Allen and Heath 16Ch</nome>
-			<codice_prodotto>8</codice_prodotto>
-			<descrizione>mixer analogico 16 canali</descrizione>
-			<prezzo>15 €</prezzo>
-			<img>
-				<source>makie16.jpg</source>
-				<alt>Allen and Heath 16Ch</alt>
-			</img>
-			<disponibile>disponibile</disponibile>
-		</attrezzatura>
+
 
 <attrezzatura>
 			<nome>Behringer 8ch</nome>
@@ -89,4 +79,15 @@
 
 
 
+<attrezzatura>
+			<nome>Mixer Allen and Heath 16Ch</nome>
+			<codice_prodotto>8</codice_prodotto>
+			<descrizione>mixer analogico 16 canali</descrizione>
+			<prezzo>15 €</prezzo>
+			<img>
+				<source>makie16.jpg</source>
+				<alt>Allen and Heath 16Ch</alt>
+			</img>
+			<disponibile>disponibile</disponibile>
+		</attrezzatura>
 </database>

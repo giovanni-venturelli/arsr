@@ -116,7 +116,7 @@ $htmlprint="$htmlprint
 				<div class=\"registration_message\" id=\"fatturazione_check\">campo non valido</div>
 				<div>
 					<input class=\"pulsante\" type=\"submit\" value=\"Registrati\" tabindex=\"22\"/>
-					<input class=\"pulsante\" type=\"reset\" value=\"Reset\" tabindex=\"23\"/>
+					<input class=\"pulsante\" type=\"reset\" value=\"Reset\" tabindex=\"23\" onclick=\"resetFields('registration_form')\"/>
 				</div>
 			</fieldset>
 			</div>
