@@ -87,7 +87,6 @@ body
     border-style:none;
     color:#EFEFEF;
     height:1.6em;
-    outline:0;
 }
 
 .pulsante:active
@@ -180,7 +179,6 @@ body
     border-style:none;
     height:1.6em;
     margin-left:.2em;
-    outline:0;
 }
 
 #inserisci_pulsante
@@ -190,7 +188,6 @@ body
     float:left;
     height:1.6em;
     margin-left:.2em;
-    outline:0;
     padding-bottom:.1%;
 }
 

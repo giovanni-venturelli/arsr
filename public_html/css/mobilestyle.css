@@ -81,7 +81,7 @@ ul
 
 .pulsante
 {
-	outline:0;
+	margin-bottom: .2em;
 }
 
 
@@ -251,7 +251,6 @@ ul
 	color:#EFEFEF;
 	height:2em;
 	margin-top:.2em;
-	outline:0;
 }
 
 #commento_textarea
@@ -359,7 +358,7 @@ ul
 	height:.9em;
 }
 
-.inp_utente
+.inp_utente,.input_login
 {
     display:block;
 }
