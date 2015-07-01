@@ -69,7 +69,7 @@ function validateAttrForm(form){
             if (el[i].value==='' && el[i].id!="form_attr_descr_input"){
                 if(el[i].id!="day_number"){
                     valid=false;
-                    window.alert("Devi riempire nome, prezzo e descrizione dell'immagine!");
+                    window.alert("Devi scegliere un'immagine e compilare nome, prezzo e descrizione dell'immagine!");
                 }
             }
         }
@@ -125,4 +125,17 @@ function handleCognome(){
         dis.removeAttribute("disabled");
         checkNotEmpty(dis);
     }
+}
+
+function resetFields(id){
+    var form = document.getElementById(id);
+    var el=form.elements;
+    for (var i=0; i<el.length; i++){
+        if(el[i].nodeName!="FIELDSET" && el[i].type!="submit" && el[i].type!="radio" && el[i].type!="reset"){
+        var mess=document.getElementById(el[i].id+"_check");
+        el[i].style.border= "none";
+        mess.style.display="none";
+    }
+    }
+
 }
