@@ -12,7 +12,7 @@
 	<xs:complexType name="commento">
 		<xs:sequence>
 			<xs:element name="id" type="xs:integer"/>
-			<xs:element name="autore" type="xs:string">
+			<xs:element name="autore">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
 						<xs:pattern value="[a-zA-Z0-9\.\-\_\?\!]+"/>
@@ -34,6 +34,7 @@
 						<xs:maxLength value="200"/>
 					</xs:restriction>
 				</xs:simpleType>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:schema>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

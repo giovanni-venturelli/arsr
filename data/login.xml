@@ -47,22 +47,5 @@
 		</indirizzo>
 		<admin>si</admin>
 	</utente>
-						
 
-						<utente>
-							<username>prova2</username>
-							<email>admin@libero.it</email>
-							<password>protozoo</password>
-							<nome>Giovanni</nome>
-							<cognome/>
-							<indirizzo>
-								<via>via De Lellis</via>
-								<numero>35</numero>
-								<paese>Italia</paese>
-								<provincia>Padova</provincia>
-							</indirizzo>
-							<fatturazione>vntgnn85a22g224a</fatturazione>
-							<tipo_fatt>on</tipo_fatt>
-						</utente>
-						
 </login>
