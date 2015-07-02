@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+	<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+		<xs:element name="Database">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element name="persona" type="pers" maxOccurs="unbounded" minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		
+		<xs:complexType name="pers">
+				<xs:sequence>
+					<xs:element name="id" type="xs:string"/>
+				
+					<xs:element name="nome" type="xs:string"/>
+					
+					<xs:element name="cognome" type="xs:string"/>
+					
+					<xs:element name="ruolo" type="xs:string"/>
+				
+					<xs:element name="img" type="imm"/>
+
+				</xs:sequence>
+				
+			</xs:complexType>
+					<xs:complexType name="imm">
+						<xs:sequence>
+							<xs:element name="source" type="xs:string" />
+							<xs:element name="alt" type="xs:string" />
+						</xs:sequence>
+			</xs:complexType>
+			
+	</xs:schema>

@@ -1,0 +1,400 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('OpenSans-Regular-webfont.eot');
+    src: url('OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-Regular-webfont.woff') format('woff'),
+         url('OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body
+{
+    background-color:#191a1c;
+    color:#EFEFEF;
+}
+#header{
+     color:#EFEFEF;
+}
+
+#header a
+{
+    color:#EFEFEF;
+    text-decoration:none;
+}
+.menulist
+{
+    border-radius:0.2;
+        list-style:none;
+           text-align:center;
+       }
+
+       #active
+{
+    border-color:#28324E;
+    border-radius:.2em;
+    border-style:solid;
+}
+
+.menulist a:link
+{
+    background-color:#806952;
+    border-radius:.2em;
+    color:#EFEFEF;
+    display:block;
+    font-weight:bolder;
+    text-decoration:none;
+    transition:all .2s ease-in-out;
+}
+
+.menulist a:visited
+{
+    background-color:rgba(114,95,95,0.6);
+    color:#FFF;
+    font-size:1em;
+}
+
+.menulist a:hover
+{
+    background-color:#A38F84;
+    color:#EFEFEF;
+    display:block;
+    text-decoration:none;
+}
+
+.menulist a:visited:hover
+{
+    background-color:#A38F84;
+}
+
+#footer
+{
+    background-color:#28324E;
+    color:#EFEFEF;
+    font-size:.8em;
+    padding-bottom:.5%;
+    padding-left:1.5%;
+    padding-top:.5%;
+}
+
+.pulsante
+{
+    background-color:#b8312e;
+    border-radius:.2em;
+    border-style:none;
+    color:#EFEFEF;
+    height:1.6em;
+}
+
+.pulsante:active
+{
+    background-color:#5b0303;
+}
+.pulsante:hover:active
+{
+    background-color:#5b0303;
+}
+.pagine_submit:hover button,input[type=submit]
+{
+    cursor:pointer!important;
+}
+
+
+#feedback_main
+{
+    background-color:#055b4a;
+    margin-bottom:.5em;
+    padding:.3em;
+}
+
+.attr_img
+{
+    float:left;
+}
+
+.attr_nome
+{
+    font-size:large;
+}
+
+.attr_cod
+{
+    color:#999;
+    font-size:x-small;
+}
+
+.attr_descr
+{
+    font-size:small;
+}
+
+
+
+#img_mod
+{
+    background-image:url(../img/m.png);
+    background-size:cover;
+}
+
+#img_rem
+{
+    background-image:url(../img/x.png);
+    background-size:cover;
+}
+
+#num_pagine
+{
+    text-align:right;
+}
+
+#pagina_button
+{
+    background-color:#75706B;
+    border-radius:.2em;
+    border-style:none;
+    color:#EFEFEF;
+    font-weight:bolder;
+    height:1.5em;
+    margin-left:.5em;
+    text-decoration:none;
+}
+
+.img_attr
+{
+    height:100%;
+}
+
+#pr
+{
+    font-size:xx-small;
+    text-align:left;
+}
+
+#pulsante_vai
+{
+    border-radius:.2em;
+    border-style:none;
+    height:1.6em;
+    margin-left:.2em;
+}
+
+#inserisci_pulsante
+{
+    border-radius:.2em;
+    border-style:none;
+    float:left;
+    height:1.6em;
+    margin-left:.2em;
+    padding-bottom:.1%;
+}
+
+.form_attr_nome
+{
+    border:solid;
+    border-color:#28324E;
+    padding:2%;
+}
+
+#form_attr_img_alt_input
+{
+   resize: none;
+}
+#form_attr_descr_input
+{
+    resize: none;
+}
+.container
+{
+    border:solid .15em #28324E;
+    height:20em;
+}
+
+.TContact
+{
+    background:linear-gradient(to bottom right,#191a1c,black);
+    border:solid .1em #28324E;
+    }
+
+    .TFirst
+{
+    background:linear-gradient(to right,#191a1c,#28324E);
+    border:.1em solid #191a1c;
+    border-radius:2.1em;
+    display:inline-block;
+    margin:.3em;
+    padding:.3em;
+    width:9em;
+}
+
+.TSecond
+{
+    width:10em;
+}
+
+.image
+{
+    height:auto;
+    width:9em;
+}
+
+.inputcorpo
+{
+    resize:none;
+}
+
+.mailto
+{
+    color:#FFF;
+    text-decoration:underline;
+}
+
+.mailto:visited
+{
+    color:#10a88a;
+    display:inline;
+}
+
+.par
+{
+    border:.1em solid #28324E;
+    margin:0;
+    padding:.25em;
+}
+
+.sub
+{
+    font-size:1.4em;
+    margin:0;
+    padding:.3em;
+}
+
+#sub1
+{
+    background-color:#B8312E;
+}
+
+#sub2
+{
+    background-color:#602a7a;
+}
+#sub3
+{
+    background-color:#097b65;
+}
+
+
+.contact_image
+{
+    display:inline-block;
+    float:right;
+}
+
+.center
+{
+    left:50%;
+}
+
+.SubTitle
+{
+    font-size:2.25em;
+    margin-bottom:.5em;
+}
+
+.HParag
+{
+    border:.1em solid #FFF;
+    border-radius:.75em;
+    font-size:1.6em;
+    margin:0;
+    padding:.5em;
+}
+
+.invisible
+{
+    display:none;
+    width:.9em;
+}
+
+@font-face
+{
+    font-family:myfont;
+    src:url("web fonts/main_font/SFSportsNight.woff") format(woff);
+}
+
+#admin_benvenuti,#admin_benvenuti2
+{
+    text-align:center;
+}
+
+.link_header{
+    padding: 0.2em;
+}
+
+.link_header:hover{
+    padding: 0.2em;
+    text-decoration: underline;
+}
+
+.fieldset_attrezzature
+{
+    border:none;
+    padding:0;
+}
+
+#subheader
+{
+    margin-bottom:3em;
+    margin-top:.4em;
+    position:relative;
+}
+
+#position
+{
+    background-color:#28324E;
+    color:#EFEFEF;
+    float:left;
+    margin-bottom:.5em;
+    margin-top:.1em;
+    padding-bottom:.3em;
+    padding-left:1.5%;
+    padding-top:.3em;
+    width:94.4%;
+}
+
+#range-logo
+{
+    background-image:url(../img/flat_facebook_logo.png);
+    background-repeat:no-repeat;
+    background-size:contain;
+    display:block;
+    float:right;
+    margin-bottom:.5em;
+    /*margin-right:-3.2em;*/
+    margin-top:.1em;
+    opacity:0.8;
+    /*padding-bottom:.5%;
+    padding-left:1.5%;*/
+    padding-top:.5%;
+    text-indent:-9999em;
+    transition:all .2s ease-in-out;
+    height: 2em;
+    width: 2em;
+
+}
+
+#range-logo:hover
+{
+    border-radius:.2em;
+    opacity:1;
+    transform:scale(1.1);
+}
+
+#range-logo:active
+{
+    border-radius:.2em;
+    opacity:1;
+    transform:scale(1);
+}

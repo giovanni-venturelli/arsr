@@ -1,0 +1,71 @@
+	#!/usr/bin/perl -w
+
+	use utf8;
+	
+
+	
+	if($utente){
+		$log="<div id=\"stato_utente\">sei collegato come $utente <a href=\"logout.cgi\" class=\"link_header pulsante\" tabindex=\"1\">esci</a></div>";
+	}
+	elsif($admin){
+		$log="<div id=\"stato_utente\">sei collegato come $admin <a href=\"logout.cgi\" class=\"link_header pulsante\">esci</a></div>";
+	}
+	elsif($title ne "Login" && $title ne "Registrazione"){
+		$log="<div id=\"stato_utente\">non sei collegato <a href=\"login.cgi\" class=\"link_header pulsante\" tabindex=\"1\">login</a> <a href=\"registration.cgi\" class=\"link_header pulsante\" tabindex=\"2\">registrati</a></div>";
+	}
+	elsif($title eq "Registrazione"){
+		$log="<div id=\"stato_utente\">non sei collegato <a href=\"login.cgi\" class=\"link_header pulsante\" tabindex=\"1\">login</a> </div>";
+	}
+	else{
+		$log="<div id=\"stato_utente\">non sei collegato <a href=\"registration.cgi\" class=\"link_header pulsante\" tabindex=\"1\">registrati</a></div>";
+	}
+	
+	$ref;
+	if ($where eq "<span lang=\"en\">Home</span>"){
+		$ref="$log
+	<h1>
+	<abbr>ARSR</abbr>
+	<span lang=\"en\">Service</span>
+	</h1>
+	<h2>Audio e luci di qualità per il tuo Spettacolo</h2>";
+	}
+else{
+	$ref="$log
+	<h1>
+	<abbr>ARSR</abbr>
+	<span lang=\"en\">Service</span>
+	</h1>
+	<h2>Audio e luci di qualità per il tuo Spettacolo</h2>
+	";
+}
+	$header= "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
+	<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\">
+		<head>
+			<title>$title - ARSR</title>
+			<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/> 
+			<meta name=\"description\" content=\"A.R.S.R. service audio luci padova per la musica dal vivo. Il sito dell'azienda di service di Amilcar Rafael Rodriguez. Indirizzo: Via Monzambano 2, Padova (PD).\"/>
+			<meta name=\"keywords\" content=\"ARSR,A.R.S.R.,service, audio, luci, noleggio, rent, PA, live, musica, feste, attrezzatura, makie, behringer, AKG, samson, proel, litec, strutture, palchi, eventi, piaza, concerti, sagre, registrazione, demo, studio, recording, soundcraft, allen heat, mixer, hk, servizi, tecnici, spettacolo, fonico, light ,designer,diffusori,casse,luci,LED,PAR,PC,fantasy,sgm,trasporto,furgone,Francesco,Agostini,Amilcar,Rafael,Soto,Rodriguez\"/> 
+			<meta name=\"language\" content=\"italian it\"/> 
+			<meta name=\"author\" content=\"y-tech\"/>
+			<link rel=\"stylesheet\" type=\"text/css\" href=\"../css/generalstyle.css\" />
+			<link rel=\"stylesheet\" type=\"text/css\" media=\"(max-width: 50.99em)\" href=\"../css/mobilestyle.css\" />
+			<link rel=\"stylesheet\" type=\"text/css\" media =\"(min-width: 51em) and (min-device-width: 68em)\"  href=\"../css/desktopstyle.css\" />
+			<script type=\"text/javascript\" src=\"../js/script.js\"></script>
+		</head>
+		<body>
+				<div id=\"main\">
+				<div id=\"header\">
+$ref
+
+	</div>
+	<div id=\"subheader\">
+	<div id=\"position\">
+	Ti trovi in: $where</div>
+	<div class=\"social\" id=\"facebook\">
+	<a href=\"https://www.facebook.com/arsrservice?fref=ts\" title=\"Pagina Facebook\" id=\"range-logo\" tabindex=\"3\">pagina <span lang=\"en\">facebook</span>
+	</a>
+	</div>
+	</div>";
+
+
+	1;

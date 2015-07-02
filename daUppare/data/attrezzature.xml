@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="attrezzature.xsl"  xmlns="http://www.ASRS.com" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="attrezzature.xsd"?>
+<database>	
+
+
+
+
+<attrezzatura>
+			<nome>Behringer 8ch</nome>
+			<codice_prodotto>9</codice_prodotto>
+			<descrizione>mixer eurorack 16</descrizione>
+			<prezzo>10 €</prezzo>
+			<img>
+				<source>behringer.jpg</source>
+				<alt>Behringer 8ch</alt>
+			</img>
+			<disponibile>disponibile</disponibile>
+		</attrezzatura>
+<attrezzatura>
+			<nome>Microfoni Studio</nome>
+			<codice_prodotto>10</codice_prodotto>
+			<descrizione>Microfoni a diaframma largo per registrazioni da studio</descrizione>
+			<prezzo>50 €</prezzo>
+			<img>
+				<source>C01-SP01-right.jpg</source>
+				<alt>mic-diaf-largo</alt>
+			</img>
+			<disponibile>disponibile</disponibile>
+		</attrezzatura>
+<attrezzatura>
+			<nome>Microfono Shure sm57</nome>
+			<codice_prodotto>1</codice_prodotto>
+			<descrizione>Microfono dinamico per strumenti</descrizione>
+			<prezzo>5€</prezzo>
+			<img>
+				<source>sm57.jpg</source>
+				<alt>Microfono Shure sm57 </alt>
+			</img>
+			<disponibile>disponibile</disponibile>
+		</attrezzatura>
+<attrezzatura>
+			<nome>Microfono Shure sm58</nome>
+			<codice_prodotto>2</codice_prodotto>
+			<descrizione>Microfono dinamico per voce/strumenti </descrizione>
+			<prezzo>5€</prezzo>
+			<img>
+				<source>sm58.jpg</source>
+				<alt>Microfono Shure sm58</alt>
+			</img>
+			<disponibile>disponibile</disponibile>
+		</attrezzatura>
+<attrezzatura>
+			<nome>Microfono AXK c1000</nome>
+			<codice_prodotto>4</codice_prodotto>
+			<descrizione>Microfono dinamico da voce</descrizione>
+			<prezzo>7 €</prezzo>
+			<img>
+				<source>AKG-c1000.jpg</source>
+				<alt>AKG c1000</alt>
+			</img>
+			<disponibile>disponibile</disponibile>
+		</attrezzatura>
+<attrezzatura>
+			<nome>Microfono AKgMic</nome>
+			<codice_prodotto>5</codice_prodotto>
+			<descrizione>kit microfono da batteria</descrizione>
+			<prezzo>10 €</prezzo>
+			<img>
+				<source>akgmic.jpg</source>
+				<alt>DrumSet T.Bone 4xCD55 1xBD200</alt>
+			</img>
+			<disponibile>disponibile tra 9 giorni</disponibile>
+		</attrezzatura>
+
+
+
+
+
+
+
+
+<attrezzatura>
+			<nome>Mixer Allen and Heath 16Ch</nome>
+			<codice_prodotto>8</codice_prodotto>
+			<descrizione>mixer analogico 16 canali</descrizione>
+			<prezzo>15 €</prezzo>
+			<img>
+				<source>makie16.jpg</source>
+				<alt>Allen and Heath 16Ch</alt>
+			</img>
+			<disponibile>disponibile</disponibile>
+		</attrezzatura>
+</database>

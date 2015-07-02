@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="staff.xsl"  xmlns="http://www.ASRS.com" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="xsd/staff.xsd"?>
+<Database>
+	
+
+
+
+<persona>
+	<id>2</id>
+	<nome>Amilcar</nome>
+	<cognome>Rodriguez</cognome>
+	<ruolo>Dirigente</ruolo>
+	<img>
+		<source>amilcar.jpg</source>
+		<alt>Foto di Amilcar Rodriguez</alt>
+	</img>
+</persona>
+
+<persona>
+	<id>1</id>
+	<nome>Francesco</nome>
+	<cognome> Agostini</cognome>
+	<ruolo>Fonico e tecnico luci</ruolo>
+	<img>
+		<source>francesco_agostini.jpg</source>
+		<alt>Foto di Francesco Agostini</alt>
+	</img>
+</persona>
+<persona>
+	<id>4</id>
+	<nome>Stolfo</nome>
+	<cognome>Fent</cognome>
+	<ruolo>Fonico</ruolo>
+	<img>
+		<source>stolfo_fent.jpg</source>
+		<alt>Foto di Stolfo Fent</alt>
+	</img>
+</persona>
+
+
+
+<persona>
+	<id>3</id>
+	<nome>Paolo</nome>
+	<cognome>Tizianel</cognome>
+	<ruolo>Fonico e tecnico luci</ruolo>
+	<img>
+		<source>paolo_tizianel.jpg</source>
+		<alt>Foto di Paolo Tizianel</alt>
+	</img>
+</persona></Database>

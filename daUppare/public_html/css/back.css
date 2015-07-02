@@ -1,0 +1,141 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('OpenSans-Regular-webfont.eot');
+    src: url('OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-Regular-webfont.woff') format('woff'),
+         url('OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+	font-family: 'open_sansregular';
+	
+}
+#header {
+	background-color: #75706B;
+	color: #EFEFEF;
+	text-align: center;
+	padding: 0.1em;
+	line-height: 0.4em;
+	height: 20%;
+	font-size:4em;
+
+}
+h1{
+	font-size: 2em;
+}
+h2 {
+	display:none;
+}
+
+	
+#position{
+display:none;
+height:0;
+}
+#range-logo {
+display:none;
+height:0;
+}
+#menu{
+margin-top:0.5em;
+padding:0;
+font-size:3.5em;
+}
+
+ul{
+	margin:0;
+	padding: 0;
+    list-style-type: none;
+}
+.menulist{
+margin:0.2em;
+list-style: none;
+text-align: center;
+border-radius: 0.12em 0.12em 0.12em 0.12em;
+border-left:solid thin #333;
+border-right:solid thin #333;
+border-bottom:solid thin #333;
+}
+
+#active{
+	color: #000;
+	background-color: #999;
+	border-radius: 0.12em 0.12em 0.12em 0.12em;
+	border: thin solid #000;	
+}
+
+.menulist a:link{
+background-color: #999;
+	text-decoration: none;
+	color: #EFEFEF;
+	display:block;
+	font-weight: bolder;
+	border-radius: 0.12em 0.12em 0.12em 0.12em;
+}
+
+.menulist a:hover{ 
+	text-decoration: none;
+	background-color: #A38F84;
+	color: #EFEFEF;
+	display:block;
+
+}
+
+.menulist a:active{ 
+	text-decoration: none;
+	background-color: #A38F84;
+	color: #EFEFEF;
+	display:block;
+
+}
+
+.menulist a:visited{
+	color: #28324E;
+	display:block;
+	background-color: #999;
+}
+}
+
+#footer {
+	font-size:1.5em;
+	padding-left: 1.5%;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+	background-color: #999;
+	color:#EFEFEF;
+}
+#content{
+	color:#191a1c;
+	text-align:justify;
+	margin-top:0.5em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	margin-bottom: 0.5em;
+	background-color:rgba(239,239,239,0.8);
+	font-size:2em;
+	border: thin solid #A38F84;
+}
+#slideshow {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	border: thin solid #000;
+}
+
+.contentimage{
+	max-width:85%;
+	margin-left:7.5%;
+	margin-right:7.5%;
+	margin-top:5%;
+	margin-bottom:5%;
+	
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xs:element name="commenti">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="feedback" type="commento" maxOccurs="unbounded" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="commento">
+		<xs:sequence>
+			<xs:element name="id" type="xs:integer"/>
+			<xs:element name="autore" type="xs:string">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="[a-zA-Z0-9\.\-\_\?\!]+"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="immagine">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="((.){0,2}\/)?([a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*(\/)?)*"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="data" type="xs:date"/>
+			<xs:element name="corpo">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="200"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:schema>

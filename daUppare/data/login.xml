@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xmlns = "http://www.ASRS.com" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="login.xsd"?>
+<login>
+	<utente>
+		<username>user1</username>
+		<email>user1@gmail.com</email>
+		<password>user</password>
+		<nome>nome</nome>
+		<cognome>cognome</cognome>
+		<indirizzo>
+			<via>via</via>
+			<numero>1</numero>
+			<paese>paese</paese>
+			<provincia>provincia</provincia>
+		</indirizzo>
+		<fatturazione>GMTLKS45862DF89S</fatturazione>
+        <tipo_fatt>p.iva</tipo_fatt>
+        <admin>no</admin>
+	</utente>		
+	<utente>
+		<username>puc</username>
+		<email>matteo@gmail.com</email>
+		<password>ciao</password>
+		<nome>matteo</nome>
+		<cognome>gnoato</cognome>
+		<indirizzo>
+			<via>Via Marin</via>
+			<numero>5</numero>
+			<paese>italia</paese>
+			<provincia>paodva</provincia>
+		</indirizzo>
+		<fatturazione>GNTMTT91M705S</fatturazione>
+		<tipo_fatt>cod.fiscale</tipo_fatt>
+		<admin>no</admin>
+	</utente>
+	<utente>
+		<username>admin</username>
+		<email>amministrazione@arsr.com</email>
+		<password>arsr</password>
+		<nome>Francesco</nome>
+		<cognome>Agostini</cognome>
+		<indirizzo>
+			<via>via</via>
+			<numero>5</numero>
+			<paese>cc</paese>
+			<provincia>cc</provincia>
+		</indirizzo>
+		<admin>si</admin>
+	</utente>
+						
+
+						<utente>
+							<username>prova2</username>
+							<email>admin@libero.it</email>
+							<password>protozoo</password>
+							<nome>Giovanni</nome>
+							<cognome/>
+							<indirizzo>
+								<via>via De Lellis</via>
+								<numero>35</numero>
+								<paese>Italia</paese>
+								<provincia>Padova</provincia>
+							</indirizzo>
+							<fatturazione>vntgnn85a22g224a</fatturazione>
+							<tipo_fatt>on</tipo_fatt>
+						</utente>
+						
+</login>

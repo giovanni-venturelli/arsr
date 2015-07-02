@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xmlns = "http://www.ASRS.com" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="feedback.xsd"?>
+<commenti>
+	<feedback>
+		<id>1</id>
+		<autore>AstroSamantha</autore>
+		<immagine>avatar.jpg</immagine>
+		<data>2015-05-07</data>
+		<corpo>Un servizio stellare!</corpo>
+	</feedback>
+	<feedback>
+		<id>2</id>
+		<autore>SilvioBerlusconi</autore>
+		<immagine>avatar.jpg</immagine>
+		<data>2015-05-03</data>
+		<corpo>Cribio!</corpo>
+	</feedback>
+	<feedback>
+		<id>3</id>
+		<autore>DanteAlighieri</autore>
+		<immagine>avatar.jpg</immagine>
+		<data>2015-01-22</data>
+		<corpo>Tanto gentile e tanto onesta pare la donna mia quando altrui saluta ch'ogne lingua deven tremando muta e li occhi no l'ardiscon di guardare. Ella si va sentendosi laudare benignamente d'umiltà vestuta e par che sia cosa venuta di cielo in terra a miracol mostrare. Mostrasi sì piacente a chi la mira che dà per li occhi una dolcezza al core che intender no la può chi no la prova.</corpo>
+	</feedback>
+
+
+
+
+<feedback>
+				<id>8</id>
+				<autore>giovanni</autore>
+				<immagine>avatar.jpg</immagine>
+				<data>2015-05-13</data>
+				<corpo>5</corpo>
+				</feedback>
+
+<feedback>
+				<id>10</id>
+				<autore>giovanni</autore>
+				<immagine>avatar.jpg</immagine>
+				<data>2015-05-13</data>
+				<corpo>7</corpo>
+				</feedback>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<feedback>
+<id>11</id>
+<autore>puc</autore>
+<immagine>avatar.jpg</immagine>
+<data>2015-06-13</data>
+<corpo>1</corpo>
+</feedback>
+
+<feedback>
+<id>13</id>
+<autore>puc</autore>
+<immagine>avatar.jpg</immagine>
+<data>2015-06-13</data>
+<corpo>3</corpo>
+</feedback>
+<feedback>
+<id>14</id>
+<autore>puc</autore>
+<immagine>avatar.jpg</immagine>
+<data>2015-06-13</data>
+<corpo>4</corpo>
+</feedback>
+<feedback>
+<id>15</id>
+<autore>puc</autore>
+<immagine>avatar.jpg</immagine>
+<data>2015-06-13</data>
+<corpo>5</corpo>
+</feedback>
+
+<feedback>
+<id>16</id>
+<autore>puc</autore>
+<immagine>avatar.jpg</immagine>
+<data>2015-06-14</data>
+<corpo>prova</corpo>
+</feedback>
+<feedback>
+<id>17</id>
+<autore>puc</autore>
+<immagine>avatar.jpg</immagine>
+<data>2015-06-14</data>
+<corpo>prova2</corpo>
+</feedback>
+<feedback>
+<id>18</id>
+<autore>user1</autore>
+<immagine>avatar.jpg</immagine>
+<data>2015-06-29</data>
+<corpo>commento di prova
+</corpo>
+</feedback>
+
+
+<feedback>
+<id>19</id>
+<autore>user1</autore>
+<immagine>avatar.jpg</immagine>
+<data>2015-07-01</data>
+<corpo>ottimo</corpo>
+</feedback>
+</commenti>
