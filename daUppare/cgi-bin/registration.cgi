@@ -33,43 +33,43 @@ $htmlprint= "$header$menu<div id=\"content\">";
 
 if($erroreDati){
 	if($erroreUser==1){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: <span xml:lang='en'> Username</span> </div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE nei dati inseriti. Controllare la<span xml:lang='en'> username</span> inserita.</div>";
 		
 	}
 	elsif($erroreUser==2 ){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. Username già in uso. </div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE nei dati inseriti. <span xml:lang='en'> Username</span> già in uso. </div>";
 		
 	}
 	if($errorePwd ){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: <span xml:lang='en'> Password</span> </div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE nei dati inseriti. Controllare la <span xml:lang='en'> Password</span> inserita. </div>";
 		
 	}
 	if($erroreFirstname ){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: Nome </div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE nei dati inseriti. Controllare il nome inserito. </div>";
 		
 	}
 	if($erroreCognome ){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: cognome</div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE nei dati inseriti. Controllare il cognome inserito.</div>";
 		
 	}
 	if($erroreVia ){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: via</div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE nei dati inseriti. Controllare la via inserita.</div>";
 		
 	}
 	if($erroreCivico ){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: civico</div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE nei dati inseriti. Controllare il numero civico inserito.</div>";
 		
 	}
 	if($erroreProvincia ){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: provincia</div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE nei dati inseriti. Controllare la provincia inserita.</div>";
 		
 	}
 	if($errorePaese ){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: Stato</div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE nei dati inseriti. Controllare lo stato inserito.</div>";
 		
 	}
 	if($ErroreFatt ){
-		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE Dati inseriti. verificare: fatturazione </div>";
+		$htmlprint="$htmlprint<div id=\"errore_login\">ERRORE nei dati inseriti. Controllare la fatturazione. </div>";
 		
 	}
 }
@@ -79,7 +79,7 @@ $htmlprint="$htmlprint
 	<form class=\"pure-form pure-form-aligned\" method=\"post\" action=\"check_registration.cgi\" id=\"registration_form\" onsubmit=\"return validateForm(this)\">
 		<div class=\"pure-control-group\">
 			<fieldset>
-				<legend>Registrazione: completare i campi come richiesto</legend>
+				<legend>Registrazione: completare i campi con le informazioni richieste</legend>
 				
 					<label class=\"label_block\" for=\"username\" >Username</label>
 						<input class=\"registration_input\" type=\"text\" value=\"$username\" tabindex=\"10\"  name=\"username\" id=\"username\" maxlength=\"10\" onkeyup=\"checkNotEmpty(this)\"/><div class=\"registration_message\" id=\"username_check\">campo non valido</div>
@@ -121,7 +121,6 @@ $htmlprint="$htmlprint
 			</fieldset>
 			</div>
 	</form>";
-
 
 $htmlprint="$htmlprint</div>\n$footer";
 print $htmlprint;
