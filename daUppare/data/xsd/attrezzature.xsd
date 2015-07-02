@@ -22,14 +22,14 @@
 						<xs:simpleType>
 							<xs:restriction base="xs:string">
 								<xs:minLength value="0"/>
-								<xs:maxLength value="50"/>
+								<xs:maxLength value="70"/>
 							</xs:restriction>
 						</xs:simpleType>
 					</xs:element>
 					<xs:element name="prezzo">
 						<xs:simpleType>
 							<xs:restriction base="xs:string">
-								<xs:pattern value="[0-9]*€"/>
+								<xs:pattern value="[0-9]* €"/>
 							</xs:restriction>
 						</xs:simpleType>
 					</xs:element>
@@ -37,7 +37,7 @@
 					<xs:element name="disponibile">
 						<xs:simpleType>
 							<xs:restriction base="xs:string">
-								<xs:pattern value="si|no|disponibile tra [1-9] giorni"/>
+								<xs:pattern value="disponibile|no|disponibile tra [1-9] giorni"/>
 							</xs:restriction>
 						</xs:simpleType>
 					</xs:element>

@@ -14,7 +14,7 @@ use utf8;
 	
 		
 		
-	require 'session.cgi';
+	my $session=getSession;
 	$page=new CGI;
 
 		
@@ -153,8 +153,7 @@ foreach $nod (@users) {
 					open(OUT, ">$file");#apre il file per la scrittura
 					print OUT $doc->toString;#scrive nel file
 					close(OUT);# chiude il file
-					$session->param('utente', $username);
-					print redirect(-uri=>'confirm_registration.cgi');
+					print redirect(-uri=>'login.cgi');
 				}
 			}
 exit
