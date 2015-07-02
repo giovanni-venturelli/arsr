@@ -2,6 +2,9 @@
 <?xml-stylesheet type="text/xsl" href="attrezzature.xsl"  xmlns="http://www.ASRS.com" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="attrezzature.xsd"?>
 <database>	
 
+
+
+
 <attrezzatura>
 			<nome>Behringer 8ch</nome>
 			<codice_prodotto>9</codice_prodotto>
@@ -28,7 +31,7 @@
 			<nome>Microfono Shure sm57</nome>
 			<codice_prodotto>1</codice_prodotto>
 			<descrizione>Microfono dinamico per strumenti</descrizione>
-			<prezzo>5 €</prezzo>
+			<prezzo>5€</prezzo>
 			<img>
 				<source>sm57.jpg</source>
 				<alt>Microfono Shure sm57 </alt>
@@ -39,7 +42,7 @@
 			<nome>Microfono Shure sm58</nome>
 			<codice_prodotto>2</codice_prodotto>
 			<descrizione>Microfono dinamico per voce/strumenti </descrizione>
-			<prezzo>5 €</prezzo>
+			<prezzo>5€</prezzo>
 			<img>
 				<source>sm58.jpg</source>
 				<alt>Microfono Shure sm58</alt>

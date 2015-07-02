@@ -18,14 +18,7 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:element>
-						<xs:element name="password">
-							<xs:simpleType>
-								<xs:restriction base="xs:string">
-									<xs:minLength value="4"/>
-									<xs:maxLength value="8"/>
-								</xs:restriction>
-							</xs:simpleType>
-						</xs:element>
+						<xs:element name="password"/>
 						<xs:element name="nome" type="xs:string" />
 						<xs:element name="cognome" type="xs:string" minOccurs="0" />
 						<xs:element name="indirizzo" type="ind" />
@@ -47,7 +40,6 @@
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
 									<xs:pattern value="([0-9])+[a|b|c|d|e|f|g|h|i|l|m]*" />
-									<xs:maxLength value="4" />
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:element>

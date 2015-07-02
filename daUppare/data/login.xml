@@ -2,64 +2,50 @@
 <?xmlns = "http://www.ASRS.com" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="login.xsd"?>
 <login>
 	<utente>
-		<username>frossi</username>
-		<email>frossi@gmail.com</email>
-		<password>fabiorossi</password>
-		<nome>Fabio</nome>
-		<cognome>Rossi</cognome>
+		<username>user1</username>
+		<email>user1@gmail.com</email>
+		<password>user</password>
+		<nome>nome</nome>
+		<cognome>cognome</cognome>
 		<indirizzo>
-			<via>via uruguay</via>
-			<numero>10</numero>
-			<paese>Italia</paese>
-			<provincia>Vicenza</provincia>
+			<via>via</via>
+			<numero>1</numero>
+			<paese>paese</paese>
+			<provincia>provincia</provincia>
 		</indirizzo>
 		<fatturazione>GMTLKS45862DF89S</fatturazione>
         <tipo_fatt>p.iva</tipo_fatt>
         <admin>no</admin>
 	</utente>		
 	<utente>
-		<username>francesco10</username>
-		<email>francesco.p@gmail.com</email>
-		<password>francesco18</password>
-		<nome>Prancesco</nome>
-		<cognome>Palermo</cognome>
+		<username>puc</username>
+		<email>matteo@gmail.com</email>
+		<password>ciao</password>
+		<nome>matteo</nome>
+		<cognome>gnoato</cognome>
 		<indirizzo>
 			<via>Via Marin</via>
-			<numero>57</numero>
-			<paese>Italia</paese>
-			<provincia>Padova</provincia>
+			<numero>5</numero>
+			<paese>italia</paese>
+			<provincia>paodva</provincia>
 		</indirizzo>
 		<fatturazione>GNTMTT91M705S</fatturazione>
 		<tipo_fatt>cod.fiscale</tipo_fatt>
 		<admin>no</admin>
 	</utente>
 	<utente>
-		<username>admin1</username>
+		<username>admin</username>
 		<email>amministrazione@arsr.com</email>
-		<password>amministratore1</password>
+		<password>arsr</password>
 		<nome>Francesco</nome>
 		<cognome>Agostini</cognome>
 		<indirizzo>
-			<via>via Roma</via>
-			<numero>75</numero>
-			<paese>Italia</paese>
-			<provincia>Padova</provincia>
+			<via>via</via>
+			<numero>5</numero>
+			<paese>cc</paese>
+			<provincia>cc</provincia>
 		</indirizzo>
 		<admin>si</admin>
 	</utente>
-		
-	<utente>
-		<username>alessiaT</username>
-		<email>alessia_tomba@hotmail.com</email>
-		<password>alessia92</password>
-		<nome>Alessia</nome>
-		<cognome>Tomba</cognome>
-		<indirizzo>
-			<via>via XX settembre</via>
-			<numero>1</numero>
-			<paese>Italia</paese>
-			<provincia>Verona</provincia>
-		</indirizzo>
-		<admin>no</admin>
-	</utente>	
+
 </login>
